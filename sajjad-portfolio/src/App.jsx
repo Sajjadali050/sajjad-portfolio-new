@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { 
   FileText, Database, ShieldCheck, Mail, Phone, MapPin, 
   Download, Menu, X, CheckCircle2, Award, GraduationCap, Briefcase, 
-  ArrowRight, FileSpreadsheet, Layers, Cpu, CheckCircle, Calendar, MessageCircle
+  ArrowRight, FileSpreadsheet, Layers, Cpu, CheckCircle, Calendar, MessageCircle, Globe
 } from 'lucide-react';
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [lang, setLang] = useState('en'); // 'en' or 'ar'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,50 @@ export default function App() {
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
   const whatsappLink = "https://wa.me/966542475245";
+
+  // Content dictionary for English and Arabic toggle
+  const content = {
+    en: {
+      roleTitle: "Procurement & Purchasing Professional | Document Control & Odoo ERP Specialist",
+      heroDesc: "Organized procurement specialist with practical experience in RFQs, Purchase Orders, supplier follow-ups, and advanced data management using Odoo ERP and Excel tracking systems at Scientific Systems Construction Company (SSCC).",
+      exploreBtn: "Explore My Systems",
+      contactBtn: "Contact Me",
+      aboutTitle: "About Me",
+      aboutDesc: "Dedicated procurement professional and document control specialist based in Riyadh, bridging operational logistics with advanced ERP management.",
+      skillsTitle: "Technical Skills",
+      certTitle: "Certifications & Qualifications",
+      projTitle: "Featured Projects & Tracking Systems",
+      projDesc: "Real-world procurement logs, material management dashboards, and Excel ERP tracking systems implemented at SSCC.",
+      expTitle: "Work Experience",
+      eduTitle: "Educational Background",
+      getInTouch: "Get In Touch",
+      location: "Riyadh, Saudi Arabia",
+      company: "Scientific Systems Construction Company (SSCC)",
+      downloadCv: "Download CV",
+      whatsappChat: "Chat on WhatsApp"
+    },
+    ar: {
+      roleTitle: "أخصائي المشتريات والتموين | مراقبة الوثائق وأخصائي نظام Odoo ERP",
+      heroDesc: "أخصائي مشريات منظم ذو خبرة عمليّة في طلبات الأسعار (RFQs)، أوامر الشراء (POs)، متابعة الموردين، وإدارة البيانات المتقدمة باستخدام نظام Odoo و Excel في شركة الأنظمة العلمية للمقاولات (SSCC).",
+      exploreBtn: "استكشف أنظمتي",
+      contactBtn: "اتصل بي",
+      aboutTitle: "نبذة عني",
+      aboutDesc: "أخصائي مشريات محترف ومختص في مراقبة الوثائق مقيم في الرياض، أربط بين الخدمات اللوجستية والإدارة المتقدمة لأنظمة ERP.",
+      skillsTitle: "المهارات التقنية",
+      certTitle: "الشهادات والمؤهلات",
+      projTitle: "المشاريع المميزة وأنظمة التتبع",
+      projDesc: "سجلات المشتريات الواقعية، لوحات تحكم إدارة المواد، وأنظمة تتبع Odoo المطبقة في SSCC.",
+      expTitle: "خبرة العمل",
+      eduTitle: "المخزون التعليمي",
+      getInTouch: "ابق على تواصل",
+      location: "الرياض، المملكة العربية السعودية",
+      company: "شركة الأنظمة العلمية للمقاولات (SSCC)",
+      downloadCv: "تحميل السيرة الذاتية",
+      whatsappChat: "مراسلة عبر واتساب"
+    }
+  };
+
+  const t = content[lang];
 
   const projects = [
     {
@@ -46,31 +91,11 @@ export default function App() {
   ];
 
   const certificates = [
-    {
-      title: "Procurement",
-      issuer: "Alison",
-      desc: "Learner Verification Certificate in core procurement processes and supplier management principles."
-    },
-    {
-      title: "Odoo Purchase",
-      issuer: "Odoo eLearning",
-      desc: "Completed official course on Odoo Purchase module, RFQs, and automated order workflows."
-    },
-    {
-      title: "Introduction to Electronic Document Management",
-      issuer: "Alison",
-      desc: "Learner Verification Certificate focusing on digital document control, versioning, and archiving."
-    },
-    {
-      title: "Professional Diploma in Administration Management",
-      issuer: "MTF Institute / Udemy",
-      desc: "Advanced professional training in administrative organization, operations, and management."
-    },
-    {
-      title: "Microsoft Office (Word, Excel, PowerPoint)",
-      issuer: "Udemy",
-      desc: "Comprehensive certification covering advanced office automation, spreadsheets, and presentations."
-    }
+    { title: "Procurement", issuer: "Alison", desc: "Learner Verification Certificate in core procurement processes and supplier management." },
+    { title: "Odoo Purchase", issuer: "Odoo eLearning", desc: "Completed official course on Odoo Purchase module, RFQs, and automated workflows." },
+    { title: "Introduction to Electronic Document Management", issuer: "Alison", desc: "Learner Verification Certificate focusing on digital document control and archiving." },
+    { title: "Professional Diploma in Administration Management", issuer: "MTF Institute / Udemy", desc: "Advanced professional training in administrative organization and operations." },
+    { title: "Microsoft Office (Word, Excel, PowerPoint)", issuer: "Udemy", desc: "Comprehensive certification covering advanced office automation and data spreadsheets." }
   ];
 
   const skills = [
@@ -115,18 +140,19 @@ export default function App() {
   ];
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
+    { name: lang === 'ar' ? 'الرئيسية' : 'Home', href: '#home' },
+    { name: lang === 'ar' ? 'عني' : 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Certificates', href: '#certificates' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Contact', href: '#contact' },
+    { name: lang === 'ar' ? 'الشهادات' : 'Certificates', href: '#certificates' },
+    { name: lang === 'ar' ? 'المشاريع' : 'Projects', href: '#projects' },
+    { name: lang === 'ar' ? 'الخبرة' : 'Experience', href: '#experience' },
+    { name: lang === 'ar' ? 'التعليم' : 'Education', href: '#education' },
+    { name: lang === 'ar' ? 'اتصل بنا' : 'Contact', href: '#contact' },
   ];
 
   return (
-    <div className="min-h-screen bg-[#08080D] text-slate-100 font-sans selection:bg-purple-600 selection:text-white relative">
+    <div className={`min-h-screen bg-[#08080D] text-slate-100 font-sans selection:bg-purple-600 selection:text-white relative ${lang === 'ar' ? 'rtl' : 'ltr'}`}>
+      
       {/* WhatsApp Floating Button */}
       <a 
         href={whatsappLink} 
@@ -137,7 +163,7 @@ export default function App() {
       >
         <MessageCircle className="w-7 h-7" />
         <span className="absolute right-16 bg-white text-slate-900 text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-          Chat on WhatsApp
+          {t.whatsappChat}
         </span>
       </a>
 
@@ -149,27 +175,42 @@ export default function App() {
               <span className="font-extrabold text-lg text-white">SA</span>
             </div>
             <div>
-              <span className="font-bold text-lg tracking-tight text-white group-hover:text-purple-400 transition-colors">Sajjad Ali</span>
-              <span className="block text-[10px] text-slate-400 font-medium tracking-wider uppercase">Procurement & Systems</span>
+              <span className="font-bold text-lg tracking-tight text-white group-hover:text-purple-400 transition-colors">Sajjad Ali Ansari</span>
+              <span className="block text-[10px] text-slate-400 font-medium tracking-wider uppercase">SSCC Procurement</span>
             </div>
           </a>
 
-          <div className="hidden lg:flex items-center space-x-7">
+          <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="text-sm font-medium text-slate-300 hover:text-purple-400 transition-colors">
+              <a key={link.href} href={link.href} className="text-sm font-medium text-slate-300 hover:text-purple-400 transition-colors">
                 {link.name}
               </a>
             ))}
           </div>
 
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
+            {/* Language Toggle Button */}
+            <button 
+              onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
+              className="px-3 py-2 rounded-xl bg-[#12121A] border border-purple-500/30 text-purple-400 text-xs font-bold hover:bg-purple-600/20 transition-all flex items-center space-x-1.5"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{lang === 'en' ? 'العربية' : 'English'}</span>
+            </button>
+
             <a href={cvLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm shadow-lg hover:opacity-90 transition-all flex items-center space-x-2">
               <Download className="w-4 h-4" />
-              <span>Download CV</span>
+              <span>{t.downloadCv}</span>
             </a>
           </div>
 
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center space-x-2">
+            <button 
+              onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
+              className="px-2.5 py-1.5 rounded-lg bg-[#12121A] border border-purple-500/30 text-purple-400 text-xs font-bold"
+            >
+              {lang === 'en' ? 'AR' : 'EN'}
+            </button>
             <button onClick={() => setNavOpen(!navOpen)} className="text-slate-300 hover:text-white p-2">
               {navOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -179,13 +220,13 @@ export default function App() {
         {navOpen && (
           <div className="lg:hidden bg-[#12121A] border-b border-purple-500/20 px-4 pt-3 pb-6 space-y-3 mt-3">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} onClick={() => setNavOpen(false)} className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-purple-600/20 hover:text-purple-400">
+              <a key={link.href} href={link.href} onClick={() => setNavOpen(false)} className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-purple-600/20 hover:text-purple-400">
                 {link.name}
               </a>
             ))}
             <div className="pt-2">
               <a href={cvLink} target="_blank" rel="noopener noreferrer" className="w-full text-center block py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold shadow-lg">
-                Download CV
+                {t.downloadCv}
               </a>
             </div>
           </div>
@@ -202,36 +243,36 @@ export default function App() {
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Available in Riyadh, Saudi Arabia</span>
+                <span>{t.location}</span>
               </div>
 
               <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Sajjad Ali</span>
+                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Sajjad Ali Ansari</span>
               </h1>
 
               <p className="text-xl sm:text-2xl font-medium text-slate-300">
-                Procurement & Purchasing Professional | Document Control & Odoo ERP Specialist
+                {t.roleTitle}
               </p>
 
               <p className="text-base text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                Organized procurement specialist with practical experience in RFQs, Purchase Orders, supplier follow-ups, and advanced data management using Odoo ERP and Excel tracking systems at Scientific Systems Construction Company (SSCC).
+                {t.heroDesc}
               </p>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
                 <a href={cvLink} target="_blank" rel="noopener noreferrer" className="px-7 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center space-x-2">
                   <Download className="w-4 h-4" />
-                  <span>Download CV</span>
+                  <span>{t.downloadCv}</span>
                 </a>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="px-7 py-3.5 rounded-xl bg-[#12121A] border border-purple-500/20 text-slate-200 font-bold text-sm hover:border-emerald-500 hover:text-emerald-400 transition-all flex items-center space-x-2">
                   <MessageCircle className="w-4 h-4 text-emerald-400" />
-                  <span>WhatsApp Chat</span>
+                  <span>{t.whatsappChat}</span>
                 </a>
               </div>
 
               <div className="pt-6 flex items-center justify-center lg:justify-start space-x-6 text-slate-400 text-sm">
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4 text-purple-400" />
-                  <span>Riyadh, Saudi Arabia</span>
+                  <span>{t.location}</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
@@ -265,11 +306,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Me</span>
+              {t.aboutTitle}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
             <p className="text-slate-400 text-base sm:text-lg">
-              Dedicated procurement professional and document control specialist based in Riyadh, bridging operational logistics with advanced ERP management.
+              {t.aboutDesc}
             </p>
           </div>
 
@@ -277,13 +318,13 @@ export default function App() {
             <div className="lg:col-span-6 bg-[#12121A] p-8 rounded-2xl border border-purple-500/20 space-y-4">
               <h3 className="text-xl font-bold text-white flex items-center space-x-3">
                 <Briefcase className="w-6 h-6 text-purple-400" />
-                <span>Professional Background</span>
+                <span>Professional Background / الخلفية المهنية</span>
               </h3>
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                Organized Procurement professional with proven practical experience in handling Requests for Quotations (RFQs), Purchase Orders (POs), supplier follow-ups, and procurement records. Currently contributing expertise at <strong>Scientific Systems Construction Company (SSCC)</strong> in Riyadh.
+                Organized Procurement professional with proven practical experience in handling Requests for Quotations (RFQs), Purchase Orders (POs), supplier follow-ups, and procurement records at <strong>Scientific Systems Construction Company (SSCC)</strong>.
               </p>
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                Equipped with strong foundational skills in computer applications (DCA) and comprehensive administrative diplomas, blending accurate data tracking with efficient supplier communication.
+                أخصائي مشريات ذو خبرة عملية في إدارة أوامر الشراء، طلبات الأسعار، ومتابعة الموردين في شركة الأنظمة العلمية للمقاولات بالرياض.
               </p>
             </div>
 
@@ -293,7 +334,7 @@ export default function App() {
                 <span>Core Strengths & Expertise</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["Expert in Odoo ERP (RFQs & POs)", "Advanced Excel PO Tracking", "Professional Document Control", "Supplier & Vendor Management"].map((item, idx) => (
+                {["Odoo ERP (RFQs & POs)", "Advanced Excel Tracking", "Document Control & Archiving", "Supplier & Vendor Management"].map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-3 p-3 rounded-xl bg-[#08080D] border border-purple-500/10">
                     <CheckCircle className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
                     <span className="text-sm font-medium text-slate-200">{item}</span>
@@ -310,7 +351,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Skills</span>
+              {t.skillsTitle}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
           </div>
@@ -336,7 +377,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Certifications & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Qualifications</span>
+              {t.certTitle}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
           </div>
@@ -361,10 +402,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Projects & Systems</span>
+              {t.projTitle}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
-            <p className="text-slate-400 text-base">Real-world procurement logs and ERP tracking systems implemented at SSCC.</p>
+            <p className="text-slate-400 text-base">{t.projDesc}</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -400,7 +441,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Experience</span>
+              {t.expTitle}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
           </div>
@@ -430,7 +471,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Background</span>
+              {t.eduTitle}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
           </div>
@@ -458,7 +499,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Touch</span>
+              {t.getInTouch}
             </h2>
             <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
             <p className="text-slate-400 text-base">Feel free to reach out for procurement roles or professional inquiries in Riyadh.</p>
@@ -472,7 +513,7 @@ export default function App() {
                 </div>
                 <div className="text-left">
                   <p className="text-xs text-slate-400 uppercase font-semibold">Location</p>
-                  <p className="text-sm font-bold">Riyadh, Saudi Arabia</p>
+                  <p className="text-sm font-bold">{t.location}</p>
                 </div>
               </div>
 
@@ -500,11 +541,11 @@ export default function App() {
             <div className="pt-6 border-t border-slate-800 flex justify-center gap-4">
               <a href={cvLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center space-x-2">
                 <Download className="w-4 h-4" />
-                <span>Download CV</span>
+                <span>{t.downloadCv}</span>
               </a>
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center space-x-2">
                 <MessageCircle className="w-4 h-4" />
-                <span>Chat on WhatsApp</span>
+                <span>{t.whatsappChat}</span>
               </a>
             </div>
           </div>
@@ -513,7 +554,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-8 border-t border-slate-800 text-center text-slate-500 text-sm bg-[#12121A]/30">
-        <p>© {new Date().getFullYear()} Sajjad Ali. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Sajjad Ali Ansari. All rights reserved.</p>
       </footer>
     </div>
   );
