@@ -324,4 +324,143 @@ export default function App() {
                     </span>
                   </div>
                   <div className="p-6 space-y-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">{proj.title}</h3>
+                    <p className="text-slate-300 text-sm leading-relaxed">{proj.desc}</p>
+                  </div>
+                </div>
+                <div className="p-6 pt-0 flex flex-wrap gap-1.5">
+                  {proj.tags.map((t, tIdx) => (
+                    <span key={tIdx} className="px-2.5 py-1 rounded-lg bg-purple-600/10 text-purple-400 text-xs font-medium border border-purple-500/20">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Work <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Experience</span>
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="bg-[#12121A] p-8 rounded-2xl border border-purple-500/20 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                    <p className="text-purple-400 font-semibold">{exp.company}</p>
+                  </div>
+                  <div className="text-xs text-slate-400 space-y-1 sm:text-right">
+                    <span className="inline-block bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20 font-medium">{exp.period}</span>
+                    <p className="flex items-center sm:justify-end space-x-1 pt-1"><MapPin className="w-3.5 h-3.5" /><span>{exp.location}</span></p>
+                  </div>
+                </div>
+                <p className="text-slate-300 text-sm leading-relaxed">{exp.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-24 bg-[#12121A]/50 border-t border-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Background</span>
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
+          </div>
+
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            {education.map((edu, idx) => (
+              <div key={idx} className="bg-[#12121A] p-8 rounded-2xl border border-purple-500/20 space-y-4">
+                <div className="w-12 h-12 rounded-xl bg-purple-600/10 flex items-center justify-center text-purple-400">
+                  <GraduationCap className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">{edu.degree}</h3>
+                <p className="text-purple-400 font-semibold text-sm">{edu.institution}</p>
+                <p className="text-slate-300 text-sm leading-relaxed">{edu.desc}</p>
+                <div className="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800">
+                  <span>{edu.period}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Touch</span>
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
+            <p className="text-slate-400 text-base">Feel free to reach out for procurement roles or professional inquiries in Riyadh.</p>
+          </div>
+
+          <div className="max-w-3xl mx-auto bg-[#12121A] p-8 rounded-2xl border border-purple-500/20 text-center space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="flex items-center space-x-3 text-slate-200">
+                <div className="w-10 h-10 rounded-xl bg-purple-600/10 flex items-center justify-center text-purple-400 shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-slate-400 uppercase font-semibold">Location</p>
+                  <p className="text-sm font-bold">Riyadh, Saudi Arabia</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3 text-slate-200">
+                <div className="w-10 h-10 rounded-xl bg-purple-600/10 flex items-center justify-center text-purple-400 shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-slate-400 uppercase font-semibold">WhatsApp</p>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-emerald-400 hover:underline">+966 54 247 5245</a>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3 text-slate-200">
+                <div className="w-10 h-10 rounded-xl bg-purple-600/10 flex items-center justify-center text-purple-400 shrink-0">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xs text-slate-400 uppercase font-semibold">Company</p>
+                  <p className="text-sm font-bold">SSCC</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-6 border-t border-slate-800 flex justify-center gap-4">
+              <a href={cvLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center space-x-2">
+                <Download className="w-4 h-4" />
+                <span>Download CV</span>
+              </a>
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm shadow-lg hover:scale-105 transition-all flex items-center space-x-2">
+                <MessageCircle className="w-4 h-4" />
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 border-t border-slate-800 text-center text-slate-500 text-sm bg-[#12121A]/30">
+        <p>© {new Date().getFullYear()} Sajjad Ali. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
