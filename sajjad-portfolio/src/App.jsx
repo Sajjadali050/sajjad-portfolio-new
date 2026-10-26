@@ -45,6 +45,34 @@ export default function App() {
     }
   ];
 
+  const certificates = [
+    {
+      title: "Procurement",
+      issuer: "Alison",
+      desc: "Learner Verification Certificate in core procurement processes and supplier management principles."
+    },
+    {
+      title: "Odoo Purchase",
+      issuer: "Odoo eLearning",
+      desc: "Completed official course on Odoo Purchase module, RFQs, and automated order workflows."
+    },
+    {
+      title: "Introduction to Electronic Document Management",
+      issuer: "Alison",
+      desc: "Learner Verification Certificate focusing on digital document control, versioning, and archiving."
+    },
+    {
+      title: "Professional Diploma in Administration Management",
+      issuer: "MTF Institute / Udemy",
+      desc: "Advanced professional training in administrative organization, operations, and management."
+    },
+    {
+      title: "Microsoft Office (Word, Excel, PowerPoint)",
+      issuer: "Udemy",
+      desc: "Comprehensive certification covering advanced office automation, spreadsheets, and presentations."
+    }
+  ];
+
   const skills = [
     { name: "Odoo ERP (RFQs & POs)", level: 90, category: "ERP & Procurement" },
     { name: "Microsoft Excel (Advanced Tracking)", level: 95, category: "Data Management" },
@@ -90,6 +118,7 @@ export default function App() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Certificates', href: '#certificates' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Education', href: '#education' },
@@ -302,8 +331,33 @@ export default function App() {
         </div>
       </section>
 
+      {/* Certificates Section */}
+      <section id="certificates" className="py-24 bg-[#12121A]/50 border-t border-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+              Certifications & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Qualifications</span>
+            </h2>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto rounded-full mb-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certificates.map((cert, idx) => (
+              <div key={idx} className="bg-[#12121A] p-8 rounded-2xl border border-purple-500/20 space-y-4 hover:border-purple-500/50 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-purple-600/10 flex items-center justify-center text-purple-400">
+                  <Award className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-white">{cert.title}</h3>
+                <p className="text-purple-400 font-semibold text-sm">{cert.issuer}</p>
+                <p className="text-slate-300 text-sm leading-relaxed">{cert.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-24 bg-[#12121A]/50 border-t border-purple-500/10">
+      <section id="projects" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
@@ -342,7 +396,7 @@ export default function App() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24">
+      <section id="experience" className="py-24 bg-[#12121A]/50 border-t border-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
@@ -372,7 +426,7 @@ export default function App() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-24 bg-[#12121A]/50 border-t border-purple-500/10">
+      <section id="education" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
@@ -400,7 +454,7 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24">
+      <section id="contact" className="py-24 bg-[#12121A]/50 border-t border-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
