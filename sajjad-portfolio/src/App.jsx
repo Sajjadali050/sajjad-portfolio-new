@@ -8,7 +8,7 @@ import {
 export default function App() {
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [lang, setLang] = useState('en'); // 'en' or 'ar'
+  const [lang, setLang] = useState('en');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +22,6 @@ export default function App() {
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
   const whatsappLink = "https://wa.me/966542475245";
 
-  // Content dictionary for English and Arabic toggle
   const content = {
     en: {
       roleTitle: "Procurement & Purchasing Professional | Document Control & Odoo ERP Specialist",
@@ -41,7 +40,9 @@ export default function App() {
       location: "Riyadh, Saudi Arabia",
       company: "Scientific Systems Construction Company (SSCC)",
       downloadCv: "Download CV",
-      whatsappChat: "Chat on WhatsApp"
+      whatsappChat: "Chat on WhatsApp",
+      englishBtn: "English",
+      arabicBtn: "العربية"
     },
     ar: {
       roleTitle: "أخصائي المشتريات والتموين | مراقبة الوثائق وأخصائي نظام Odoo ERP",
@@ -60,7 +61,9 @@ export default function App() {
       location: "الرياض، المملكة العربية السعودية",
       company: "شركة الأنظمة العلمية للمقاولات (SSCC)",
       downloadCv: "تحميل السيرة الذاتية",
-      whatsappChat: "مراسلة عبر واتساب"
+      whatsappChat: "مراسلة عبر واتساب",
+      englishBtn: "English",
+      arabicBtn: "العربية"
     }
   };
 
@@ -70,22 +73,22 @@ export default function App() {
     {
       title: "Project Fanar - Inventory & Material Control",
       client: "Scientific Systems Construction Company (SSCC)",
-      desc: "Real-time stock level tracking system for sewer materials, rubber rings, and safety equipment with dynamic balance formulas.",
-      tags: ["Odoo ERP", "Advanced Excel", "Material Tracking"],
+      desc: "Real-time stock level tracking system for sewer materials, rubber rings, and safety equipment with dynamic balance formulas using Odoo ERP and Excel.",
+      tags: ["Odoo ERP", "Advanced Excel", "Material Tracking", "Inventory"],
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
     },
     {
       title: "Project B.V.4 - Procurement & Material Log",
       client: "Scientific Systems Construction Company (SSCC)",
-      desc: "Comprehensive procurement log tracking UPVC pipes, fittings, and safety gear with rigorous balance verification.",
-      tags: ["Procurement", "Excel Logs", "Supplier Follow-up"],
+      desc: "Comprehensive procurement log tracking UPVC pipes, fittings, and safety gear with rigorous balance verification using Odoo and Excel logs.",
+      tags: ["Procurement", "Excel Logs", "Supplier Follow-up", "Material Log"],
       image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800"
     },
     {
       title: "Project Homes - MSR & PO Tracking Log",
       client: "Scientific Systems Construction Company (SSCC)",
-      desc: "Material Status Request (MSR) and Purchase Order (PO) tracking mechanism managing supplier payments and advance percentages.",
-      tags: ["Odoo Purchase", "Payment Logs", "Vendor Management"],
+      desc: "Material Status Request (MSR) and Purchase Order (PO) tracking mechanism managing supplier payments and advance percentages implemented at SSCC.",
+      tags: ["Odoo Purchase", "Payment Logs", "Vendor Management", "MSR"],
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
     }
   ];
@@ -189,13 +192,12 @@ export default function App() {
           </div>
 
           <div className="hidden lg:flex items-center space-x-3">
-            {/* Language Toggle Button */}
             <button 
               onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
               className="px-3 py-2 rounded-xl bg-[#12121A] border border-purple-500/30 text-purple-400 text-xs font-bold hover:bg-purple-600/20 transition-all flex items-center space-x-1.5"
             >
               <Globe className="w-4 h-4" />
-              <span>{lang === 'en' ? 'العربية' : 'English'}</span>
+              <span>{lang === 'en' ? t.arabicBtn : t.englishBtn}</span>
             </button>
 
             <a href={cvLink} target="_blank" rel="noopener noreferrer" className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold text-sm shadow-lg hover:opacity-90 transition-all flex items-center space-x-2">
@@ -318,10 +320,10 @@ export default function App() {
             <div className="lg:col-span-6 bg-[#12121A] p-8 rounded-2xl border border-purple-500/20 space-y-4">
               <h3 className="text-xl font-bold text-white flex items-center space-x-3">
                 <Briefcase className="w-6 h-6 text-purple-400" />
-                <span>Professional Background / الخلفية المهنية</span>
+                <span>Professional Background</span>
               </h3>
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
-                Organized Procurement professional with proven practical experience in handling Requests for Quotations (RFQs), Purchase Orders (POs), supplier follow-ups, and procurement records at <strong>Scientific Systems Construction Company (SSCC)</strong>.
+                Organized Procurement professional with proven practical experience in handling Requests for Quotations (RFQs), Purchase Orders (POs), supplier follow-ups, and procurement records at <strong>Scientific Systems Construction Company (SSCC)</strong> in Riyadh.
               </p>
               <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
                 أخصائي مشريات ذو خبرة عملية في إدارة أوامر الشراء، طلبات الأسعار، ومتابعة الموردين في شركة الأنظمة العلمية للمقاولات بالرياض.
@@ -334,7 +336,7 @@ export default function App() {
                 <span>Core Strengths & Expertise</span>
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["Odoo ERP (RFQs & POs)", "Advanced Excel Tracking", "Document Control & Archiving", "Supplier & Vendor Management"].map((item, idx) => (
+                {["Odoo ERP (RFQs & POs)", "Advanced Excel Tracking", "Professional Document Control", "Supplier & Vendor Management"].map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-3 p-3 rounded-xl bg-[#08080D] border border-purple-500/10">
                     <CheckCircle className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
                     <span className="text-sm font-medium text-slate-200">{item}</span>
