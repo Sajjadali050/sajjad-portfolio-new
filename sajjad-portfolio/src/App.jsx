@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   FileText, Database, ShieldCheck, Mail, Phone, MapPin, 
-  Download, Menu, X, CheckCircle2, Award, GraduationCap, Briefcase
+  Download, Menu, X, CheckCircle2, Award, GraduationCap, Briefcase, ExternalLink, Wrench
 } from 'lucide-react';
 
 export default function App() {
@@ -12,24 +12,68 @@ export default function App() {
   // Profile photo direct link
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg"; 
 
+  const experiences = [
+    {
+      role: "Procurement & Systems Specialist",
+      company: "Scientific Systems Construction Company (SSCC)",
+      location: "Riyadh, Saudi Arabia",
+      period: "2023 - Present",
+      points: [
+        "Odoo ERP purchase & inventory modules ko efficiently manage aur streamline kiya.",
+        "Supplier follow-ups, RFQs create karna, Purchase Orders (PO) issue karna, aur MSR tracking ko strictly maintain kiya.",
+        "UPVC pipes, rubbers, safety equipment, aur civil materials ki dynamic stock balance tracking sheet design ki."
+      ]
+    },
+    {
+      role: "Document Controller & Material Specialist",
+      company: "SSCC Contracting",
+      location: "Saudi Arabia",
+      period: "2021 - 2023",
+      points: [
+        "Project Fanar aur Project B.V.4 ke saare material submittals, inspection logs, aur client transmittals store & audit kiye.",
+        "Advanced Excel formulas (VLOOKUP, SUMIFS, Dynamic Balances) ki madad se physical stock audit & reconciliation report ready ki."
+      ]
+    }
+  ];
+
+  const education = [
+    {
+      degree: "Bachelor's Degree",
+      institution: "Recognized University",
+      year: "2018 - 2021",
+      desc: "Specialized in Logistics, Supply Chain Management & Business Operations."
+    }
+  ];
+
+  const skills = [
+    "Odoo ERP (Purchase & Inventory)",
+    "Advanced Microsoft Excel",
+    "Material Control & Log Management",
+    "RFQ & Purchase Order (PO) Processing",
+    "Vendor & Supplier Relations",
+    "Inventory Balance Reconciliation",
+    "Document Control & Inspection Logs",
+    "Procurement Compliance"
+  ];
+
   const projects = [
     {
       title: "Project Fanar - Inventory & Material Control",
-      client: "Scientific Systems Construction Company (SSCC)",
+      client: "SSCC",
       desc: "Real-time stock level tracking system for sewer materials, rubber rings, and safety equipment with dynamic balance formulas.",
       tags: ["Odoo ERP", "Advanced Excel", "Material Tracking"],
       image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
     },
     {
       title: "Project B.V.4 - Procurement & Material Log",
-      client: "Scientific Systems Construction Company (SSCC)",
+      client: "SSCC",
       desc: "Detailed procurement log managing UPVC pipes, couplings, and safety gear with strict balance reconciliation.",
       tags: ["Procurement ERP", "Excel Dashboards", "Safety Logs"],
       image: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800"
     },
     {
       title: "Project Homes - MSR & Purchase Order Tracking",
-      client: "Scientific Systems Construction Company (SSCC)",
+      client: "SSCC",
       desc: "End-to-end MSR and PO tracking system for monitoring advance payments, vendor delivery schedules, and payment terms.",
       tags: ["Odoo Purchase", "PO Tracking", "Vendor Management"],
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
@@ -54,8 +98,9 @@ export default function App() {
           <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
             <a href="#about" className="hover:text-[#8B5CF6] transition-colors">About</a>
             <a href="#skills" className="hover:text-[#8B5CF6] transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-[#8B5CF6] transition-colors">Projects</a>
             <a href="#experience" className="hover:text-[#8B5CF6] transition-colors">Experience</a>
+            <a href="#education" className="hover:text-[#8B5CF6] transition-colors">Education</a>
+            <a href="#projects" className="hover:text-[#8B5CF6] transition-colors">Projects</a>
             <a href="#contact" className="hover:text-[#8B5CF6] transition-colors">Contact</a>
           </div>
 
@@ -73,10 +118,29 @@ export default function App() {
             {navOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+
+        {/* Mobile menu */}
+        {navOpen && (
+          <div className="md:hidden bg-[#08080D] border-b border-[#8B5CF6]/20 px-4 pt-4 pb-6 space-y-3 flex flex-col text-slate-300 font-medium">
+            <a href="#about" onClick={() => setNavOpen(false)} className="hover:text-[#8B5CF6]">About</a>
+            <a href="#skills" onClick={() => setNavOpen(false)} className="hover:text-[#8B5CF6]">Skills</a>
+            <a href="#experience" onClick={() => setNavOpen(false)} className="hover:text-[#8B5CF6]">Experience</a>
+            <a href="#education" onClick={() => setNavOpen(false)} className="hover:text-[#8B5CF6]">Education</a>
+            <a href="#projects" onClick={() => setNavOpen(false)} className="hover:text-[#8B5CF6]">Projects</a>
+            <a href="#contact" onClick={() => setNavOpen(false)} className="hover:text-[#8B5CF6]">Contact</a>
+            <button 
+              onClick={() => { setNavOpen(false); setShowCvModal(true); }} 
+              className="mt-2 w-full py-2.5 rounded-xl bg-[#8B5CF6] text-white font-semibold text-sm flex items-center justify-center space-x-2"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download CV</span>
+            </button>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[85vh] flex items-center">
+      <section id="about" className="pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-[85vh] flex items-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 text-[#8B5CF6] text-xs font-semibold">
@@ -122,8 +186,87 @@ export default function App() {
         </div>
       </section>
 
+      {/* Skills Section */}
+      <section id="skills" className="py-20 bg-[#08080D]/80 border-t border-[#8B5CF6]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="text-3xl font-bold text-white">Core <span className="text-[#8B5CF6]">Skills & Expertise</span></h2>
+            <div className="w-16 h-1 bg-[#8B5CF6] mx-auto mt-3 rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            {skills.map((skill, idx) => (
+              <div key={idx} className="bg-[#12121A] p-5 rounded-xl border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/60 transition-all flex items-center space-x-3">
+                <Wrench className="w-5 h-5 text-[#8B5CF6] shrink-0" />
+                <span className="text-sm font-medium text-slate-200">{skill}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#8B5CF6]/10">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-white">Work <span className="text-[#8B5CF6]">Experience</span></h2>
+          <div className="w-16 h-1 bg-[#8B5CF6] mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div className="space-y-8 max-w-4xl mx-auto">
+          {experiences.map((exp, idx) => (
+            <div key={idx} className="bg-[#12121A] p-6 sm:p-8 rounded-2xl border border-[#8B5CF6]/20 space-y-4 hover:border-[#8B5CF6]/50 transition-all">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                  <p className="text-[#8B5CF6] font-medium text-sm">{exp.company} • <span className="text-slate-400">{exp.location}</span></p>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-[#8B5CF6]/10 text-[#8B5CF6] text-xs font-semibold border border-[#8B5CF6]/20 self-start sm:self-center">
+                  {exp.period}
+                </span>
+              </div>
+              <ul className="space-y-2 text-slate-300 text-sm">
+                {exp.points.map((pt, pIdx) => (
+                  <li key={pIdx} className="flex items-start space-x-2">
+                    <span className="text-[#8B5CF6] mt-1">•</span>
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="py-20 bg-[#08080D]/80 border-t border-[#8B5CF6]/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold text-white">Education & <span className="text-[#8B5CF6]">Qualifications</span></h2>
+            <div className="w-16 h-1 bg-[#8B5CF6] mx-auto mt-3 rounded-full"></div>
+          </div>
+
+          <div className="max-w-3xl mx-auto grid grid-cols-1 gap-6">
+            {education.map((edu, idx) => (
+              <div key={idx} className="bg-[#12121A] p-6 rounded-2xl border border-[#8B5CF6]/20 flex items-start space-x-4">
+                <div className="p-3 bg-[#8B5CF6]/10 rounded-xl text-[#8B5CF6] shrink-0">
+                  <GraduationCap className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="flex items-center justify-between w-full">
+                    <h3 className="text-lg font-bold text-white">{edu.degree}</h3>
+                    <span className="text-xs text-[#8B5CF6] font-semibold">{edu.year}</span>
+                  </div>
+                  <p className="text-slate-400 text-sm font-medium">{edu.institution}</p>
+                  <p className="text-slate-300 text-sm mt-2">{edu.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-24 bg-[#08080D]/50 border-t border-[#8B5CF6]/10">
+      <section id="projects" className="py-20 border-t border-[#8B5CF6]/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold text-white">Featured <span className="text-[#8B5CF6]">Projects</span></h2>
@@ -155,7 +298,7 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-[#8B5CF6]/10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-white">Get In <span className="text-[#8B5CF6]">Touch</span></h2>
           <div className="w-16 h-1 bg-[#8B5CF6] mx-auto mt-3 rounded-full"></div>
