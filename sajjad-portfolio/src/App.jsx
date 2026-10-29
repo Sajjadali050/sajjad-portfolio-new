@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  FileText, Database, ShieldCheck, Mail, Phone, MapPin, 
-  Download, Menu, X, CheckCircle2, Award, GraduationCap, Briefcase, 
-  ArrowUpRight, FileSpreadsheet, Layers, Cpu, CheckCircle, Calendar, MessageCircle, Globe
-} from 'lucide-react';
 
 export default function App() {
+  const [lang, setLang] = useState('en');
   const [navOpen, setNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [lang, setLang] = useState('en');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,550 +13,411 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const profilePhotoUrl = "https://imgur.com/zYbPdnl.jpg";
-  const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
-  const whatsappLink = "https://wa.me/966542475245";
-
-  const colors = {
-    bgPrimary: "#18211B",
-    bgSecondary: "#253328",
-    sageGreen: "#A3B899",
-    lightSage: "#CCE0C5",
-    creamWhite: "#F5F5F0",
-    mutedText: "#9EADA0"
+  const toggleLanguage = () => {
+    const nextLang = lang === 'en' ? 'ar' : 'en';
+    setLang(nextLang);
+    document.documentElement.lang = nextLang;
+    document.documentElement.dir = nextLang === 'ar' ? 'rtl' : 'ltr';
   };
 
-  const content = {
-    en: {
-      roleTitle: "Procurement & Purchasing Professional | Document Control & Odoo ERP Specialist",
-      heroDesc: "Organized procurement specialist with practical experience in RFQs, Purchase Orders, supplier follow-ups, and advanced data management using Odoo ERP and Excel tracking systems at Scientific Systems Construction Company (SSCC).",
-      exploreBtn: "Explore Projects",
-      contactBtn: "Contact Me",
-      aboutTitle: "About Me",
-      aboutDesc: "Dedicated procurement professional and document control specialist based in Riyadh, bridging operational logistics with advanced ERP management.",
-      skillsTitle: "Technical Skills",
-      certTitle: "Certifications & Qualifications",
-      projTitle: "Featured Projects & Tracking Systems",
-      projDesc: "Real-world procurement logs, material management dashboards, and Excel ERP tracking systems implemented at SSCC.",
-      expTitle: "Work Experience",
-      eduTitle: "Educational Background",
-      getInTouch: "Get In Touch",
-      location: "Riyadh, Saudi Arabia",
-      company: "Scientific Systems Construction Company (SSCC)",
-      downloadCv: "Download CV",
-      whatsappChat: "Chat on WhatsApp",
-      englishBtn: "English",
-      arabicBtn: "العربية"
-    },
-    ar: {
-      roleTitle: "أخصائي المشتريات والتموين | مراقبة الوثائق وأخصائي نظام Odoo ERP",
-      heroDesc: "أخصائي مشريات منظم ذو خبرة عمليّة في طلبات الأسعار (RFQs)، أوامر الشراء (POs)، متابعة الموردين، وإدارة البيانات المتقدمة باستخدام نظام Odoo و Excel في شركة الأنظمة العلمية للمقاولات (SSCC).",
-      exploreBtn: "استكشف أنظمتي",
-      contactBtn: "اتصل بي",
-      aboutTitle: "نبذة عني",
-      aboutDesc: "أخصائي مشريات محترف ومختص في مراقبة الوثائق مقيم في الرياض، أربط بين الخدمات اللوجستية والإدارة المتقدمة لأنظمة ERP.",
-      skillsTitle: "المهارات التقنية",
-      certTitle: "الشهادات والمؤهلات",
-      projTitle: "المشاريع المميزة وأنظمة التتبع",
-      projDesc: "سجلات المشتريات الواقعية، لوحات تحكم إدارة المواد، وأنظمة تتبع Odoo المطبقة في SSCC.",
-      expTitle: "خبرة العمل",
-      eduTitle: "المخزون التعليمي",
-      getInTouch: "ابق على تواصل",
-      location: "الرياض، المملكة العربية السعودية",
-      company: "شركة الأنظمة العلمية للمقاولات (SSCC)",
-      downloadCv: "تحميل السيرة الذاتية",
-      whatsappChat: "مراسلة عبر واتساب",
-      englishBtn: "English",
-      arabicBtn: "العربية"
-    }
-  };
-
-  const t = content[lang];
-
-  const projects = [
-    {
-      title: "Project Fanar - Inventory & Material Control",
-      client: "SSCC",
-      desc: "Real-time stock level tracking system for sewer materials, rubber rings, and safety equipment with dynamic balance formulas using Odoo ERP and Excel.",
-      tags: ["Odoo ERP", "Advanced Excel", "Material Tracking", "Inventory"],
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      title: "Project B.V.4 - Procurement & Material Log",
-      client: "SSCC",
-      desc: "Comprehensive procurement log tracking UPVC pipes, fittings, and safety gear with rigorous balance verification using Odoo and Excel logs.",
-      tags: ["Procurement", "Excel Logs", "Supplier Follow-up", "Material Log"],
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-      title: "Project Homes - MSR & PO Tracking Log",
-      client: "SSCC",
-      desc: "Material Status Request (MSR) and Purchase Order (PO) tracking mechanism managing supplier payments and advance percentages implemented at SSCC.",
-      tags: ["Odoo Purchase", "Payment Logs", "Vendor Management", "MSR"],
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
-    }
-  ];
-
-  const certificates = [
-    { title: "Procurement", issuer: "Alison", desc: "Learner Verification Certificate in core procurement processes and supplier management." },
-    { title: "Odoo Purchase", issuer: "Odoo eLearning", desc: "Completed official course on Odoo Purchase module, RFQs, and automated workflows." },
-    { title: "Introduction to Electronic Document Management", issuer: "Alison", desc: "Learner Verification Certificate focusing on digital document control and archiving." },
-    { title: "Professional Diploma in Administration Management", issuer: "MTF Institute / Udemy", desc: "Advanced professional training in administrative organization and operations." },
-    { title: "Microsoft Office (Word, Excel, PowerPoint)", issuer: "Udemy", desc: "Comprehensive certification covering advanced office automation and data spreadsheets." }
-  ];
-
-  const skills = [
-    { name: "Odoo ERP (RFQs & POs)", level: 90, category: "ERP & Procurement" },
-    { name: "Microsoft Excel (Advanced Tracking)", level: 95, category: "Data Management" },
-    { name: "Document Control & Versioning", level: 88, category: "Administration" },
-    { name: "Supplier Coordination & Pricing", level: 90, category: "Procurement" },
-    { name: "MS Word, PowerPoint & Outlook", level: 92, category: "Office Tools" },
-    { name: "Inventory & Stock Management", level: 89, category: "Operations" }
-  ];
-
-  const experiences = [
-    {
-      role: "Procurement / Purchasing Professional",
-      company: "Scientific Systems Construction Company (SSCC)",
-      period: "September 2026 - Present",
-      location: "Riyadh, Saudi Arabia",
-      desc: "Creating RFQs and Purchase Orders via Odoo ERP, coordinating supplier pricing and deliveries, and managing advanced Excel tracking sheets."
-    },
-    {
-      role: "Document Controller",
-      company: "Administrative Business Pattern Co.",
-      period: "September 2024 - June 2026",
-      location: "Riyadh, Saudi Arabia",
-      desc: "Managed project files, version controls, and maintained physical & electronic document archives ensuring compliance and fast retrieval."
-    }
-  ];
-
-  const education = [
-    {
-      degree: "Diploma in Computer Applications (DCA)",
-      institution: "Ruma Technical Degree College, UP",
-      period: "August 2023 - July 2024",
-      desc: "Comprehensive training in MS Office suite, advanced Excel, database management, and computer fundamentals."
-    },
-    {
-      degree: "High School (10th Pass)",
-      institution: "Allahabad Board, India",
-      period: "2013",
-      desc: "Completed secondary education with foundational academic subjects."
-    }
-  ];
-
-  const navLinks = [
-    { name: lang === 'ar' ? 'الرئيسية' : 'Home', href: '#home' },
-    { name: lang === 'ar' ? 'عني' : 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: lang === 'ar' ? 'الشهادات' : 'Certificates', href: '#certificates' },
-    { name: lang === 'ar' ? 'المشاريع' : 'Projects', href: '#projects' },
-    { name: lang === 'ar' ? 'الخبرة' : 'Experience', href: '#experience' },
-    { name: lang === 'ar' ? 'التعليم' : 'Education', href: '#education' },
-    { name: lang === 'ar' ? 'اتصل بنا' : 'Contact', href: '#contact' },
-  ];
+  const isAr = lang === 'ar';
 
   return (
-    <div style={{ backgroundColor: colors.bgPrimary, color: colors.creamWhite }} className={`min-h-screen font-sans relative ${lang === 'ar' ? 'rtl' : 'ltr'}`}>
+    <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
       
-      <a 
-        href={whatsappLink} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group font-bold"
-        title="Chat on WhatsApp"
-      >
-        <MessageCircle className="w-7 h-7" />
-        <span style={{ backgroundColor: colors.bgSecondary, color: colors.creamWhite, borderColor: `${colors.sageGreen}40` }} className="absolute right-16 text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border">
-          {t.whatsappChat}
-        </span>
-      </a>
-
-      <nav style={{ backgroundColor: scrolled ? `${colors.bgPrimary}F0` : 'transparent', borderColor: `${colors.sageGreen}30` }} className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'backdrop-blur-md border-b py-3 shadow-lg' : 'py-5'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <a href="#home" className="flex items-center space-x-2 group">
-            <div style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }} className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg font-extrabold text-lg">
+      {/* Topbar / Navigation */}
+      <header className="sticky top-0 z-20 bg-[#0B0B12]/90 border-b border-[#59447A]/38 backdrop-blur-md">
+        <div className="max-w-[1160px] mx-auto px-5 min-h-[76px] flex items-center justify-between gap-5">
+          <a href="#home" className="flex items-center gap-3">
+            <div className="h-[42px] w-[42px] rounded-[13px] grid place-items-center bg-gradient-to-br from-[#7C3AED] to-[#C4B5FD] text-[#100B1B] font-black tracking-tighter">
               SA
             </div>
             <div>
-              <span style={{ color: colors.creamWhite }} className="font-bold text-lg tracking-tight">Sajjad Ali Ansari</span>
-              <span style={{ color: colors.mutedText }} className="block text-[10px] font-medium tracking-wider uppercase">SSCC Procurement</span>
+              <span className="text-[0.96rem] font-extrabold leading-tight block">Sajjad Ali Ansari</span>
+              <span className="text-stone-400 text-[0.68rem] font-semibold tracking-wider uppercase block mt-1">
+                {isAr ? 'المشتريات والأنظمة' : 'Procurement & Systems'}
+              </span>
             </div>
           </a>
 
-          <div className="hidden lg:flex items-center space-x-6">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} style={{ color: colors.mutedText }} className="text-sm font-medium hover:opacity-80 transition-opacity">
-                {link.name}
-              </a>
-            ))}
-          </div>
+          <nav className={`lg:flex items-center gap-[22px] text-[#D7CFE8] text-[0.87rem] ${navOpen ? 'flex flex-col absolute top-[68px] left-0 right-0 p-5 bg-[#100D17] border-b border-[#30263F]' : 'hidden lg:flex'}`}>
+            <a href="#about" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'نبذة' : 'About'}</a>
+            <a href="#skills" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'المهارات' : 'Skills'}</a>
+            <a href="#projects" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'المشاريع' : 'Projects'}</a>
+            <a href="#experience" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'الخبرة' : 'Experience'}</a>
+            <a href="#education" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'التعليم' : 'Education'}</a>
+            <a href="#contact" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'التواصل' : 'Contact'}</a>
+          </nav>
 
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="flex items-center gap-2.5">
             <button 
-              onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-              style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}40`, color: colors.sageGreen }}
-              className="px-3 py-2 rounded-xl border text-xs font-bold transition-all flex items-center space-x-1.5"
+              onClick={toggleLanguage} 
+              className="border border-[#493765] bg-[#171321] text-[#f3f6fb] px-3.5 py-2.5 rounded-xl cursor-pointer font-bold text-xs hover:border-[#8B5CF6] transition-colors"
             >
-              <Globe className="w-4 h-4" />
-              <span>{lang === 'en' ? t.arabicBtn : t.englishBtn}</span>
+              {isAr ? 'English' : 'العربية'}
             </button>
-
-            <a href={cvLink} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }} className="px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg transition-all flex items-center space-x-2">
-              <Download className="w-4 h-4" />
-              <span>{t.downloadCv}</span>
-            </a>
-          </div>
-
-          <div className="lg:hidden flex items-center space-x-2">
             <button 
-              onClick={() => setLang(lang === 'en' ? 'ar' : 'en')}
-              style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}40`, color: colors.sageGreen }}
-              className="px-2.5 py-1.5 rounded-lg border text-xs font-bold"
+              onClick={() => setNavOpen(!navOpen)} 
+              className="lg:hidden border border-[#493765] bg-[#171321] text-[#f3f6fb] p-2.5 rounded-xl cursor-pointer font-bold"
             >
-              {lang === 'en' ? 'AR' : 'EN'}
-            </button>
-            <button onClick={() => setNavOpen(!navOpen)} style={{ color: colors.mutedText }} className="p-2">
-              {navOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {navOpen ? '✕' : '☰'}
             </button>
           </div>
         </div>
+      </header>
 
-        {navOpen && (
-          <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="lg:hidden border-b px-4 pt-3 pb-6 space-y-3 mt-3">
-            {navLinks.map((link) => (
-              <a key={link.href} href={link.href} onClick={() => setNavOpen(false)} style={{ color: colors.creamWhite }} className="block px-3 py-2 rounded-lg text-base font-medium">
-                {link.name}
-              </a>
-            ))}
-            <div className="pt-2">
-              <a href={cvLink} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }} className="w-full text-center block py-2.5 rounded-xl font-semibold shadow-lg">
-                {t.downloadCv}
-              </a>
-            </div>
-          </div>
-        )}
-      </nav>
-
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen pt-32 pb-20 flex items-center relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}40`, color: colors.sageGreen }} className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>{t.location}</span>
+      <main>
+        {/* Hero Section */}
+        <section id="home" className="py-[74px] px-5 max-w-[1160px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-[54px] items-center">
+            <div>
+              <div className="inline-flex items-center gap-2.5 border border-[#3B2B5C] bg-[#2C1A4E]/50 px-3 py-1.5 rounded-full text-[#E9DDFF] text-[0.78rem] font-bold">
+                <span className="w-1.75 h-1.75 rounded-full bg-[#57dfad] shadow-[0_0_0_4px_rgba(87,223,173,0.1)] inline-block"></span>
+                {isAr ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}
               </div>
 
-              <h1 style={{ color: colors.creamWhite }} className="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
-                Hi, I'm <span style={{ color: colors.sageGreen }}>Sajjad Ali Ansari</span>
+              <h1 className="text-[clamp(2.75rem,6vw,5rem)] tracking-tight leading-[1.05] my-6 font-extrabold">
+                {isAr ? (
+                  <>مسؤول مشتريات <span className="block text-[#8B5CF6]">وتوريد</span></>
+                ) : (
+                  <>Procurement & <span className="block text-[#8B5CF6]">Purchasing Officer</span></>
+                )}
               </h1>
 
-              <p style={{ color: colors.mutedText }} className="text-xl sm:text-2xl font-medium">
-                {t.roleTitle}
+              <p className="text-[#C2B8D4] text-[1.07rem] max-w-[660px] mb-6 leading-relaxed">
+                {isAr 
+                  ? 'متخصص في المشتريات والتوريد، لديه خبرة عملية في طلبات عروض الأسعار وأوامر الشراء ومتابعة الموردين وتتبع المواد وضبط المستندات باستخدام نظام Odoo ERP وجداول Excel.'
+                  : 'Procurement and purchasing professional with practical experience in RFQs, purchase orders, supplier follow-ups, material tracking, and document control using Odoo ERP and Excel-based tracking systems.'}
               </p>
 
-              <p style={{ color: colors.mutedText }} className="text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                {t.heroDesc}
-              </p>
+              <div className="flex gap-2.5 flex-wrap mb-8">
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Odoo ERP</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & POs</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel Tracking</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</span>
+              </div>
 
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                <a href="#projects" style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }} className="px-6 py-3 rounded-xl font-bold text-sm shadow-md transition-all flex items-center space-x-2">
-                  <span>{t.exploreBtn}</span>
-                  <ArrowUpRight className="w-4 h-4" />
+              <div className="flex gap-3 flex-wrap">
+                <a href="Sajjad_Ali_Ansari_CV.pdf" download className="inline-flex items-center gap-2.5 min-h-[48px] px-5 rounded-[13px] font-bold text-sm bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] text-white shadow-lg shadow-purple-900/30 hover:-translate-y-0.5 transition-all">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+                  {isAr ? 'تحميل السيرة الذاتية (PDF)' : 'Download CV (PDF)'}
                 </a>
-                <a href="#contact" style={{ borderColor: `${colors.mutedText}60`, color: colors.creamWhite }} className="px-6 py-3 rounded-xl bg-transparent border font-bold text-sm transition-all flex items-center space-x-2">
-                  <span>{t.contactBtn}</span>
+                <a href="#projects" className="inline-flex items-center gap-2.5 min-h-[48px] px-5 rounded-[13px] font-bold text-sm bg-[#15121F] border border-[#3D3151] text-[#F4EEFF] hover:border-[#8B5CF6] hover:-translate-y-0.5 transition-all">
+                  {isAr ? 'استعراض المشاريع ←' : 'Explore Projects ↗'}
                 </a>
               </div>
-
-              <div className="pt-8 grid grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0">
-                <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}25` }} className="p-4 rounded-xl border">
-                  <p style={{ color: colors.sageGreen }} className="text-2xl font-bold">03+</p>
-                  <p style={{ color: colors.mutedText }} className="text-xs">Projects</p>
-                </div>
-                <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}25` }} className="p-4 rounded-xl border">
-                  <p style={{ color: colors.creamWhite }} className="text-2xl font-bold">Clean</p>
-                  <p style={{ color: colors.mutedText }} className="text-xs">Code & UI</p>
-                </div>
-              </div>
             </div>
 
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative group">
-                <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}40` }} className="w-72 sm:w-80 h-96 rounded-2xl overflow-hidden p-2 border shadow-2xl relative">
-                  <img 
-                    src={profilePhotoUrl} 
-                    alt="Sajjad Ali" 
-                    className="w-full h-full object-cover rounded-xl"
-                  />
-                  <div style={{ backgroundColor: `${colors.bgPrimary}FA`, borderColor: `${colors.sageGreen}30` }} className="absolute bottom-4 left-4 right-4 backdrop-blur-md p-3 rounded-xl border text-center">
-                    <p style={{ color: colors.creamWhite }} className="text-sm font-bold">Sajjad Ali Ansari</p>
-                    <p style={{ color: colors.sageGreen }} className="text-xs font-medium">Procurement Officer @ SSCC</p>
-                  </div>
-                </div>
+            {/* Profile Image Card */}
+            <div className="relative max-w-[395px] mx-auto w-full">
+              <div className="absolute inset-[8%_0_0_6%] rounded-[42px] bg-gradient-to-br from-[#7C3AED]/35 to-[#C4B5FD]/10 blur-[30px]"></div>
+              <div className="relative aspect-[4/4.65] border border-[#493765] rounded-[28px] overflow-hidden bg-gradient-to-br from-[#21182F] to-[#100D17] shadow-2xl flex flex-col items-center justify-center">
+                <img src="https://imgur.com/zYbPdnl.jpg" alt="Sajjad Ali Ansari" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute z-10 bottom-6 left-[-22px] p-4 rounded-[15px] border border-[#493765] bg-[#100D17]/96 shadow-xl">
+                <strong className="block text-sm">Odoo ERP + Excel</strong>
+                <span className="block text-[#A79CB8] text-xs mt-0.5">{isAr ? 'سير عمل تتبع المشتريات' : 'Procurement tracking workflow'}</span>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* About Section */}
-      <section id="about" style={{ backgroundColor: `${colors.bgSecondary}60`, borderColor: `${colors.sageGreen}20` }} className="py-24 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.aboutTitle}
+        {/* Proof Strip */}
+        <section className="border-y border-[#59447A]/38 bg-[#100D17]/72 py-6">
+          <div className="max-w-[1160px] mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="md:border-r border-[#59447A]/38 pr-4">
+              <strong className="block text-base">{isAr ? 'عمليات المشتريات' : 'Procurement Operations'}</strong>
+              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'طلبات الأسعار وأوامر الشراء ومتابعة الموردين' : 'RFQs, purchase orders & supplier follow-ups'}</span>
+            </div>
+            <div className="md:border-r border-[#59447A]/38 pr-4">
+              <strong className="block text-base">{isAr ? 'تتبع المواد والمخزون' : 'Material & Inventory Tracking'}</strong>
+              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'سجلات Odoo ERP وExcel' : 'Odoo ERP and Excel logs'}</span>
+            </div>
+            <div>
+              <strong className="block text-base">{isAr ? 'ضبط المستندات' : 'Document Control'}</strong>
+              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'السجلات وإدارة الإصدارات والأرشفة الرقمية' : 'Records, versioning & digital archives'}</span>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="max-w-[720px] mb-8">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '01 / الملف المهني' : '01 / Profile'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">
+              {isAr ? <>تركيز على المشتريات، <span className="text-[#8B5CF6]">والأنظمة.</span></> : <>Procurement-minded. <span className="text-[#8B5CF6]">Systems-focused.</span></>}
             </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
-            <p style={{ color: colors.mutedText }} className="text-base sm:text-lg">
-              {t.aboutDesc}
-            </p>
+            <p className="text-[#A79CB8]">{isAr ? 'مزيج عملي من تنسيق الشراء ودقة التتبع والإدارة المنظمة للمستندات.' : 'A practical mix of purchasing coordination, tracking discipline, and organized document management.'}</p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="lg:col-span-6 p-8 rounded-2xl border space-y-4">
-              <h3 style={{ color: colors.creamWhite }} className="text-xl font-bold flex items-center space-x-3">
-                <Briefcase style={{ color: colors.sageGreen }} className="w-6 h-6" />
-                <span>Professional Background</span>
-              </h3>
-              <p style={{ color: colors.mutedText }} className="leading-relaxed text-sm sm:text-base">
-                Organized Procurement professional with proven practical experience in handling Requests for Quotations (RFQs), Purchase Orders (POs), supplier follow-ups, and procurement records at <strong>Scientific Systems Construction Company (SSCC)</strong> in Riyadh.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
+              <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
+              <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base">
+                {isAr 
+                  ? 'أعمل في الرياض بالمملكة العربية السعودية، ولدي خبرة في شركة Scientific Systems Construction Company (SSCC) في طلبات عروض الأسعار وأوامر الشراء وتنسيق الموردين وسجلات المشتريات وتتبع المواد. كما تشمل خبرتي السابقة في ضبط المستندات تنظيم الملفات وإدارة الإصدارات والأرشيف الورقي والإلكتروني.'
+                  : 'Based in Riyadh, Saudi Arabia, with experience at Scientific Systems Construction Company (SSCC) handling RFQs, POs, supplier coordination, procurement records, and material tracking. Previous document control experience includes file organization, version control, and physical and electronic archives.'}
               </p>
-              <p style={{ color: colors.mutedText }} className="leading-relaxed text-sm sm:text-base">
-                أخصائي مشريات ذو خبرة عملية في إدارة أوامر الشراء، طلبات الأسعار، ومتابعة الموردين في شركة الأنظمة العلمية للمقاولات بالرياض.
-              </p>
+            </article>
+            <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
+              <h3 className="text-xl font-bold mb-3">{isAr ? 'نقاط القوة الأساسية' : 'Core Strengths'}</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'نظام Odoo ERP: عروض الأسعار وأوامر الشراء' : 'Odoo ERP: RFQs & purchase orders'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'التتبع المتقدم باستخدام Excel' : 'Advanced Excel tracking'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'تنسيق الموردين والبائعين' : 'Supplier and vendor coordination'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'ضبط المستندات وإدارة الإصدارات' : 'Document control and versioning'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'إدارة المخزون والمستودعات' : 'Inventory and stock management'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'أدوات Microsoft Office' : 'MS Office tools'}</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        {/* Skills Section */}
+        <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="max-w-[720px] mb-8">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المهارات والأدوات' : 'Skills & tools'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات العملية الواردة في الملف المهني الحالي.' : 'Tools and day-to-day capabilities listed in the existing portfolio.'}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
+              <h3 className="font-bold text-base mb-1">Odoo ERP</h3>
+              <p className="text-[#A79CB8] text-sm">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">XL</div>
+              <h3 className="font-bold text-base mb-1">Microsoft Excel</h3>
+              <p className="text-[#A79CB8] text-sm">{isAr ? 'جداول تتبع متقدمة والأرصدة وسجلات المواد.' : 'Advanced tracking sheets, balances, and material logs.'}</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">DC</div>
+              <h3 className="font-bold text-base mb-1">{isAr ? 'ضبط المستندات' : 'Document Control'}</h3>
+              <p className="text-[#A79CB8] text-sm">{isAr ? 'تنظيم الملفات وإدارة الإصدارات واسترجاع السجلات.' : 'File organization, versioning, and record retrieval.'}</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">SC</div>
+              <h3 className="font-bold text-base mb-1">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</h3>
+              <p className="text-[#A79CB8] text-sm">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">INV</div>
+              <h3 className="font-bold text-base mb-1">{isAr ? 'المخزون والمواد' : 'Inventory & Materials'}</h3>
+              <p className="text-[#A79CB8] text-sm">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
+              <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
+              <p className="text-[#A79CB8] text-sm">Word, PowerPoint, and Outlook.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Projects Section */}
+        <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="max-w-[720px] mb-8">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Work samples'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز مشاريع المشتريات' : 'Featured procurement projects'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'الأوصاف التالية مستندة إلى أمثلة العمل الواردة في الملف المقدم.' : 'Project descriptions based on supplied portfolio records.'}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col">
+              <div className="p-5 border-b border-[#30263F] bg-[#100E18]">
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع فنار — ضبط المخزون والمواد' : 'Project Fanar — Inventory & Material Control'}</h3>
+                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'تتبع مستويات مخزون مواد الصرف الصحي والحلقات المطاطية ومعدات السلامة، مع معادلات ديناميكية للأرصدة باستخدام Odoo ERP وExcel.' : 'Stock-level tracking for sewer materials, rubber rings, and safety equipment, supported by dynamic balance formulas in Odoo ERP and Excel.'}</p>
+                <div className="flex gap-2 flex-wrap mt-auto">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'تتبع المواد' : 'Material Tracking'}</span>
+                </div>
+              </div>
             </div>
 
-            <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="lg:col-span-6 p-8 rounded-2xl border space-y-6">
-              <h3 style={{ color: colors.creamWhite }} className="text-xl font-bold flex items-center space-x-3">
-                <Award style={{ color: colors.sageGreen }} className="w-6 h-6" />
-                <span>Core Strengths & Expertise</span>
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {["Odoo ERP (RFQs & POs)", "Advanced Excel Tracking", "Professional Document Control", "Supplier & Vendor Management"].map((item, idx) => (
-                  <div key={idx} style={{ backgroundColor: colors.bgPrimary, borderColor: `${colors.sageGreen}20` }} className="flex items-start space-x-3 p-3 rounded-xl border">
-                    <CheckCircle style={{ color: colors.sageGreen }} className="w-5 h-5 shrink-0 mt-0.5" />
-                    <span style={{ color: colors.creamWhite }} className="text-sm font-medium">{item}</span>
-                  </div>
-                ))}
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col">
+              <div className="p-5 border-b border-[#30263F] bg-[#100E18]">
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 02</span>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع B.V.4 — سجل المشتريات والمواد' : 'Project B.V.4 — Procurement & Material Log'}</h3>
+                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'سجل مشتريات لأنابيب UPVC والوصلات ومعدات السلامة، مع التحقق من الأرصدة باستخدام سجلات Odoo وExcel.' : 'Procurement log for UPVC pipes, fittings, and safety gear, with balance verification using Odoo and Excel logs.'}</p>
+                <div className="flex gap-2 flex-wrap mt-auto">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'المشتريات' : 'Procurement'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel Logs</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'التحقق من الأرصدة' : 'Balance Verification'}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col">
+              <div className="p-5 border-b border-[#30263F] bg-[#100E18]">
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 03</span>
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع Homes — سجل تتبع MSR وأوامر الشراء' : 'Project Homes — MSR & PO Tracking Log'}</h3>
+                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'آلية لتتبع طلبات حالة المواد (MSR) وأوامر الشراء (PO)، تشمل مدفوعات الموردين ونسب الدفعات المقدمة في SSCC.' : 'A Material Status Request (MSR) and Purchase Order (PO) tracking mechanism covering supplier payments and advance percentages at SSCC.'}</p>
+                <div className="flex gap-2 flex-wrap mt-auto">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">MSR / PO</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'سجلات المدفوعات' : 'Payment Logs'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'إدارة الموردين' : 'Vendor Management'}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.skillsTitle}
-            </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
+        {/* Experience Section */}
+        <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="max-w-[720px] mb-8">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / المسار المهني' : '04 / Career'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الخبرة العملية' : 'Work experience'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'المسميات الوظيفية والتواريخ كما وردت في الملف المهني المقدم.' : 'Roles and dates reproduced from the provided portfolio.'}</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skill, idx) => (
-              <div key={idx} style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="p-6 rounded-2xl border space-y-3">
-                <div className="flex justify-between items-center">
-                  <span style={{ color: colors.creamWhite }} className="font-bold text-base">{skill.name}</span>
-                  <span style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }} className="text-xs font-bold px-2.5 py-1 rounded-md">{skill.category}</span>
-                </div>
-                <div style={{ backgroundColor: colors.bgPrimary }} className="w-full h-2.5 rounded-full overflow-hidden">
-                  <div style={{ backgroundColor: colors.sageGreen }} className="h-full rounded-full" style={{ width: `${skill.level}%` }}></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Certificates Section */}
-      <section id="certificates" style={{ backgroundColor: `${colors.bgSecondary}60`, borderColor: `${colors.sageGreen}20` }} className="py-24 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.certTitle}
-            </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certificates.map((cert, idx) => (
-              <div key={idx} style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="p-8 rounded-2xl border space-y-4 hover:scale-[1.02] transition-transform">
-                <div style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen }} className="w-12 h-12 rounded-xl flex items-center justify-center">
-                  <Award className="w-6 h-6" />
-                </div>
-                <h3 style={{ color: colors.creamWhite }} className="text-xl font-bold">{cert.title}</h3>
-                <p style={{ color: colors.sageGreen }} className="font-semibold text-sm">{cert.issuer}</p>
-                <p style={{ color: colors.mutedText }} className="text-sm leading-relaxed">{cert.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.projTitle}
-            </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
-            <p style={{ color: colors.mutedText }} className="text-base">{t.projDesc}</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {projects.map((proj, idx) => (
-              <div key={idx} style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="rounded-2xl overflow-hidden border flex flex-col justify-between group hover:scale-[1.02] transition-transform">
+          <div className="space-y-5">
+            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
+              <div className="flex flex-col md:flex-row justify-between items-start gap-3">
                 <div>
-                  <div style={{ backgroundColor: colors.bgPrimary }} className="relative h-48 overflow-hidden">
-                    <img src={proj.image} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <span style={{ backgroundColor: `${colors.bgPrimary}D0`, color: colors.sageGreen, borderColor: `${colors.sageGreen}40` }} className="absolute top-3 right-3 px-3 py-1 rounded-full backdrop-blur-md text-xs font-semibold border">
-                      {proj.client}
-                    </span>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <h3 style={{ color: colors.creamWhite }} className="text-xl font-bold">{proj.title}</h3>
-                    <p style={{ color: colors.mutedText }} className="text-sm leading-relaxed">{proj.desc}</p>
-                  </div>
+                  <h3 className="font-bold text-lg">{isAr ? 'متخصص مشتريات وتوريد' : 'Procurement / Purchasing Professional'}</h3>
+                  <div className="text-[#d3deec] font-semibold text-sm mt-1">Scientific Systems Construction Company (SSCC)</div>
+                  <div className="text-[#A79CB8] text-xs mt-0.5">{isAr ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}</div>
                 </div>
-                <div className="p-6 pt-0 flex flex-wrap gap-1.5">
-                  {proj.tags.map((t, tIdx) => (
-                    <span key={tIdx} style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen, borderColor: `${colors.sageGreen}30` }} className="px-2.5 py-1 rounded-lg text-xs font-medium border">
-                      {t}
-                    </span>
-                  ))}
+                <div className="text-[#C4B5FD] text-xs font-bold bg-[#7C3AED]/10 px-3 py-1 rounded-full">
+                  {isAr ? 'سبتمبر 2026 – حتى الآن' : 'Sep 2026 – Present'}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <p className="text-[#aab7c9] text-sm mt-4 leading-relaxed">
+                {isAr ? 'إعداد طلبات عروض الأسعار وأوامر الشراء عبر Odoo ERP، وتنسيق أسعار الموردين وعمليات التسليم، وإدارة جداول التتبع باستخدام Excel.' : 'Create RFQs and purchase orders through Odoo ERP; coordinate supplier pricing and deliveries; and maintain Excel-based tracking sheets.'}
+              </p>
+            </div>
 
-      {/* Experience Section */}
-      <section id="experience" style={{ backgroundColor: `${colors.bgSecondary}60`, borderColor: `${colors.sageGreen}20` }} className="py-24 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.expTitle}
-            </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-8">
-            {experiences.map((exp, idx) => (
-              <div key={idx} style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="p-8 rounded-2xl border space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <div>
-                    <h3 style={{ color: colors.creamWhite }} className="text-xl font-bold">{exp.role}</h3>
-                    <p style={{ color: colors.sageGreen }} className="font-semibold">{exp.company}</p>
-                  </div>
-                  <div style={{ color: colors.mutedText }} className="text-xs space-y-1 sm:text-right">
-                    <span style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen, borderColor: `${colors.sageGreen}30` }} className="inline-block px-3 py-1 rounded-full border font-medium">{exp.period}</span>
-                    <p className="flex items-center sm:justify-end space-x-1 pt-1"><MapPin className="w-3.5 h-3.5" /><span>{exp.location}</span></p>
-                  </div>
+            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
+              <div className="flex flex-col md:flex-row justify-between items-start gap-3">
+                <div>
+                  <h3 className="font-bold text-lg">{isAr ? 'مراقب مستندات' : 'Document Controller'}</h3>
+                  <div className="text-[#d3deec] font-semibold text-sm mt-1">Administrative Business Pattern Co.</div>
+                  <div className="text-[#A79CB8] text-xs mt-0.5">{isAr ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}</div>
                 </div>
-                <p style={{ color: colors.mutedText }} className="text-sm leading-relaxed">{exp.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section id="education" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.eduTitle}
-            </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
-          </div>
-
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            {education.map((edu, idx) => (
-              <div key={idx} style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="p-8 rounded-2xl border space-y-4">
-                <div style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen }} className="w-12 h-12 rounded-xl flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6" />
-                </div>
-                <h3 style={{ color: colors.creamWhite }} className="text-xl font-bold">{edu.degree}</h3>
-                <p style={{ color: colors.sageGreen }} className="font-semibold text-sm">{edu.institution}</p>
-                <p style={{ color: colors.mutedText }} className="text-sm leading-relaxed">{edu.desc}</p>
-                <div style={{ borderColor: `${colors.sageGreen}20`, color: colors.mutedText }} className="flex items-center justify-between text-xs pt-4 border-t">
-                  <span>{edu.period}</span>
+                <div className="text-[#C4B5FD] text-xs font-bold bg-[#7C3AED]/10 px-3 py-1 rounded-full">
+                  {isAr ? 'سبتمبر 2024 – يونيو 2026' : 'Sep 2024 – Jun 2026'}
                 </div>
               </div>
-            ))}
+              <p className="text-[#aab7c9] text-sm mt-4 leading-relaxed">
+                {isAr ? 'إدارة ملفات المشاريع والتحكم في الإصدارات وحفظ الأرشيف الورقي والإلكتروني لدعم الامتثال وسرعة استرجاع المستندات.' : 'Managed project files and version control, and maintained physical and electronic document archives to support compliance and fast retrieval.'}
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Contact Section */}
-      <section id="contact" style={{ backgroundColor: `${colors.bgSecondary}60`, borderColor: `${colors.sageGreen}20` }} className="py-24 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 style={{ color: colors.creamWhite }} className="text-3xl sm:text-4xl font-extrabold mb-4">
-              {t.getInTouch}
-            </h2>
-            <div style={{ backgroundColor: colors.sageGreen }} className="w-16 h-1 mx-auto rounded-full mb-6"></div>
-            <p style={{ color: colors.mutedText }} className="text-base">Feel free to reach out for procurement roles or professional inquiries in Riyadh.</p>
+        {/* Certifications Section */}
+        <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="max-w-[720px] mb-8">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / التطوير المهني' : '05 / Professional learning'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والدورات' : 'Certifications & training'}</h2>
           </div>
-
-          <div style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}30` }} className="max-w-3xl mx-auto p-8 rounded-2xl border text-center space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div style={{ color: colors.creamWhite }} className="flex items-center space-x-3">
-                <div style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen }} className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
-                  <MapPin className="w-5 h-5" />
-                </div>
-                <div className="text-left">
-                  <p style={{ color: colors.mutedText }} className="text-xs uppercase font-semibold">Location</p>
-                  <p className="text-sm font-bold">{t.location}</p>
-                </div>
-              </div>
-
-              <div style={{ color: colors.creamWhite }} className="flex items-center space-x-3">
-                <div style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen }} className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div className="text-left">
-                  <p style={{ color: colors.mutedText }} className="text-xs uppercase font-semibold">WhatsApp</p>
-                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen }} className="text-sm font-bold hover:underline">+966 54 247 5245</a>
-                </div>
-              </div>
-
-              <div style={{ color: colors.creamWhite }} className="flex items-center space-x-3">
-                <div style={{ backgroundColor: `${colors.sageGreen}20`, color: colors.sageGreen }} className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0">
-                  <Briefcase className="w-5 h-5" />
-                </div>
-                <div className="text-left">
-                  <p style={{ color: colors.mutedText }} className="text-xs uppercase font-semibold">Company</p>
-                  <p className="text-sm font-bold">SSCC</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">AL</div>
+              <div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'المشتريات' : 'Procurement'}</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Alison</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'شهادة تحقق للمتعلم في أساسيات عمليات المشتريات وإدارة الموردين.' : 'Learner verification certificate in core procurement processes and supplier management.'}</p>
               </div>
             </div>
 
-            <div style={{ borderColor: `${colors.sageGreen}20` }} className="pt-6 border-t flex justify-center gap-4">
-              <a href={cvLink} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors.sageGreen, color: colors.bgPrimary }} className="px-6 py-3 rounded-xl font-bold text-sm shadow-md transition-all flex items-center space-x-2">
-                <Download className="w-4 h-4" />
-                <span>{t.downloadCv}</span>
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">Odoo</div>
+              <div>
+                <h3 className="font-bold text-sm mb-1">Odoo Purchase</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Odoo eLearning</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'دورة رسمية حول وحدة المشتريات في Odoo وطلبات عروض الأسعار وسير العمل الآلي.' : 'Official course covering the Odoo Purchase module, RFQs, and automated workflows.'}</p>
+              </div>
+            </div>
+
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">EDM</div>
+              <div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'مقدمة في إدارة المستندات الإلكترونية' : 'Introduction to Electronic Document Management'}</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Alison</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'شهادة تحقق للمتعلم تركز على ضبط المستندات الرقمية وأرشفتها.' : 'Learner verification certificate focused on digital document control and archiving.'}</p>
+              </div>
+            </div>
+
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
+              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">AM</div>
+              <div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'دبلوم مهني في الإدارة الإدارية' : 'Professional Diploma in Administration Management'}</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">MTF Institute / Udemy</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'تدريب مهني في التنظيم الإداري والعمليات.' : 'Professional training in administrative organization and operations.'}</p>
+              </div>
+            </div>
+
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start md:col-span-2">
+              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">MS</div>
+              <div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'Microsoft Office (Word وExcel وPowerPoint)' : 'Microsoft Office (Word, Excel, PowerPoint)'}</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Udemy</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'تدريب على أدوات المكتب وجداول البيانات.' : 'Training in office tools and spreadsheets.'}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Education Section */}
+        <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="max-w-[720px] mb-8">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المؤهلات التعليمية' : 'Educational background'}</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">{isAr ? 'دبلوم تطبيقات الحاسب الآلي (DCA)' : 'Diploma in Computer Applications (DCA)'}</h3>
+              <p className="text-[#A79CB8] text-sm mb-2">{isAr ? 'Ruma Technical Degree College، ولاية أوتار براديش' : 'Ruma Technical Degree College, UP'}</p>
+              <p className="text-[#C2B8D4] text-xs mb-4">{isAr ? 'تدريب في MS Office وExcel المتقدم وإدارة قواعد البيانات وأساسيات الحاسب.' : 'Training in MS Office, advanced Excel, database management, and computer fundamentals.'}</p>
+              <span className="text-[#A78BFA] text-xs font-bold">Aug 2023 – Jul 2024</span>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">{isAr ? 'المرحلة الثانوية (الصف العاشر)' : 'High School (10th Pass)'}</h3>
+              <p className="text-[#A79CB8] text-sm mb-2">{isAr ? 'مجلس الله أباد، الهند' : 'Allahabad Board, India'}</p>
+              <p className="text-[#C2B8D4] text-xs mb-4">{isAr ? 'إكمال التعليم الثانوي.' : 'Completed secondary education.'}</p>
+              <span className="text-[#A78BFA] text-xs font-bold">2013</span>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
+          <div className="p-8 md:p-12 border border-[#493765] rounded-[24px] bg-gradient-to-br from-[#181322] to-[#100D17] grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
+            <div>
+              <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '07 / تواصل معي' : '07 / Get in touch'}</span>
+              <h2 className="text-2xl md:text-3xl font-extrabold mt-2 mb-3">{isAr ? 'لنتواصل بشأن فرص العمل في المشتريات.' : 'Let’s connect about procurement opportunities.'}</h2>
+              <p className="text-[#A79CB8] text-sm max-w-[580px]">{isAr ? 'للاستفسارات المهنية المتعلقة بالمشتريات والتوريد ودعم الأنظمة في الرياض.' : 'Available for professional inquiries related to procurement, purchasing, and systems support in Riyadh.'}</p>
+              <div className="flex gap-6 flex-wrap mt-6 text-[#DED5EE] text-sm">
+                <span className="flex items-center gap-2">📍 {isAr ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}</span>
+                <span className="flex items-center gap-2">📞 +966 54 247 5245</span>
+                <span className="flex items-center gap-2">🏢 SSCC</span>
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 min-w-[200px]">
+              <a href="https://wa.me/966542475245" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] text-white shadow-lg">
+                {isAr ? 'تواصل عبر واتساب' : 'Chat on WhatsApp'}
               </a>
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: colors.bgSecondary, borderColor: `${colors.sageGreen}40`, color: colors.sageGreen }} className="px-6 py-3 rounded-xl border font-bold text-sm shadow-md transition-all flex items-center space-x-2">
-                <MessageCircle className="w-4 h-4" />
-                <span>{t.whatsappChat}</span>
+              <a href="Sajjad_Ali_Ansari_CV.pdf" download className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm bg-[#15121F] border border-[#3D3151] text-[#F4EEFF] hover:border-[#8B5CF6]">
+                {isAr ? 'تحميل السيرة الذاتية' : 'Download CV'}
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: colors.bgPrimary, borderColor: `${colors.sageGreen}20`, color: colors.mutedText }} className="py-8 border-t text-center text-sm">
-        <p>© {new Date().getFullYear()} Sajjad Ali Ansari. All rights reserved.</p>
+      <footer className="py-8 border-t border-[#29223A] text-[#9B91AB] text-xs">
+        <div className="max-w-[1160px] mx-auto px-5 flex justify-between flex-wrap gap-4">
+          <span className="text-[#DED5EE] font-bold">SA — Sajjad Ali Ansari</span>
+          <span>© {new Date().getFullYear()} {isAr ? 'جميع الحقوق محفوظة.' : 'All rights reserved.'}</span>
+          <span>{isAr ? 'المشتريات • Odoo ERP • ضبط المستندات' : 'Procurement • Odoo ERP • Document Control'}</span>
+        </div>
       </footer>
     </div>
   );
