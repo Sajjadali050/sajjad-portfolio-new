@@ -492,57 +492,60 @@ export default function App() {
           </div>
         </section>
 
-        {/* Certifications Section */}
+        {/* Certifications Section with Direct Google Drive Links */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / التطوير المهني' : '05 / Professional learning'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والدورات' : 'Certifications & training'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'انقر على زر التحقق لعرض الشهادات الرسمية.' : 'Click view buttons to verify official certificates.'}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
-              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">AL</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            {/* Certificate 1: Procurement */}
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex flex-col justify-between">
               <div>
-                <h3 className="font-bold text-sm mb-1">{isAr ? 'المشتريات' : 'Procurement'}</h3>
+                <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/20 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0 mb-3">AL</div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'المشتريات (التحقق للمتعلم)' : 'Procurement Learner Verification'}</h3>
                 <div className="text-[#C4B5FD] text-xs font-bold">Alison</div>
-                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'شهادة تحقق للمتعلم في أساسيات عمليات المشتريات وإدارة الموردين.' : 'Learner verification certificate in core procurement processes and supplier management.'}</p>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'شهادة تحقق رسمية في أساسيات عمليات المشتريات وإدارة الموردين.' : 'Official learner verification certificate in core procurement processes.'}</p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1FlLTFgKeP5UT9lgDhszskRJSS8lAIwYs/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full py-2 px-3 text-center rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Certificate ↗
+                </a>
               </div>
             </div>
 
-            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
-              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">Odoo</div>
+            {/* Certificate 2: Odoo */}
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex flex-col justify-between">
               <div>
-                <h3 className="font-bold text-sm mb-1">Odoo Purchase</h3>
-                <div className="text-[#C4B5FD] text-xs font-bold">Odoo eLearning</div>
-                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'دورة رسمية حول وحدة المشتريات في Odoo وطلبات عروض الأسعار وسير العمل الآلي.' : 'Official course covering the Odoo Purchase module, RFQs, and automated workflows.'}</p>
+                <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/20 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0 mb-3">Odoo</div>
+                <h3 className="font-bold text-sm mb-1">Odoo eLearning</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Odoo</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'دورة رسمية حول وحدة المشتريات في Odoo وطلبات عروض الأسعار وسير العمل.' : 'Official training certificate covering Odoo purchase module and workflows.'}</p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1RNmouiSc8x9jfsoC0C3O03oGspnD9UXG/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full py-2 px-3 text-center rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Certificate ↗
+                </a>
               </div>
             </div>
 
-            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
-              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">EDM</div>
+            {/* Certificate 3: Document Management */}
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex flex-col justify-between">
               <div>
-                <h3 className="font-bold text-sm mb-1">{isAr ? 'مقدمة في إدارة المستندات الإلكترونية' : 'Introduction to Electronic Document Management'}</h3>
+                <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/20 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0 mb-3">EDM</div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'إدارة المستندات الإلكترونية' : 'Electronic Document Management'}</h3>
                 <div className="text-[#C4B5FD] text-xs font-bold">Alison</div>
-                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'شهادة تحقق للمتعلم تركز على ضبط المستندات الرقمية وأرشفتها.' : 'Learner verification certificate focused on digital document control and archiving.'}</p>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'شهادة تحقق للمتعلم تركز على ضبط المستندات الرقمية وأرشفتها.' : 'Learner verification certificate focused on digital document control.'}</p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/12_BDAQxV2XUwRcBKcZteNpSpF4jWzUcX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full py-2 px-3 text-center rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Certificate ↗
+                </a>
               </div>
             </div>
 
-            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start">
-              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">AM</div>
-              <div>
-                <h3 className="font-bold text-sm mb-1">{isAr ? 'دبلوم مهني في الإدارة الإدارية' : 'Professional Diploma in Administration Management'}</h3>
-                <div className="text-[#C4B5FD] text-xs font-bold">MTF Institute / Udemy</div>
-                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'تدريب مهني في التنظيم الإداري والعمليات.' : 'Professional training in administrative organization and operations.'}</p>
-              </div>
-            </div>
-
-            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex gap-4 items-start md:col-span-2">
-              <div className="w-10 h-10 rounded-xl bg-[#A79CB8]/15 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">MS</div>
-              <div>
-                <h3 className="font-bold text-sm mb-1">{isAr ? 'Microsoft Office (Word وExcel وPowerPoint)' : 'Microsoft Office (Word, Excel, PowerPoint)'}</h3>
-                <div className="text-[#C4B5FD] text-xs font-bold">Udemy</div>
-                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'تدريب على أدوات المكتب وجداول البيانات.' : 'Training in office tools and spreadsheets.'}</p>
-              </div>
-            </div>
           </div>
         </section>
 
