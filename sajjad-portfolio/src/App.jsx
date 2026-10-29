@@ -21,7 +21,7 @@ export default function App() {
   const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
 
-  // Exact verified filenames matching your uploaded WhatsApp images in /screenshots/ folder
+  // Exact matching filenames with correct .jpeg extensions
   const screenshots = {
     odoo: { 
       title: "Odoo ERP - Requests for Quotation (SSCC)", 
@@ -35,7 +35,7 @@ export default function App() {
     },
     msrPoLog: { 
       title: "MSR & PO Tracking Log (Excel)", 
-      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.33.37.jpg", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.33.37.jpeg", 
       desc: "Comprehensive Excel log managing material status requests (MSR) and purchase orders (PO)." 
     },
     paymentRequest: { 
