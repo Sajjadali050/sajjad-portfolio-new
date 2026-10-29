@@ -21,7 +21,7 @@ export default function App() {
   const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
 
-  // Exact filenames mapped to your uploaded WhatsApp images in /screenshots/ folder
+  // Exact verified filenames matching your uploaded WhatsApp images in /screenshots/ folder
   const screenshots = {
     odoo: { 
       title: "Odoo ERP - Requests for Quotation (SSCC)", 
