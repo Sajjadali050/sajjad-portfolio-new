@@ -546,6 +546,36 @@ export default function App() {
               </div>
             </div>
 
+            {/* Certificate 4: Administration Management Diploma (Udemy) */}
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex flex-col justify-between">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/20 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0 mb-3">AM</div>
+                <h3 className="font-bold text-sm mb-1">{isAr ? 'دبلوم الإدارة الإدارية' : 'Administration Management Diploma'}</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Udemy</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'دبلوم مهني معتمد في التنظيم الإداري والعمليات المكتبية.' : 'Professional diploma covering administrative organization and office operations.'}</p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1X24QJp9AE3IrQfgYHbql4B4aZKi1uptL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full py-2 px-3 text-center rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Certificate ↗
+                </a>
+              </div>
+            </div>
+
+            {/* Certificate 5: Microsoft Office (Udemy) */}
+            <div className="p-5 border border-[#30263F] rounded-[16px] bg-[#15111F] flex flex-col justify-between">
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#7C3AED]/20 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0 mb-3">MS</div>
+                <h3 className="font-bold text-sm mb-1">Microsoft Office (Word, Excel, PowerPoint)</h3>
+                <div className="text-[#C4B5FD] text-xs font-bold">Udemy</div>
+                <p className="text-[#A79CB8] text-xs mt-1.5">{isAr ? 'تدريب متقدم على أدوات مايكروسوفت أوفيس وجداول البيانات وتحليل البيانات.' : 'Comprehensive training on Microsoft Office suite, advanced Excel, and spreadsheets.'}</p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="block w-full py-2 px-3 text-center rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Certificate ↗
+                </a>
+              </div>
+            </div>
+
           </div>
         </section>
 
