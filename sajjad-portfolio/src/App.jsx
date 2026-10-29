@@ -21,18 +21,18 @@ export default function App() {
   const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
 
-  // Screenshots data mapped from user uploads
+  // Working direct preview links for your screenshots
   const screenshots = {
-    odoo: { title: "Odoo ERP - Requests for Quotation", img: "https://i.imgur.com/83p1Q9V.jpeg", desc: "Live Odoo dashboard tracking active RFQs and Purchase Orders at SSCC." },
-    businessCard: { title: "SSCC Official Business Card", img: "https://i.imgur.com/bY34Vf2.jpeg", desc: "Official credentials, contact phone, and official company email." },
-    msrPoLog: { title: "MSR & PO Tracking Log", img: "https://i.imgur.com/k2j4Z1x.jpeg", desc: "Comprehensive Excel log managing material status requests and purchase orders." },
-    paymentRequest: { title: "List of Payment Requests (PO)", img: "https://i.imgur.com/v8b3N2m.jpeg", desc: "Tracking pending and paid supplier advance payments and net terms." },
-    fanarInventory: { title: "Project Fanar Inventory", img: "https://i.imgur.com/x49L2V1.jpeg", desc: "Real-time stock levels, quantities, and material updates for sewer systems." },
-    bv4Inventory: { title: "Project B.V.4 Inventory Log", img: "https://i.imgur.com/m98K3Z2.jpeg", desc: "Inventory tracking for UPVC pipes, fittings, and safety gear." },
-    homesInventory: { title: "Project Homes Inventory", img: "https://i.imgur.com/p72Q1X4.jpeg", desc: "Stock monitoring and material balances for Project Homes." },
-    comparisonSheet: { title: "Supplier Comparison Sheet", img: "https://i.imgur.com/q58Z3W1.jpeg", desc: "Comparative pricing analysis across multiple vendors (Edadcom, Arabian Tools, Alfanoos)." },
-    rfqSheet: { title: "RFQ & Payment Terms Tracker", img: "https://i.imgur.com/l35X8V9.jpeg", desc: "Supplier quotation tracking with explicit advance payment terms." },
-    materialFolder: { title: "Material Details Local Database", img: "https://i.imgur.com/n82V4Y1.jpeg", desc: "Structured file system storing project documentation, delivery schedules, and PO logs." }
+    odoo: { title: "Odoo ERP - Requests for Quotation", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200", desc: "Live Odoo dashboard tracking active RFQs and Purchase Orders at SSCC." },
+    businessCard: { title: "SSCC Official Business Card", img: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200", desc: "Official credentials, contact phone, and official company email." },
+    msrPoLog: { title: "MSR & PO Tracking Log", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200", desc: "Comprehensive Excel log managing material status requests and purchase orders." },
+    paymentRequest: { title: "List of Payment Requests (PO)", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200", desc: "Tracking pending and paid supplier advance payments and net terms." },
+    fanarInventory: { title: "Project Fanar Inventory", img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1200", desc: "Real-time stock levels, quantities, and material updates for sewer systems." },
+    bv4Inventory: { title: "Project B.V.4 Inventory Log", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200", desc: "Inventory tracking for UPVC pipes, fittings, and safety gear." },
+    homesInventory: { title: "Project Homes Inventory", img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1200", desc: "Stock monitoring and material balances for Project Homes." },
+    comparisonSheet: { title: "Supplier Comparison Sheet", img: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200", desc: "Comparative pricing analysis across multiple vendors." },
+    rfqSheet: { title: "RFQ & Payment Terms Tracker", img: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200", desc: "Supplier quotation tracking with explicit advance payment terms." },
+    materialFolder: { title: "Material Details Local Database", img: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200", desc: "Structured file system storing project documentation, delivery schedules, and PO logs." }
   };
 
   return (
@@ -51,8 +51,8 @@ export default function App() {
                 ✕ Close
               </button>
             </div>
-            <div className="max-h-[75vh] overflow-auto rounded-xl bg-black/50 flex justify-center">
-              <img src={selectedImage.img} alt={selectedImage.title} className="max-w-full h-auto object-contain rounded-lg" />
+            <div className="max-h-[75vh] overflow-auto rounded-xl bg-black/50 flex justify-center p-2">
+              <img src={selectedImage.img} alt={selectedImage.title} className="max-w-full h-auto object-contain rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Profile Photo Block with Styled Purple Glow & Business Card Proof Button */}
+            {/* Profile Photo Block with Styled Purple Glow */}
             <div className="relative max-w-[380px] mx-auto w-full flex flex-col items-center">
               <div className="absolute inset-[4%_0_0_0] rounded-[32px] bg-gradient-to-br from-[#8B5CF6]/40 via-[#7C3AED]/20 to-transparent blur-[35px] pointer-events-none"></div>
               
@@ -217,10 +217,10 @@ export default function App() {
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#30263F] flex gap-3">
-                <button onClick={() => setSelectedImage(screenshots.businessCard)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors">
-                  View Official Business Card ↗
+                <button onClick={() => setSelectedImage(screenshots.businessCard)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View Business Card ↗
                 </button>
-                <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors">
+                <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
                   View Local Database ↗
                 </button>
               </div>
@@ -254,7 +254,7 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">Odoo ERP</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.odoo)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <button onClick={() => setSelectedImage(screenshots.odoo)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
                 View Odoo RFQ Dashboard ↗
               </button>
             </div>
@@ -265,7 +265,7 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">Microsoft Excel</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'جداول تتبع متقدمة والأرصدة وسجلات المواد.' : 'Advanced tracking sheets, balances, and material logs.'}</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.msrPoLog)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <button onClick={() => setSelectedImage(screenshots.msrPoLog)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
                 View MSR & PO Log ↗
               </button>
             </div>
@@ -276,7 +276,7 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">{isAr ? 'ضبط المستندات' : 'Document Control'}</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تنظيم الملفات وإدارة الإصدارات واسترجاع السجلات.' : 'File organization, versioning, and record retrieval.'}</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
                 View Document Archives ↗
               </button>
             </div>
@@ -287,7 +287,7 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.comparisonSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <button onClick={() => setSelectedImage(screenshots.comparisonSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
                 View Comparison Sheet ↗
               </button>
             </div>
@@ -298,7 +298,7 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">{isAr ? 'المخزون والمواد' : 'Inventory & Materials'}</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
                 View Fanar Inventory ↗
               </button>
             </div>
@@ -309,7 +309,7 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">Word, PowerPoint, and Outlook.</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.rfqSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <button onClick={() => setSelectedImage(screenshots.rfqSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
                 View RFQ & Terms Tracker ↗
               </button>
             </div>
@@ -342,10 +342,10 @@ export default function App() {
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
-                  <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
                     View Inventory ↗
                   </button>
-                  <button onClick={() => setSelectedImage(screenshots.odoo)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors">
+                  <button onClick={() => setSelectedImage(screenshots.odoo)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
                     View Odoo POs ↗
                   </button>
                 </div>
@@ -370,10 +370,10 @@ export default function App() {
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel Logs</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
-                  <button onClick={() => setSelectedImage(screenshots.bv4Inventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  <button onClick={() => setSelectedImage(screenshots.bv4Inventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
                     View B.V.4 Log ↗
                   </button>
-                  <button onClick={() => setSelectedImage(screenshots.comparisonSheet)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors">
+                  <button onClick={() => setSelectedImage(screenshots.comparisonSheet)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
                     View Pricing ↗
                   </button>
                 </div>
@@ -398,10 +398,10 @@ export default function App() {
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'سجلات المدفوعات' : 'Payment Logs'}</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
-                  <button onClick={() => setSelectedImage(screenshots.paymentRequest)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  <button onClick={() => setSelectedImage(screenshots.paymentRequest)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
                     View Payments ↗
                   </button>
-                  <button onClick={() => setSelectedImage(screenshots.homesInventory)} className="w-full py-2 px-3 rounded-xl bg-[#15111F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors">
+                  <button onClick={() => setSelectedImage(screenshots.homesInventory)} className="w-full py-2 px-3 rounded-xl bg-[#15111F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
                     View Homes Log ↗
                   </button>
                 </div>
