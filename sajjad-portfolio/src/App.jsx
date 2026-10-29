@@ -16,8 +16,8 @@ export default function App() {
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
   const whatsappNumber = "+966542475245";
   const whatsappLink = "https://wa.me/966542475245";
-  const personalEmail = "sajjadaliansari050@gmail.com";
-  const companyEmail = "sajjad@sscc.com.sa";
+  const personalEmail = "saddamjacker7@gmail.com";
+  const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
 
   return (
@@ -120,21 +120,20 @@ export default function App() {
               </div>
             </div>
 
-            {/* Profile Photo Block with Repositioned Non-Overlapping Card */}
+            {/* Profile Photo Block with Styled Purple Glow & Shadow */}
             <div className="relative max-w-[380px] mx-auto w-full flex flex-col items-center">
-              <div className="absolute inset-[8%_0_0_6%] rounded-[42px] bg-gradient-to-br from-[#7C3AED]/35 to-[#C4B5FD]/10 blur-[30px]"></div>
+              <div className="absolute inset-[4%_0_0_0] rounded-[32px] bg-gradient-to-br from-[#8B5CF6]/40 via-[#7C3AED]/20 to-transparent blur-[35px] pointer-events-none"></div>
               
-              <div className="relative w-full aspect-[4/4.8] border border-[#493765] rounded-[28px] overflow-hidden bg-[#100D17] shadow-2xl">
+              <div className="relative w-full aspect-[4/4.8] border border-[#8B5CF6]/50 rounded-[28px] overflow-hidden bg-[#100D17] shadow-[0_0_35px_rgba(139,92,246,0.35)]">
                 <img src={profilePhotoUrl} alt="Sajjad Ali Ansari" className="w-full h-full object-cover" />
               </div>
 
-              {/* Repositioned Badge below photo image container */}
-              <div className="mt-4 w-full p-3.5 rounded-[16px] border border-[#493765] bg-[#100D17] shadow-xl flex items-center justify-between text-left">
+              <div className="mt-4 w-full p-3.5 rounded-[16px] border border-[#8B5CF6]/40 bg-[#100D17]/95 shadow-[0_4px_20px_rgba(139,92,246,0.2)] flex items-center justify-between text-left">
                 <div>
                   <strong className="block text-sm text-[#EDE7F7]">Odoo ERP + Excel</strong>
                   <span className="block text-[#A79CB8] text-xs mt-0.5">{isAr ? 'سير عمل تتبع المشتريات' : 'Procurement tracking workflow'}</span>
                 </div>
-                <span className="px-2.5 py-1 rounded-md bg-[#7C3AED]/20 border border-[#8B5CF6]/40 text-[#C4B5FD] text-[11px] font-bold">
+                <span className="px-2.5 py-1 rounded-md bg-[#7C3AED]/30 border border-[#8B5CF6]/60 text-[#C4B5FD] text-[11px] font-bold shadow-sm">
                   SSCC
                 </span>
               </div>
@@ -422,7 +421,7 @@ export default function App() {
                 <span className="flex items-center gap-2">🏢 SSCC</span>
               </div>
 
-              {/* Both Personal & Company Email */}
+              {/* Exact Updated Emails */}
               <div className="flex gap-x-6 gap-y-2 flex-wrap mt-3 text-xs text-[#C2B8D4]">
                 <a href={`mailto:${personalEmail}`} className="flex items-center gap-1.5 hover:text-[#C4B5FD]">
                   ✉️ <strong className="text-[#EDE7F7]">Personal:</strong> {personalEmail}
