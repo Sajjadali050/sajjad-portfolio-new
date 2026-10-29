@@ -21,57 +21,57 @@ export default function App() {
   const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1HsF6R3ee-G9Q5uEgCrS4Ueqk6WsyFEhr/view?usp=drivesdk";
 
-  // 100% Original Verified Screenshots mapped directly from your WhatsApp uploads
+  // Exact filenames mapped to your uploaded WhatsApp images in /screenshots/ folder
   const screenshots = {
     odoo: { 
       title: "Odoo ERP - Requests for Quotation (SSCC)", 
-      img: "https://i.imgur.com/83p1Q9V.jpeg", 
-      desc: "Live Odoo enterprise software dashboard tracking active RFQs and Purchase Orders at SSCC[cite: 4]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.41.01.jpeg", 
+      desc: "Live Odoo enterprise software dashboard tracking active RFQs and Purchase Orders at SSCC." 
     },
     businessCard: { 
       title: "SSCC Official Business Card", 
-      img: "https://i.imgur.com/bY34Vf2.jpeg", 
-      desc: "Official credentials, contact phone (+966 54 247 5245), and official company email (sajjad.ali@sscc-sa.com)[cite: 5]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 12.02.53.jpeg", 
+      desc: "Official credentials, contact phone (+966 54 247 5245), and official company email (sajjad.ali@sscc-sa.com)." 
     },
     msrPoLog: { 
       title: "MSR & PO Tracking Log (Excel)", 
-      img: "https://i.imgur.com/k2j4Z1x.jpeg", 
-      desc: "Comprehensive Excel log managing material status requests (MSR) and purchase orders (PO)[cite: 6]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.33.37.jpg", 
+      desc: "Comprehensive Excel log managing material status requests (MSR) and purchase orders (PO)." 
     },
     paymentRequest: { 
       title: "List of PO Payment Requests", 
-      img: "https://i.imgur.com/v8b3N2m.jpeg", 
-      desc: "Tracking pending and paid supplier advance payments, net terms, and delays[cite: 7]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.35.18.jpeg", 
+      desc: "Tracking pending and paid supplier advance payments, net terms, and delays." 
     },
     fanarInventory: { 
       title: "Project Fanar Inventory Tracker", 
-      img: "https://i.imgur.com/x49L2V1.jpeg", 
-      desc: "Real-time stock levels, incoming/outgoing quantities, and material updates for sewer systems[cite: 8]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.36.29.jpeg", 
+      desc: "Real-time stock levels, incoming/outgoing quantities, and material updates for sewer systems." 
     },
     bv4Inventory: { 
       title: "Project B.V.4 Inventory Log", 
-      img: "https://i.imgur.com/m98K3Z2.jpeg", 
-      desc: "Inventory tracking for UPVC pipes, rubber rings, fittings, and safety gear[cite: 9]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.37.14.jpeg", 
+      desc: "Inventory tracking for UPVC pipes, rubber rings, fittings, and safety gear." 
     },
     homesInventory: { 
       title: "Project Homes Inventory Tracker", 
-      img: "https://i.imgur.com/p72Q1X4.jpeg", 
-      desc: "Stock monitoring, balances, and material updates for Project Homes[cite: 10]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.38.21.jpeg", 
+      desc: "Stock monitoring, balances, and material updates for Project Homes." 
     },
     comparisonSheet: { 
       title: "Supplier Comparison Sheet (New Tools)", 
-      img: "https://i.imgur.com/q58Z3W1.jpeg", 
-      desc: "Comparative pricing analysis across multiple vendors (Edadcom, Arabian Tools, Alfanoos, Madar Hardware)[cite: 11]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.46.49.jpeg", 
+      desc: "Comparative pricing analysis across multiple vendors (Edadcom, Arabian Tools, Alfanoos, Madar Hardware)." 
     },
     rfqSheet: { 
       title: "RFQ & Payment Terms Tracker", 
-      img: "https://i.imgur.com/l35X8V9.jpeg", 
-      desc: "Supplier quotation tracking with explicit advance payment terms and totals[cite: 12]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.50.04.jpeg", 
+      desc: "Supplier quotation tracking with explicit advance payment terms and totals." 
     },
     materialFolder: { 
       title: "Material Details Local Database & Folders", 
-      img: "https://i.imgur.com/n82V4Y1.jpeg", 
-      desc: "Structured local file system storing project documentation, delivery schedules, and PO logs[cite: 13]." 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.50.50.jpeg", 
+      desc: "Structured local file system storing project documentation, delivery schedules, and PO logs." 
     }
   };
 
