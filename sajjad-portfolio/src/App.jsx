@@ -44,7 +44,7 @@ export default function App() {
       desc: "Tracking pending and paid supplier advance payments, net terms, and delays." 
     },
     fanarInventory: { 
-      title: "Project Fanar Inventory Tracker", 
+      title: "Project Fanar Log & Inventory Tracker", 
       img: "/screenshots/WhatsApp Image 2026-10-29 at 11.36.29.jpeg", 
       desc: "Real-time stock levels, incoming/outgoing quantities, and material updates for sewer systems." 
     },
@@ -339,7 +339,7 @@ export default function App() {
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
               </div>
               <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
-                View Fanar Inventory ↗
+                View Fanar Log ↗
               </button>
             </div>
 
@@ -372,7 +372,7 @@ export default function App() {
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">SSCC</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع فنار — ضبط المخزون والمواد' : 'Project Fanar — Inventory & Material Control'}</h3>
+                  <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع فنار — سجلات وتتبع المواد' : 'Project Fanar — Log & Material Control'}</h3>
                   <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'تتبع مستويات مخزون مواد الصرف الصحي والحلقات المطاطية ومعدات السلامة، مع معادلات ديناميكية للأرصدة باستخدام Odoo ERP وExcel.' : 'Stock-level tracking for sewer materials, rubber rings, and safety equipment, supported by dynamic balance formulas in Odoo ERP and Excel.'}</p>
                 </div>
               </div>
@@ -383,7 +383,7 @@ export default function App() {
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
                   <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
-                    View Inventory ↗
+                    View Fanar Log ↗
                   </button>
                   <button onClick={() => setSelectedImage(screenshots.odoo)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
                     View Odoo POs ↗
@@ -455,13 +455,15 @@ export default function App() {
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / المسار المهني' : '04 / Career'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الخبرة العملية' : 'Work experience'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'المسميات الوظيفية والتواريخ كما وردت في الملف المهني المقدم.' : 'Roles and dates reproduced from the provided portfolio.'}</p>
+            <p className="text-[#A79CB8]">{isAr ? 'المسميات الوظيفية والتواريخ مع روابط التحقق وإثبات العمل المباشر.' : 'Roles and dates with direct verification and working proof links.'}</p>
           </div>
           <div className="space-y-5">
+            
+            {/* SSCC (Current) with Business Card & Working Proofs */}
             <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
               <div className="flex flex-col md:flex-row justify-between items-start gap-3">
                 <div>
-                  <h3 className="font-bold text-lg">{isAr ? 'متخصص مشتريات وتوريد' : 'Procurement / Purchasing Professional'}</h3>
+                  <h3 className="font-bold text-lg">{isAr ? 'متخصص مشتريات وتوريد (حالي)' : 'Procurement / Purchasing Professional (Current)'}</h3>
                   <div className="text-[#d3deec] font-semibold text-sm mt-1">Scientific Systems Construction Company (SSCC)</div>
                   <div className="text-[#A79CB8] text-xs mt-0.5">{isAr ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}</div>
                 </div>
@@ -472,8 +474,20 @@ export default function App() {
               <p className="text-[#aab7c9] text-sm mt-4 leading-relaxed">
                 {isAr ? 'إعداد طلبات عروض الأسعار وأوامر الشراء عبر Odoo ERP، وتنسيق أسعار الموردين وعمليات التسليم، وإدارة جداول التتبع باستخدام Excel.' : 'Create RFQs and purchase orders through Odoo ERP; coordinate supplier pricing and deliveries; and maintain Excel-based tracking sheets.'}
               </p>
+              <div className="mt-5 pt-4 border-t border-[#30263F] flex gap-3 flex-wrap">
+                <button onClick={() => setSelectedImage(screenshots.businessCard)} className="px-3.5 py-2 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View SSCC Business Card ↗
+                </button>
+                <button onClick={() => setSelectedImage(screenshots.odoo)} className="px-3.5 py-2 rounded-xl bg-[#100D17] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
+                  View Live Odoo RFQs ↗
+                </button>
+                <button onClick={() => setSelectedImage(screenshots.msrPoLog)} className="px-3.5 py-2 rounded-xl bg-[#100D17] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
+                  View MSR & PO Log ↗
+                </button>
+              </div>
             </div>
 
+            {/* Administrative Business Pattern Co. with Experience Letter Link */}
             <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
               <div className="flex flex-col md:flex-row justify-between items-start gap-3">
                 <div>
@@ -488,7 +502,13 @@ export default function App() {
               <p className="text-[#aab7c9] text-sm mt-4 leading-relaxed">
                 {isAr ? 'إدارة ملفات المشاريع والتحكم في الإصدارات وحفظ الأرشيف الورقي والإلكتروني لدعم الامتثال وسرعة استرجاع المستندات.' : 'Managed project files and version control, and maintained physical and electronic document archives to support compliance and fast retrieval.'}
               </p>
+              <div className="mt-5 pt-4 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Experience Letter (PDF) ↗
+                </a>
+              </div>
             </div>
+
           </div>
         </section>
 
@@ -579,25 +599,45 @@ export default function App() {
           </div>
         </section>
 
-        {/* Education Section */}
+        {/* Education Section with Direct Google Drive Links */}
         <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المؤهلات التعليمية' : 'Educational background'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'المؤهلات مع روابط عرض المستندات الأصلية.' : 'Qualifications with original document verification links.'}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
-              <h3 className="font-bold text-base mb-1">{isAr ? 'دبلوم تطبيقات الحاسب الآلي (DCA)' : 'Diploma in Computer Applications (DCA)'}</h3>
-              <p className="text-[#A79CB8] text-sm mb-2">{isAr ? 'Ruma Technical Degree College، ولاية أوتار براديش' : 'Ruma Technical Degree College, UP'}</p>
-              <p className="text-[#C2B8D4] text-xs mb-4">{isAr ? 'تدريب في MS Office وExcel المتقدم وإدارة قواعد البيانات وأساسيات الحاسب.' : 'Training in MS Office, advanced Excel, database management, and computer fundamentals.'}</p>
-              <span className="text-[#A78BFA] text-xs font-bold">Aug 2023 – Jul 2024</span>
+            
+            {/* Diploma */}
+            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F] flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-base mb-1">{isAr ? 'دبلوم تطبيقات الحاسب الآلي (DCA)' : 'Diploma in Computer Applications (DCA)'}</h3>
+                <p className="text-[#A79CB8] text-sm mb-2">{isAr ? 'Ruma Technical Degree College، ولاية أوتار براديش' : 'Ruma Technical Degree College, UP'}</p>
+                <p className="text-[#C2B8D4] text-xs mb-4">{isAr ? 'تدريب في MS Office وExcel المتقدم وإدارة قواعد البيانات وأساسيات الحاسب.' : 'Training in MS Office, advanced Excel, database management, and computer fundamentals.'}</p>
+                <span className="text-[#A78BFA] text-xs font-bold block mb-4">Aug 2023 – Jul 2024</span>
+              </div>
+              <div className="pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1pkIBjxwRBQWQD4PA3GI99KIQndSXdLr9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Diploma Certificate (PDF) ↗
+                </a>
+              </div>
             </div>
-            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F]">
-              <h3 className="font-bold text-base mb-1">{isAr ? 'المرحلة الثانوية (الصف العاشر)' : 'High School (10th Pass)'}</h3>
-              <p className="text-[#A79CB8] text-sm mb-2">{isAr ? 'مجلس الله أباد، الهند' : 'Allahabad Board, India'}</p>
-              <p className="text-[#C2B8D4] text-xs mb-4">{isAr ? 'إكمال التعليم الثانوي.' : 'Completed secondary education.'}</p>
-              <span className="text-[#A78BFA] text-xs font-bold">2013</span>
+
+            {/* High School */}
+            <div className="p-6 border border-[#30263F] rounded-[17px] bg-[#15111F] flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-base mb-1">{isAr ? 'المرحلة الثانوية (الصف العاشر)' : 'High School (10th Pass)'}</h3>
+                <p className="text-[#A79CB8] text-sm mb-2">{isAr ? 'مجلس الله أباد، الهند' : 'Allahabad Board, India'}</p>
+                <p className="text-[#C2B8D4] text-xs mb-4">{isAr ? 'إكمال التعليم الثانوي بنجاح.' : 'Completed secondary education successfully.'}</p>
+                <span className="text-[#A78BFA] text-xs font-bold block mb-4">2013</span>
+              </div>
+              <div className="pt-3 border-t border-[#30263F]">
+                <a href="https://drive.google.com/file/d/1h07TBOATE0AMpMOyVzDf72khpn9I1Xwz/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View High School Certificate (PDF) ↗
+                </a>
+              </div>
             </div>
+
           </div>
         </section>
 
