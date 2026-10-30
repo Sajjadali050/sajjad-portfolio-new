@@ -182,7 +182,6 @@ export default function App() {
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & POs</span>
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel Tracking</span>
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Windows & MS Licensing</span>
               </div>
 
               <div className="flex gap-3 flex-wrap">
@@ -232,8 +231,8 @@ export default function App() {
               <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'سجلات Odoo ERP وExcel' : 'Odoo ERP and Excel logs'}</span>
             </div>
             <div>
-              <strong className="block text-base">{isAr ? 'ضبط المستندات والأنظمة' : 'Document & System Support'}</strong>
-              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'السجلات، إدارة الإصدارات، وتثبيت وتفعيل البرامج' : 'Records, versioning & OS/Software activation'}</span>
+              <strong className="block text-base">{isAr ? 'ضبط المستندات' : 'Document Control'}</strong>
+              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'السجلات وإدارة الإصدارات والأرشفة الرقمية' : 'Records, versioning & digital archives'}</span>
             </div>
           </div>
         </section>
@@ -245,7 +244,7 @@ export default function App() {
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">
               {isAr ? <>تركيز على المشتريات، <span className="text-[#8B5CF6]">والأنظمة.</span></> : <>Procurement-minded. <span className="text-[#8B5CF6]">Systems-focused.</span></>}
             </h2>
-            <p className="text-[#A79CB8]">{isAr ? 'مزيج عملي من تنسيق الشراء ودقة التتبع والإدارة المنظمة للمستندات والأنظمة.' : 'A practical mix of purchasing coordination, tracking discipline, document control, and system setup.'}</p>
+            <p className="text-[#A79CB8]">{isAr ? 'مزيج عملي من تنسيق الشراء ودقة التتبع والإدارة المنظمة للمستندات.' : 'A practical mix of purchasing coordination, tracking discipline, and organized document management.'}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl flex flex-col justify-between">
@@ -253,8 +252,8 @@ export default function App() {
                 <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
                 <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base">
                   {isAr 
-                    ? 'أعمل في الرياض بالمملكة العربية السعودية، ولدي خبرة في شركة Scientific Systems Construction Company (SSCC) في طلبات عروض الأسعار وأوامر الشراء وتنسيق الموردين وسجلات المشتريات وتتبع المواد. كما تشمل خبرتي السابقة في ضبط المستندات تنظيم الملفات وإدارة الإصدارات، بالإضافة إلى معرفة عملية بتثبيت وتفعيل أنظمة Windows وبرامج MS Office.'
-                    : 'Based in Riyadh, Saudi Arabia, with experience at Scientific Systems Construction Company (SSCC) handling RFQs, POs, supplier coordination, procurement records, and material tracking. Previous document control experience includes file organization and version control, alongside practical knowledge of Windows installation and MS Office licensing/activations.'}
+                    ? 'أعمل في الرياض بالمملكة العربية السعودية، ولدي خبرة في شركة Scientific Systems Construction Company (SSCC) في طلبات عروض الأسعار وأوامر الشراء وتنسيق الموردين وسجلات المشتريات وتتبع المواد. كما تشمل خبرتي السابقة في ضبط المستندات تنظيم الملفات وإدارة الإصدارات والأرشيف الورقي والإلكتروني.'
+                    : 'Based in Riyadh, Saudi Arabia, with experience at Scientific Systems Construction Company (SSCC) handling RFQs, POs, supplier coordination, procurement records, and material tracking. Previous document control experience includes file organization, version control, and physical and electronic archives.'}
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#30263F] flex gap-3">
@@ -275,13 +274,13 @@ export default function App() {
                 <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'تنسيق الموردين والبائعين' : 'Supplier and vendor coordination'}</li>
                 <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'ضبط المستندات وإدارة الإصدارات' : 'Document control and versioning'}</li>
                 <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'إدارة المخزون والمستودعات' : 'Inventory and stock management'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'تثبيت وتفعيل MS Office & Windows' : 'MS Office & Windows Installation/Activation'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'أدوات Microsoft Office' : 'MS Office tools'}</li>
               </ul>
             </article>
           </div>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills Section with Windows & MS Office Lifetime Installation Cards */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -289,6 +288,8 @@ export default function App() {
             <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات العملية الواردة في الملف المهني الحالي.' : 'Tools and day-to-day capabilities listed in the existing portfolio.'}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            {/* Odoo ERP */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
@@ -300,6 +301,7 @@ export default function App() {
               </button>
             </div>
 
+            {/* Microsoft Excel */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">XL</div>
@@ -311,6 +313,7 @@ export default function App() {
               </button>
             </div>
 
+            {/* Document Control */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">DC</div>
@@ -322,6 +325,7 @@ export default function App() {
               </button>
             </div>
 
+            {/* Supplier Coordination */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">SC</div>
@@ -333,6 +337,7 @@ export default function App() {
               </button>
             </div>
 
+            {/* Inventory & Materials */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">INV</div>
@@ -344,17 +349,32 @@ export default function App() {
               </button>
             </div>
 
-            {/* Added Software Licensing & OS Activation */}
+            {/* Microsoft Office (Free Lifetime Installation & Activation) */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
-                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">IT</div>
-                <h3 className="font-bold text-base mb-1">{isAr ? 'تثبيت وتفعيل البرامج' : 'Software & OS Setup'}</h3>
-                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تثبيت وتفعيل نظام Windows وبرامج MS Office والتراخيص.' : 'Windows OS installation, MS Office setup, and software licensing.'}</p>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
+                <h3 className="font-bold text-base mb-1">MS Office</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تثبيت وتفعيل مدى الحياة لجميع برامج أوفيس.' : 'Free lifetime installation and activation.'}</p>
               </div>
-              <button onClick={() => setSelectedImage(screenshots.rfqSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
-                View Tools & Software ↗
-              </button>
+              <div className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/10 border border-[#8B5CF6]/30 px-3 py-2 rounded-xl text-center">
+                Lifetime Activation Ready
+              </div>
             </div>
+
+            {/* Windows (Free Lifetime Installation & Activation) */}
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between md:col-span-3">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                  <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-2 font-bold">WIN</div>
+                  <h3 className="font-bold text-base mb-1">Windows</h3>
+                  <p className="text-[#A79CB8] text-sm">{isAr ? 'تثبيت وتفعيل نظام ويندوز مدى الحياة بكل احترافية.' : 'Free lifetime installation and activation of Windows operating system.'}</p>
+                </div>
+                <div className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/10 border border-[#8B5CF6]/30 px-4 py-2.5 rounded-xl text-center shrink-0">
+                  OS Setup & Lifetime Activation
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
