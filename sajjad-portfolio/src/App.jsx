@@ -182,6 +182,7 @@ export default function App() {
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & POs</span>
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel Tracking</span>
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Windows & MS Licensing</span>
               </div>
 
               <div className="flex gap-3 flex-wrap">
@@ -231,8 +232,8 @@ export default function App() {
               <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'سجلات Odoo ERP وExcel' : 'Odoo ERP and Excel logs'}</span>
             </div>
             <div>
-              <strong className="block text-base">{isAr ? 'ضبط المستندات' : 'Document Control'}</strong>
-              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'السجلات وإدارة الإصدارات والأرشفة الرقمية' : 'Records, versioning & digital archives'}</span>
+              <strong className="block text-base">{isAr ? 'ضبط المستندات والأنظمة' : 'Document & System Support'}</strong>
+              <span className="block text-[#A79CB8] text-sm mt-1">{isAr ? 'السجلات، إدارة الإصدارات، وتثبيت وتفعيل البرامج' : 'Records, versioning & OS/Software activation'}</span>
             </div>
           </div>
         </section>
@@ -244,7 +245,7 @@ export default function App() {
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">
               {isAr ? <>تركيز على المشتريات، <span className="text-[#8B5CF6]">والأنظمة.</span></> : <>Procurement-minded. <span className="text-[#8B5CF6]">Systems-focused.</span></>}
             </h2>
-            <p className="text-[#A79CB8]">{isAr ? 'مزيج عملي من تنسيق الشراء ودقة التتبع والإدارة المنظمة للمستندات.' : 'A practical mix of purchasing coordination, tracking discipline, and organized document management.'}</p>
+            <p className="text-[#A79CB8]">{isAr ? 'مزيج عملي من تنسيق الشراء ودقة التتبع والإدارة المنظمة للمستندات والأنظمة.' : 'A practical mix of purchasing coordination, tracking discipline, document control, and system setup.'}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl flex flex-col justify-between">
@@ -252,8 +253,8 @@ export default function App() {
                 <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
                 <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base">
                   {isAr 
-                    ? 'أعمل في الرياض بالمملكة العربية السعودية، ولدي خبرة في شركة Scientific Systems Construction Company (SSCC) في طلبات عروض الأسعار وأوامر الشراء وتنسيق الموردين وسجلات المشتريات وتتبع المواد. كما تشمل خبرتي السابقة في ضبط المستندات تنظيم الملفات وإدارة الإصدارات والأرشيف الورقي والإلكتروني.'
-                    : 'Based in Riyadh, Saudi Arabia, with experience at Scientific Systems Construction Company (SSCC) handling RFQs, POs, supplier coordination, procurement records, and material tracking. Previous document control experience includes file organization, version control, and physical and electronic archives.'}
+                    ? 'أعمل في الرياض بالمملكة العربية السعودية، ولدي خبرة في شركة Scientific Systems Construction Company (SSCC) في طلبات عروض الأسعار وأوامر الشراء وتنسيق الموردين وسجلات المشتريات وتتبع المواد. كما تشمل خبرتي السابقة في ضبط المستندات تنظيم الملفات وإدارة الإصدارات، بالإضافة إلى معرفة عملية بتثبيت وتفعيل أنظمة Windows وبرامج MS Office.'
+                    : 'Based in Riyadh, Saudi Arabia, with experience at Scientific Systems Construction Company (SSCC) handling RFQs, POs, supplier coordination, procurement records, and material tracking. Previous document control experience includes file organization and version control, alongside practical knowledge of Windows installation and MS Office licensing/activations.'}
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-[#30263F] flex gap-3">
@@ -274,7 +275,7 @@ export default function App() {
                 <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'تنسيق الموردين والبائعين' : 'Supplier and vendor coordination'}</li>
                 <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'ضبط المستندات وإدارة الإصدارات' : 'Document control and versioning'}</li>
                 <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'إدارة المخزون والمستودعات' : 'Inventory and stock management'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'أدوات Microsoft Office' : 'MS Office tools'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'تثبيت وتفعيل MS Office & Windows' : 'MS Office & Windows Installation/Activation'}</li>
               </ul>
             </article>
           </div>
@@ -343,14 +344,15 @@ export default function App() {
               </button>
             </div>
 
+            {/* Added Software Licensing & OS Activation */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
-                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
-                <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
-                <p className="text-[#A79CB8] text-sm mb-4">Word, PowerPoint, and Outlook.</p>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">IT</div>
+                <h3 className="font-bold text-base mb-1">{isAr ? 'تثبيت وتفعيل البرامج' : 'Software & OS Setup'}</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تثبيت وتفعيل نظام Windows وبرامج MS Office والتراخيص.' : 'Windows OS installation, MS Office setup, and software licensing.'}</p>
               </div>
               <button onClick={() => setSelectedImage(screenshots.rfqSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
-                View RFQ & Terms Tracker ↗
+                View Tools & Software ↗
               </button>
             </div>
           </div>
