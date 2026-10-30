@@ -72,6 +72,16 @@ export default function App() {
       title: "Material Details Local Database & Folders", 
       img: "/screenshots/WhatsApp Image 2026-10-29 at 11.50.50.jpeg", 
       desc: "Structured local file system storing project documentation, delivery schedules, and PO logs." 
+    },
+    msOfficeProof: {
+      title: "MS Office Activation Customer Proof",
+      img: "/screenshots/ms office 2026-10-30 at 17.32.00 (1).jpeg",
+      desc: "Live customer chat verification showing successful MS Office lifetime installation and activation."
+    },
+    windowsProof: {
+      title: "Windows & MS Office Activation Proof",
+      img: "/screenshots/Window and ms office 2026-10-30 at 17.32.00.jpeg",
+      desc: "System setup proof demonstrating completed Windows operating system and MS Office activation."
     }
   };
 
@@ -280,7 +290,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section with Windows & MS Office Lifetime Installation Cards */}
+        {/* Skills Section with Proof Buttons for MS Office & Windows */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -349,19 +359,19 @@ export default function App() {
               </button>
             </div>
 
-            {/* Microsoft Office (Free Lifetime Installation & Activation) */}
+            {/* MS Office (With Proof Button) */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
                 <h3 className="font-bold text-base mb-1">MS Office</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تثبيت وتفعيل مدى الحياة لجميع برامج أوفيس.' : 'Free lifetime installation and activation.'}</p>
               </div>
-              <div className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/10 border border-[#8B5CF6]/30 px-3 py-2 rounded-xl text-center">
-                Lifetime Activation Ready
-              </div>
+              <button onClick={() => setSelectedImage(screenshots.msOfficeProof)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View MS Office Proof ↗
+              </button>
             </div>
 
-            {/* Windows (Free Lifetime Installation & Activation) */}
+            {/* Windows (With Proof Button) */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between md:col-span-3">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
@@ -369,9 +379,9 @@ export default function App() {
                   <h3 className="font-bold text-base mb-1">Windows</h3>
                   <p className="text-[#A79CB8] text-sm">{isAr ? 'تثبيت وتفعيل نظام ويندوز مدى الحياة بكل احترافية.' : 'Free lifetime installation and activation of Windows operating system.'}</p>
                 </div>
-                <div className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/10 border border-[#8B5CF6]/30 px-4 py-2.5 rounded-xl text-center shrink-0">
-                  OS Setup & Lifetime Activation
-                </div>
+                <button onClick={() => setSelectedImage(screenshots.windowsProof)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-4 py-2.5 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer shrink-0">
+                  View Windows & Office Proof ↗
+                </button>
               </div>
             </div>
 
