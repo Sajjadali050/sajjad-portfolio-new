@@ -14,12 +14,12 @@ export default function App() {
   const isAr = lang === 'ar';
 
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
-  const businessCardUrl = "/screenshots/WhatsApp Image 2026-10-29 at 12.02.53.jpeg";
+  const businessCardUrl = "https://drive.google.com/file/d/1obKef4eOzFS4D0RPrRpd9lPl6gMSgDMK/view?usp=sharing";
   const whatsappNumber = "+966542475245";
   const whatsappLink = "https://wa.me/966542475245";
-  const personalEmail = "saddamjacker7@gmail.com";
+  const personalEmail = "sajjad.ali.procurement@gmail.com";
   const companyEmail = "sajjad.ali@sscc-sa.com";
-  const cvLink = "https://drive.google.com/file/d/1obKef4eOzFS4D0RPrRpd9lPl6gMSgDMK/view?usp=sharing";
+  const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
 
   return (
     <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
@@ -121,7 +121,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Profile Photo Block */}
+            {/* Profile Photo & Business Card Block */}
             <div className="relative max-w-[380px] mx-auto w-full flex flex-col items-center">
               <div className="absolute inset-[4%_0_0_0] rounded-[32px] bg-gradient-to-br from-[#8B5CF6]/40 via-[#7C3AED]/20 to-transparent blur-[35px] pointer-events-none"></div>
               
@@ -129,14 +129,13 @@ export default function App() {
                 <img src={profilePhotoUrl} alt="Sajjad Ali Ansari" className="w-full h-full object-cover" />
               </div>
 
-              {/* Official Business Card Embedded Directly */}
+              {/* SSCC Official Business Card embedded directly */}
               <div className="mt-4 w-full p-3.5 rounded-[16px] border border-[#8B5CF6]/40 bg-[#100D17]/95 shadow-[0_4px_20px_rgba(139,92,246,0.2)]">
                 <div className="flex items-center justify-between mb-2">
                   <strong className="block text-sm text-[#EDE7F7]">SSCC Official Business Card</strong>
-                  <span className="text-[10px] bg-[#7C3AED]/30 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Verified</span>
-                </div>
-                <div className="w-full rounded-lg overflow-hidden border border-[#30263F] bg-black/40">
-                  <img src={businessCardUrl} alt="SSCC Official Business Card" className="w-full h-auto object-contain" />
+                  <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-[11px] bg-[#7C3AED]/30 text-[#C4B5FD] px-2.5 py-1 rounded-md font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                    View Card ↗
+                  </a>
                 </div>
               </div>
             </div>
@@ -196,7 +195,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills Section Updated */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -237,14 +236,14 @@ export default function App() {
 
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
-              <h3 className="font-bold text-base mb-1">MS Office</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'تثبيت وتفعيل مدى الحياة لجميع برامج أوفيس.' : 'Free lifetime installation and activation.'}</p>
+              <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
+              <p className="text-[#A79CB8] text-sm">Microsoft Office - installation and configuration</p>
             </div>
 
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] md:col-span-3">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-2 font-bold">WIN</div>
-              <h3 className="font-bold text-base mb-1">Windows</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'تثبيت وتفعيل نظام ويندوز مدى الحياة بكل احترافية.' : 'Free lifetime installation and activation of Windows operating system.'}</p>
+              <h3 className="font-bold text-base mb-1">Window</h3>
+              <p className="text-[#A79CB8] text-sm">Window - installation and setup</p>
             </div>
 
           </div>
@@ -307,7 +306,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Experience Section */}
+        {/* Experience Section Updated with Document Controller */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
@@ -330,54 +329,115 @@ export default function App() {
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إعداد جداول مقارنة الأسعار بين الموردين لتحسين التكلفة.' : 'Preparing comparative pricing sheets across vendors to optimize procurement costs.'}</li>
               </ul>
             </div>
+
+            {/* Document Controller Experience Added */}
+            <div className="p-8 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
+              <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                <div>
+                  <h3 className="text-xl font-bold">{isAr ? 'مراقب مستندات' : 'Document Controller'}</h3>
+                  <p className="text-[#C4B5FD] text-sm font-semibold mt-1">{isAr ? 'خبرة سابقة في الأرشيف وإدارة المستندات' : 'Previous Experience in Archiving & Document Management'}</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/30 text-[#C4B5FD] border border-[#8B5CF6]/50 px-3 py-1.5 rounded-xl font-bold mt-2 md:mt-0 w-fit hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  View Document ↗
+                </a>
+              </div>
+              <p className="text-[#C2B8D4] text-sm leading-relaxed">
+                {isAr ? 'تنظيم الملفات، إدارة الإصدارات، التحكم في المستندات الهندسية والإدارية، والأرشفة الرقمية والورقية بكفاءة عالية.' : 'Organizing files, version control, technical and administrative document management, and efficient digital and physical archiving.'}
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* Certifications Section */}
+        {/* Certifications Section with all 5 links */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات' : '05 / Certifications'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والدورات' : 'Certifications & Credentials'}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">Odoo ERP Procurement Certification</h3>
-              <p className="text-[#A79CB8] text-sm">Verified expertise in Odoo purchasing and inventory modules.</p>
+            
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-base mb-1">Procurement Learner Verification</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">Alison Learner Verification</p>
+              </div>
+              <a href="https://drive.google.com/file/d/1FlLTFgKeP5UT9lgDhszskRJSS8lAIwYs/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Certificate ↗
+              </a>
             </div>
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">Professional Diploma in Administration Management</h3>
-              <p className="text-[#A79CB8] text-sm">Udemy Verified Credential</p>
+
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-base mb-1">Electronic Document Management</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">Alison Learner Verification</p>
+              </div>
+              <a href="https://drive.google.com/file/d/12_BDAQxV2XUwRcBKcZteNpSpF4jWzUcX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Certificate ↗
+              </a>
             </div>
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">MS Office Specialist Mastery</h3>
-              <p className="text-[#A79CB8] text-sm">Advanced Excel, Word, & PowerPoint</p>
+
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-base mb-1">Odoo ERP Procurement Certification</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">Odoo eLearning</p>
+              </div>
+              <a href="https://drive.google.com/file/d/1RNmouiSc8x9jfsoC0C3O03oGspnD9UXG/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Certificate ↗
+              </a>
             </div>
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">Electronic Document Management</h3>
-              <p className="text-[#A79CB8] text-sm">Digital Records & Archiving Control</p>
+
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <h3 className="font-bold text-base mb-1">Microsoft Excel, Word, & PowerPoint</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">Udemy Certification</p>
+              </div>
+              <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Certificate ↗
+              </a>
             </div>
+
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between md:col-span-2">
+              <div>
+                <h3 className="font-bold text-base mb-1">Professional Diploma in Administration Management</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">Udemy Verified Certification</p>
+              </div>
+              <a href="https://drive.google.com/file/d/1X24QJp9AE3IrQfgYHbql4B4aZKi1uptL/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Certificate ↗
+              </a>
+            </div>
+
           </div>
         </section>
 
-        {/* Education Section */}
+        {/* Education Section Updated */}
         <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'التعليم المؤهل' : 'Education'}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96">
-              <h3 className="text-lg font-bold mb-1">Diploma in Computer Application (DCA)</h3>
-              <p className="text-[#C4B5FD] text-sm">Ruma Technical Degree College</p>
+            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-bold mb-1">Diploma in Computer Application (DCA)</h3>
+                <p className="text-[#C4B5FD] text-sm mb-4">Ruma Technical Degree College</p>
+              </div>
+              <a href="https://drive.google.com/file/d/1pkIBjxwRBQWQD4PA3GI99KIQndSXdLr9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Diploma Certificate ↗
+              </a>
             </div>
-            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96">
-              <h3 className="text-lg font-bold mb-1">Senior Secondary High School</h3>
-              <p className="text-[#C4B5FD] text-sm">Allahabad Board</p>
+            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 flex flex-col justify-between">
+              <div>
+                <h3 className="text-lg font-bold mb-1">Senior Secondary High School</h3>
+                <p className="text-[#C4B5FD] text-sm mb-4">Allahabad Board</p>
+              </div>
+              <a href="https://drive.google.com/file/d/1h07TBOATE0AMpMOyVzDf72khpn9I1Xwz/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View High School Certificate ↗
+              </a>
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section Updated with new Email */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
             <div className="max-w-[600px]">
@@ -387,7 +447,7 @@ export default function App() {
                 {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
               </p>
               <div className="space-y-4 text-sm font-medium">
-                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:saddamjacker7@gmail.com" className="text-[#C4B5FD] hover:underline">saddamjacker7@gmail.com</a></p>
+                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:sajjad.ali.procurement@gmail.com" className="text-[#C4B5FD] hover:underline">sajjad.ali.procurement@gmail.com</a></p>
                 <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">🏢</span> Company Email: <a href="mailto:sajjad.ali@sscc-sa.com" className="text-[#C4B5FD] hover:underline">sajjad.ali@sscc-sa.com</a></p>
                 <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📱</span> Phone / WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">+966 54 247 5245</a></p>
               </div>
