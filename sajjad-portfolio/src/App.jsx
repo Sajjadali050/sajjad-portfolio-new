@@ -237,13 +237,13 @@ export default function App() {
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
               <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
-              <p className="text-[#A79CB8] text-sm">Microsoft Office - installation and configuration</p>
+              <p className="text-[#A79CB8] text-sm">microsoft office - installation and configuration</p>
             </div>
 
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] md:col-span-3">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-2 font-bold">WIN</div>
               <h3 className="font-bold text-base mb-1">Window</h3>
-              <p className="text-[#A79CB8] text-sm">Window - installation and setup</p>
+              <p className="text-[#A79CB8] text-sm">window - installation and setup</p>
             </div>
 
           </div>
@@ -306,7 +306,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Experience Section Updated with Document Controller */}
+        {/* Experience Section */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
@@ -330,7 +330,7 @@ export default function App() {
               </ul>
             </div>
 
-            {/* Document Controller Experience Added */}
+            {/* Document Controller Experience */}
             <div className="p-8 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <div>
@@ -348,7 +348,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Certifications Section with all 5 links */}
+        {/* Certifications Section Updated with Learner Verification */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات' : '05 / Certifications'}</span>
@@ -362,7 +362,7 @@ export default function App() {
                 <p className="text-[#A79CB8] text-sm mb-4">Alison Learner Verification</p>
               </div>
               <a href="https://drive.google.com/file/d/1FlLTFgKeP5UT9lgDhszskRJSS8lAIwYs/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
-                View Certificate ↗
+                View Learner Verification ↗
               </a>
             </div>
 
@@ -372,7 +372,7 @@ export default function App() {
                 <p className="text-[#A79CB8] text-sm mb-4">Alison Learner Verification</p>
               </div>
               <a href="https://drive.google.com/file/d/12_BDAQxV2XUwRcBKcZteNpSpF4jWzUcX/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
-                View Certificate ↗
+                View Learner Verification ↗
               </a>
             </div>
 
@@ -389,9 +389,9 @@ export default function App() {
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <h3 className="font-bold text-base mb-1">Microsoft Excel, Word, & PowerPoint</h3>
-                <p className="text-[#A79CB8] text-sm mb-4">Udemy Certification</p>
+                <p className="text-[#A79CB8] text-sm mb-4">Udemy Verified Certification</p>
               </div>
-              <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
                 View Certificate ↗
               </a>
             </div>
@@ -409,7 +409,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Education Section Updated */}
+        {/* Education Section Updated with Uttar Pradesh India */}
         <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
@@ -428,7 +428,7 @@ export default function App() {
             <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 flex flex-col justify-between">
               <div>
                 <h3 className="text-lg font-bold mb-1">Senior Secondary High School</h3>
-                <p className="text-[#C4B5FD] text-sm mb-4">Allahabad Board</p>
+                <p className="text-[#C4B5FD] text-sm mb-4">Allahabad Board, Uttar Pradesh India</p>
               </div>
               <a href="https://drive.google.com/file/d/1h07TBOATE0AMpMOyVzDf72khpn9I1Xwz/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
                 View High School Certificate ↗
