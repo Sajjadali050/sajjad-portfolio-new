@@ -45,7 +45,7 @@ export default function App() {
               SA
             </div>
             <div>
-              <span className="text-[0.96rem] font-extrabold leading-tight block">Sajjad Ali Ansari</span>
+              <span className="text-[0.96rem] font-extrabold leading-tight block">Sajjad Ali</span>
               <span className="text-stone-400 text-[0.68rem] font-semibold tracking-wider uppercase block mt-1">
                 {isAr ? 'المشتريات والأنظمة' : 'Procurement & Systems'}
               </span>
@@ -126,7 +126,7 @@ export default function App() {
               <div className="absolute inset-[4%_0_0_0] rounded-[32px] bg-gradient-to-br from-[#8B5CF6]/40 via-[#7C3AED]/20 to-transparent blur-[35px] pointer-events-none"></div>
               
               <div className="relative w-full aspect-[4/4.8] border border-[#8B5CF6]/50 rounded-[28px] overflow-hidden bg-[#100D17] shadow-[0_0_35px_rgba(139,92,246,0.35)]">
-                <img src={profilePhotoUrl} alt="Sajjad Ali Ansari" className="w-full h-full object-cover" />
+                <img src={profilePhotoUrl} alt="Sajjad Ali" className="w-full h-full object-cover" />
               </div>
 
               {/* SSCC Official Business Card embedded directly */}
@@ -306,7 +306,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Experience Section Updated with "View Experience Letter" */}
+        {/* Experience Section Updated with Dates */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
@@ -320,7 +320,7 @@ export default function App() {
                   <p className="text-[#C4B5FD] text-sm font-semibold mt-1">Scientific Systems Construction Company (SSCC) — {isAr ? 'الرياض' : 'Riyadh'}</p>
                 </div>
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold mt-2 md:mt-0 w-fit">
-                  {isAr ? 'الحالي' : 'Present'}
+                  September 2026 – Present
                 </span>
               </div>
               <ul className="space-y-2.5 text-[#C2B8D4] text-sm leading-relaxed">
@@ -335,11 +335,16 @@ export default function App() {
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <div>
                   <h3 className="text-xl font-bold">{isAr ? 'مراقب مستندات' : 'Document Controller'}</h3>
-                  <p className="text-[#C4B5FD] text-sm font-semibold mt-1">{isAr ? 'خبرة سابقة في الأرشيف وإدارة المستندات' : 'Previous Experience in Archiving & Document Management'}</p>
+                  <p className="text-[#C4B5FD] text-sm font-semibold mt-1">Administrative Business Pattern Co. – Riyadh, Saudi Arabia</p>
                 </div>
-                <a href="https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/30 text-[#C4B5FD] border border-[#8B5CF6]/50 px-3 py-1.5 rounded-xl font-bold mt-2 md:mt-0 w-fit hover:bg-[#7C3AED] hover:text-white transition-colors">
-                  View Experience Letter ↗
-                </a>
+                <div className="flex flex-col md:items-end gap-2 mt-2 md:mt-0">
+                  <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold w-fit">
+                    September 2024 – April 2026
+                  </span>
+                  <a href="https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/30 text-[#C4B5FD] border border-[#8B5CF6]/50 px-3 py-1.5 rounded-xl font-bold w-fit hover:bg-[#7C3AED] hover:text-white transition-colors">
+                    View Experience Letter ↗
+                  </a>
+                </div>
               </div>
               <p className="text-[#C2B8D4] text-sm leading-relaxed">
                 {isAr ? 'تنظيم الملفات، إدارة الإصدارات، التحكم في المستندات الهندسية والإدارية، والأرشفة الرقمية والورقية بكفاءة عالية.' : 'Organizing files, version control, technical and administrative document management, and efficient digital and physical archiving.'}
@@ -457,7 +462,7 @@ export default function App() {
       </main>
 
       <footer className="border-t border-[#30263F] py-8 text-center text-xs text-[#A79CB8]">
-        © 2026 Sajjad Ali Ansari. All rights reserved.
+        © 2026 Sajjad Ali. All rights reserved.
       </footer>
     </div>
   );
