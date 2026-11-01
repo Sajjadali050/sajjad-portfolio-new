@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function App() {
   const [lang, setLang] = useState('en');
   const [navOpen, setNavOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const toggleLanguage = () => {
     const nextLang = lang === 'en' ? 'ar' : 'en';
@@ -14,12 +15,99 @@ export default function App() {
   const isAr = lang === 'ar';
 
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
+  const whatsappNumber = "+966542475245";
   const whatsappLink = "https://wa.me/966542475245";
+  const personalEmail = "saddamjacker7@gmail.com";
+  const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1obKef4eOzFS4D0RPrRpd9lPl6gMSgDMK/view?usp=sharing";
+
+  // Exact matching filenames with correct .jpeg extensions
+  const screenshots = {
+    odoo: { 
+      title: "Odoo ERP - Requests for Quotation (SSCC)", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.41.01.jpeg", 
+      desc: "Live Odoo enterprise software dashboard tracking active RFQs and Purchase Orders at SSCC." 
+    },
+    businessCard: { 
+      title: "SSCC Official Business Card", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 12.02.53.jpeg", 
+      desc: "Official credentials, contact phone (+966 54 247 5245), and official company email (sajjad.ali@sscc-sa.com)." 
+    },
+    msrPoLog: { 
+      title: "MSR & PO Tracking Log (Excel)", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.33.37.jpeg", 
+      desc: "Comprehensive Excel log managing material status requests (MSR) and purchase orders (PO)." 
+    },
+    paymentRequest: { 
+      title: "List of PO Payment Requests", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.35.18.jpeg", 
+      desc: "Tracking pending and paid supplier advance payments, net terms, and delays." 
+    },
+    fanarInventory: { 
+      title: "Project Fanar Log & Inventory Tracker", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.36.29.jpeg", 
+      desc: "Real-time stock levels, incoming/outgoing quantities, and material updates for sewer systems." 
+    },
+    bv4Inventory: { 
+      title: "Project B.V.4 Inventory Log", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.37.14.jpeg", 
+      desc: "Inventory tracking for UPVC pipes, rubber rings, fittings, and safety gear." 
+    },
+    homesInventory: { 
+      title: "Project Homes Inventory Tracker", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.38.21.jpeg", 
+      desc: "Stock monitoring, balances, and material updates for Project Homes." 
+    },
+    comparisonSheet: { 
+      title: "Supplier Comparison Sheet (New Tools)", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.46.49.jpeg", 
+      desc: "Comparative pricing analysis across multiple vendors (Edadcom, Arabian Tools, Alfanoos, Madar Hardware)." 
+    },
+    rfqSheet: { 
+      title: "RFQ & Payment Terms Tracker", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.50.04.jpeg", 
+      desc: "Supplier quotation tracking with explicit advance payment terms and totals." 
+    },
+    materialFolder: { 
+      title: "Material Details Local Database & Folders", 
+      img: "/screenshots/WhatsApp Image 2026-10-29 at 11.50.50.jpeg", 
+      desc: "Structured local file system storing project documentation, delivery schedules, and PO logs." 
+    },
+    msOfficeProof: {
+      title: "MS Office Activation Customer Proof",
+      img: "/screenshots/ms office 2026-10-30 at 17.32.00 (1).jpeg",
+      desc: "Live customer chat verification showing successful MS Office lifetime installation and activation."
+    },
+    windowsProof: {
+      title: "Windows & MS Office Activation Proof",
+      img: "/screenshots/Window and ms office 2026-10-30 at 17.32.00.jpeg",
+      desc: "System setup proof demonstrating completed Windows operating system and MS Office activation."
+    }
+  };
 
   return (
     <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
       
+      {/* Image Modal Viewer */}
+      {selectedImage && (
+        <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
+          <div className="relative max-w-5xl w-full bg-[#15111F] border border-[#493765] rounded-2xl overflow-hidden p-4 shadow-2xl" onClick={e => e.stopPropagation()}>
+            <div className="flex justify-between items-center mb-3 border-b border-[#30263F] pb-3">
+              <div>
+                <h3 className="text-lg font-bold text-[#EDE7F7]">{selectedImage.title}</h3>
+                <p className="text-xs text-[#A79CB8]">{selectedImage.desc}</p>
+              </div>
+              <button onClick={() => setSelectedImage(null)} className="px-3 py-1.5 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] font-bold text-sm hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                ✕ Close
+              </button>
+            </div>
+            <div className="max-h-[75vh] overflow-auto rounded-xl bg-black/50 flex justify-center p-2">
+              <img src={selectedImage.img} alt={selectedImage.title} className="max-w-full h-auto object-contain rounded-lg shadow-lg" />
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Floating WhatsApp Button */}
       <a 
         href={whatsappLink} 
@@ -117,7 +205,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Profile Photo Block */}
+            {/* Profile Photo Block with Styled Purple Glow */}
             <div className="relative max-w-[380px] mx-auto w-full flex flex-col items-center">
               <div className="absolute inset-[4%_0_0_0] rounded-[32px] bg-gradient-to-br from-[#8B5CF6]/40 via-[#7C3AED]/20 to-transparent blur-[35px] pointer-events-none"></div>
               
@@ -130,6 +218,12 @@ export default function App() {
                   <strong className="block text-sm text-[#EDE7F7]">Odoo ERP + Excel</strong>
                   <span className="block text-[#A79CB8] text-xs mt-0.5">{isAr ? 'سير عمل تتبع المشتريات' : 'Procurement tracking workflow'}</span>
                 </div>
+                <button 
+                  onClick={() => setSelectedImage(screenshots.businessCard)}
+                  className="px-2.5 py-1 rounded-md bg-[#7C3AED]/30 border border-[#8B5CF6]/60 text-[#C4B5FD] text-[11px] font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer"
+                >
+                  View Card ↗
+                </button>
               </div>
             </div>
           </div>
@@ -172,6 +266,14 @@ export default function App() {
                     : 'Based in Riyadh, Saudi Arabia, with experience at Scientific Systems Construction Company (SSCC) handling RFQs, POs, supplier coordination, procurement records, and material tracking. Previous document control experience includes file organization, version control, and physical and electronic archives.'}
                 </p>
               </div>
+              <div className="mt-6 pt-4 border-t border-[#30263F] flex gap-3">
+                <button onClick={() => setSelectedImage(screenshots.businessCard)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View Business Card ↗
+                </button>
+                <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View Local Database ↗
+                </button>
+              </div>
             </article>
 
             <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
@@ -188,7 +290,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills Section with Proof Buttons for MS Office & Windows */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -202,8 +304,11 @@ export default function App() {
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
                 <h3 className="font-bold text-base mb-1">Odoo ERP</h3>
-                <p className="text-[#A79CB8] text-sm">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
               </div>
+              <button onClick={() => setSelectedImage(screenshots.odoo)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View Odoo RFQ Dashboard ↗
+              </button>
             </div>
 
             {/* Microsoft Excel */}
@@ -211,8 +316,11 @@ export default function App() {
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">XL</div>
                 <h3 className="font-bold text-base mb-1">Microsoft Excel</h3>
-                <p className="text-[#A79CB8] text-sm">{isAr ? 'جداول تتبع متقدمة والأرصدة وسجلات المواد.' : 'Advanced tracking sheets, balances, and material logs.'}</p>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'جداول تتبع متقدمة والأرصدة وسجلات المواد.' : 'Advanced tracking sheets, balances, and material logs.'}</p>
               </div>
+              <button onClick={() => setSelectedImage(screenshots.msrPoLog)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View MSR & PO Log ↗
+              </button>
             </div>
 
             {/* Document Control */}
@@ -220,8 +328,11 @@ export default function App() {
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">DC</div>
                 <h3 className="font-bold text-base mb-1">{isAr ? 'ضبط المستندات' : 'Document Control'}</h3>
-                <p className="text-[#A79CB8] text-sm">{isAr ? 'تنظيم الملفات وإدارة الإصدارات واسترجاع السجلات.' : 'File organization, versioning, and record retrieval.'}</p>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تنظيم الملفات وإدارة الإصدارات واسترجاع السجلات.' : 'File organization, versioning, and record retrieval.'}</p>
               </div>
+              <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View Document Archives ↗
+              </button>
             </div>
 
             {/* Supplier Coordination */}
@@ -229,8 +340,11 @@ export default function App() {
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">SC</div>
                 <h3 className="font-bold text-base mb-1">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</h3>
-                <p className="text-[#A79CB8] text-sm">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
               </div>
+              <button onClick={() => setSelectedImage(screenshots.comparisonSheet)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View Comparison Sheet ↗
+              </button>
             </div>
 
             {/* Inventory & Materials */}
@@ -238,20 +352,26 @@ export default function App() {
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">INV</div>
                 <h3 className="font-bold text-base mb-1">{isAr ? 'المخزون والمواد' : 'Inventory & Materials'}</h3>
-                <p className="text-[#A79CB8] text-sm">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
               </div>
+              <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View Fanar Log ↗
+              </button>
             </div>
 
-            {/* MS Office */}
+            {/* MS Office (With Proof Button) */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
                 <h3 className="font-bold text-base mb-1">MS Office</h3>
-                <p className="text-[#A79CB8] text-sm">{isAr ? 'تثبيت وتفعيل مدى الحياة لجميع برامج أوفيس.' : 'Free lifetime installation and activation.'}</p>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تثبيت وتفعيل مدى الحياة لجميع برامج أوفيس.' : 'Free lifetime installation and activation.'}</p>
               </div>
+              <button onClick={() => setSelectedImage(screenshots.msOfficeProof)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer text-center">
+                View MS Office Proof ↗
+              </button>
             </div>
 
-            {/* Windows */}
+            {/* Windows (With Proof Button) */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between md:col-span-3">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
@@ -259,18 +379,21 @@ export default function App() {
                   <h3 className="font-bold text-base mb-1">Windows</h3>
                   <p className="text-[#A79CB8] text-sm">{isAr ? 'تثبيت وتفعيل نظام ويندوز مدى الحياة بكل احترافية.' : 'Free lifetime installation and activation of Windows operating system.'}</p>
                 </div>
+                <button onClick={() => setSelectedImage(screenshots.windowsProof)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-4 py-2.5 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer shrink-0">
+                  View Windows & Office Proof ↗
+                </button>
               </div>
             </div>
 
           </div>
         </section>
 
-        {/* Projects Section */}
+        {/* Projects Section with Interactive Screenshot Buttons */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Work samples'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز مشاريع المشتريات' : 'Featured procurement projects'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'نظرة عامة على مشاريع المشتريات والأنظمة في SSCC.' : 'Overview of procurement operations and tracking systems at SSCC.'}</p>
+            <p className="text-[#A79CB8]">{isAr ? 'انقر على أزرار المعاينة أدناه لعرض لقطات الشاشة الأصلية للعمليات والأنظمة في SSCC.' : 'Click view buttons below to inspect original system screenshots and logs.'}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Project 1: Fanar */}
@@ -290,10 +413,18 @@ export default function App() {
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel</span>
                 </div>
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
+                  <button onClick={() => setSelectedImage(screenshots.fanarInventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                    View Fanar Log ↗
+                  </button>
+                  <button onClick={() => setSelectedImage(screenshots.odoo)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
+                    View Odoo POs ↗
+                  </button>
+                </div>
               </div>
             </div>
 
-            {/* Project 2: B.V.4 */}
+            {/* Project 2: Bv4 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div>
                 <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
@@ -301,19 +432,27 @@ export default function App() {
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">SSCC</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع B.V.4 — تتبع مواد البناء' : 'Project B.V.4 — Material Inventory'}</h3>
-                  <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'سجل شامل لمتابعة أنابيب UPVC والوصلات ومعدات السلامة والمعدات الموقعية.' : 'Comprehensive tracking log for UPVC pipes, fittings, rubber rings, and site safety gear.'}</p>
+                  <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع B.V.4 — سجلات المخزون' : 'Project B.V.4 — Inventory Log'}</h3>
+                  <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'إدارة ومتابعة أنابيب البولي بروبيلين، القطع، الوصلات، ومستلزمات التركيب.' : 'Inventory control for UPVC pipes, rubber rings, fittings, and site materials.'}</p>
                 </div>
               </div>
               <div className="p-6 pt-0 space-y-3">
                 <div className="flex gap-2 flex-wrap">
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Logistics</span>
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Inventory</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
+                  <button onClick={() => setSelectedImage(screenshots.bv4Inventory)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                    View B.V.4 Log ↗
+                  </button>
+                  <button onClick={() => setSelectedImage(screenshots.materialFolder)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
+                    View Folders ↗
+                  </button>
                 </div>
               </div>
             </div>
 
-            {/* Project 3: Comparison & Pricing */}
+            {/* Project 3: Comparison Sheet */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div>
                 <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
@@ -321,17 +460,26 @@ export default function App() {
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">SSCC</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-bold text-lg mb-2">{isAr ? 'تحليل مقارنة الموردين والأسعار' : 'Supplier Price Comparison Sheet'}</h3>
-                  <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'مقارنة دقيقة لعروض أسعار الموردين المتعددين لضمان أفضل تكلفة وشروط سداد.' : 'Structured price comparison across multiple vendors to optimize costs and payment terms.'}</p>
+                  <h3 className="font-bold text-lg mb-2">{isAr ? 'مقارنة عروض الأسعار والشركات' : 'Supplier Comparison & RFQ Sheet'}</h3>
+                  <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'تحليل أسعار الموردين (مثل معدات مادار، العربية، وغيرها) وتحديد شروط الدفع المناسبة.' : 'Comparative analysis across multiple vendors with explicit advance payment terms.'}</p>
                 </div>
               </div>
               <div className="p-6 pt-0 space-y-3">
                 <div className="flex gap-2 flex-wrap">
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Procurement</span>
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Comparison</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">RFQs</span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#30263F]">
+                  <button onClick={() => setSelectedImage(screenshots.comparisonSheet)} className="w-full py-2 px-3 rounded-xl bg-[#2C1A4E] text-[#C4B5FD] text-xs font-bold hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                    View Sheet ↗
+                  </button>
+                  <button onClick={() => setSelectedImage(screenshots.rfqSheet)} className="w-full py-2 px-3 rounded-xl bg-[#15121F] border border-[#493765] text-[#EDE7F7] text-xs font-bold hover:border-[#8B5CF6] transition-colors cursor-pointer">
+                    View Terms ↗
+                  </button>
                 </div>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -339,24 +487,36 @@ export default function App() {
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الخبرة العملية' : 'Work experience'}</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الخبرة العملية' : 'Work Experience'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'التاريخ المهني في مجال المشتريات وإدارة النظم.' : 'Professional background in procurement and systems administration.'}</p>
           </div>
-          <div className="space-y-6">
-            <div className="p-8 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
-              <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
+          <div className="grid grid-cols-1 gap-6">
+            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 mb-4">
                 <div>
                   <h3 className="text-xl font-bold">{isAr ? 'مسؤول مشتريات وتوريد' : 'Procurement & Purchasing Officer'}</h3>
-                  <p className="text-[#C4B5FD] text-sm font-semibold mt-1">Scientific Systems Construction Company (SSCC) — {isAr ? 'الرياض' : 'Riyadh'}</p>
+                  <p className="text-[#C4B5FD] text-sm font-semibold">Scientific Systems Construction Company (SSCC) — Riyadh</p>
                 </div>
-                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold mt-2 md:mt-0 w-fit">
+                <span className="px-3 py-1 rounded-full bg-[#7C3AED]/20 border border-[#8B5CF6]/40 text-[#C4B5FD] text-xs font-bold">
                   {isAr ? 'الحالي' : 'Present'}
                 </span>
               </div>
-              <ul className="space-y-2.5 text-[#C2B8D4] text-sm leading-relaxed">
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة طلبات عروض الأسعار (RFQs) وأوامر الشراء (POs) عبر نظام Odoo ERP.' : 'Managing RFQs, purchase orders, and vendor follow-ups using Odoo ERP.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'متابعة شحنات المواد وأرصدة المخزون للمشاريع الكبرى مثل مشروع فنار وB.V.4.' : 'Tracking material stock levels and balances for major projects like Project Fanar and B.V.4.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إعداد جداول مقارنة الأسعار بين الموردين لتحسين التكلفة.' : 'Preparing comparative pricing sheets across vendors to optimize procurement costs.'}</li>
-              </ul>
+              <p className="text-[#C2B8D4] text-sm leading-relaxed mb-4">
+                {isAr 
+                  ? 'العمل في قسم المشتريات، إدارة طلبات الشراء (PR)، طلبات عروض الأسعار (RFQ)، عروض الموردين، جداول المقارنة، أوامر الشراء (PO)، تحديثات مخزون المستودعات، ومعاملات النقد البسيط.'
+                  : 'Managing Purchase Requisitions (PR), Request for Quotations (RFQ), supplier quotations, comparison sheets, Purchase Orders (PO), warehouse stock updates, and petty cash transactions.'}
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                <button onClick={() => setSelectedImage(screenshots.odoo)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-1.5 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View Odoo RFQ ↗
+                </button>
+                <button onClick={() => setSelectedImage(screenshots.msrPoLog)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-1.5 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View MSR & PO Log ↗
+                </button>
+                <button onClick={() => setSelectedImage(screenshots.paymentRequest)} className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-1.5 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors cursor-pointer">
+                  View Payment Requests ↗
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -365,24 +525,29 @@ export default function App() {
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات' : '05 / Certifications'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والدورات' : 'Certifications & Credentials'}</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والاعتمادات' : 'Certifications & Credentials'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'الشهادات المهنية المعتمدة في المشتريات والإدارة.' : 'Verified professional credentials in procurement, administration, and software.'}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">Odoo ERP Procurement Certification</h3>
-              <p className="text-[#A79CB8] text-sm">Verified expertise in Odoo purchasing and inventory modules.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">Odoo eLearning Certificate</h3>
+              <p className="text-[#A79CB8] text-sm">Official Odoo learning verification</p>
             </div>
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">Introduction to Electronic Document Management</h3>
+              <p className="text-[#A79CB8] text-sm">Document Control & Archiving Verification</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">Procurement Learner Verification</h3>
+              <p className="text-[#A79CB8] text-sm">Procurement process & purchasing workflows</p>
+            </div>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F]">
               <h3 className="font-bold text-base mb-1">Professional Diploma in Administration Management</h3>
-              <p className="text-[#A79CB8] text-sm">Udemy Verified Credential</p>
+              <p className="text-[#A79CB8] text-sm">Udemy Verified Certification</p>
             </div>
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">MS Office Specialist Mastery</h3>
-              <p className="text-[#A79CB8] text-sm">Advanced Excel, Word, & PowerPoint</p>
-            </div>
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <h3 className="font-bold text-base mb-1">Electronic Document Management</h3>
-              <p className="text-[#A79CB8] text-sm">Digital Records & Archiving Control</p>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F] md:col-span-2">
+              <h3 className="font-bold text-base mb-1">Microsoft Office Mastery Course Certificate</h3>
+              <p className="text-[#A79CB8] text-sm">Comprehensive mastery covering Microsoft Word, Excel, and PowerPoint.</p>
             </div>
           </div>
         </section>
@@ -391,15 +556,15 @@ export default function App() {
         <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'التعليم المؤهل' : 'Education'}</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'التعليم الأكاديمي' : 'Education'}</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96">
-              <h3 className="text-lg font-bold mb-1">Diploma in Computer Application (DCA)</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">Diploma in Computer Application (DCA)</h3>
               <p className="text-[#C4B5FD] text-sm">Ruma Technical Degree College</p>
             </div>
-            <div className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96">
-              <h3 className="text-lg font-bold mb-1">Senior Secondary High School</h3>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#15111F]">
+              <h3 className="font-bold text-base mb-1">High School Education</h3>
               <p className="text-[#C4B5FD] text-sm">Allahabad Board</p>
             </div>
           </div>
@@ -407,26 +572,40 @@ export default function App() {
 
         {/* Contact Section */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
-          <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
-            <div className="max-w-[600px]">
+          <div className="border border-[#493765] bg-[#15111F] rounded-[24px] p-8 md:p-12 shadow-2xl">
+            <div className="max-w-[700px]">
               <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '07 / التواصل' : '07 / Contact'}</span>
-              <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'تواصل معي' : 'Get in touch'}</h2>
               <p className="text-[#C2B8D4] mb-8 leading-relaxed">
-                {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
+                {isAr 
+                  ? 'أنا متواجد حالياً في الرياض، المملكة العربية السعودية. يمكنك التواصل معي عبر البريد الإلكتروني أو الواتساب لأي استفسارات أو فرص عمل.'
+                  : 'Currently based in Riyadh, Saudi Arabia. Feel free to reach out via phone, WhatsApp, or email for professional opportunities.'}
               </p>
-              <div className="space-y-4 text-sm font-medium">
-                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:saddamjacker7@gmail.com" className="text-[#C4B5FD] hover:underline">saddamjacker7@gmail.com</a></p>
-                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">🏢</span> Company Email: <a href="mailto:sajjad.ali@sscc-sa.com" className="text-[#C4B5FD] hover:underline">sajjad.ali@sscc-sa.com</a></p>
-                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📱</span> Phone / WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">+966 54 247 5245</a></p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                <div className="p-4 rounded-xl bg-[#100D17] border border-[#30263F]">
+                  <span className="text-stone-400 block text-xs mb-1">Phone / WhatsApp</span>
+                  <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="font-bold text-[#C4B5FD] hover:underline">{whatsappNumber}</a>
+                </div>
+                <div className="p-4 rounded-xl bg-[#100D17] border border-[#30263F]">
+                  <span className="text-stone-400 block text-xs mb-1">Personal Email</span>
+                  <a href={`mailto:${personalEmail}`} className="font-bold text-[#C4B5FD] hover:underline">{personalEmail}</a>
+                </div>
+                <div className="p-4 rounded-xl bg-[#100D17] border border-[#30263F] sm:col-span-2">
+                  <span className="text-stone-400 block text-xs mb-1">Company Email</span>
+                  <a href={`mailto:${companyEmail}`} className="font-bold text-[#C4B5FD] hover:underline">{companyEmail}</a>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
       </main>
 
       <footer className="border-t border-[#30263F] py-8 text-center text-xs text-[#A79CB8]">
         © 2026 Sajjad Ali Ansari. All rights reserved.
       </footer>
+
     </div>
   );
 }
