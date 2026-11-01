@@ -195,7 +195,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section Updated */}
+        {/* Skills Section */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -249,7 +249,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects Section */}
+        {/* Projects Section Updated with Fanar Bannan, Homes Bannan, B.V.4 */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Work samples'}</span>
@@ -264,7 +264,7 @@ export default function App() {
                 <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">SSCC</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع فنار — سجلات وتتبع المواد' : 'Project Fanar — Log & Material Control'}</h3>
+                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع Fanar Bannan' : 'Fanar Bannan'}</h3>
                 <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'تتبع مستويات مخزون مواد الصرف الصحي والحلقات المطاطية ومعدات السلامة، مع معادلات ديناميكية للأرصدة باستخدام Odoo ERP وExcel.' : 'Stock-level tracking for sewer materials, rubber rings, and safety equipment, supported by dynamic balance formulas in Odoo ERP and Excel.'}</p>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
@@ -279,8 +279,8 @@ export default function App() {
                 <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">SSCC</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع B.V.4 — تتبع مواد البناء' : 'Project B.V.4 — Material Inventory'}</h3>
-                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'سجل شامل لمتابعة أنابيب UPVC والوصلات ومعدات السلامة والمعدات الموقعية.' : 'Comprehensive tracking log for UPVC pipes, fittings, rubber rings, and site safety gear.'}</p>
+                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع Homes Bannan' : 'Homes Bannan'}</h3>
+                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'سجل شامل لمتابعة مواد البناء والتشطيبات والمعدات الموقعية بدقة عالية.' : 'Comprehensive tracking log for building materials, finishing items, and site equipment.'}</p>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
                 <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Logistics</span>
@@ -294,8 +294,8 @@ export default function App() {
                 <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">SSCC</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'تحليل مقارنة الموردين والأسعار' : 'Supplier Price Comparison Sheet'}</h3>
-                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'مقارنة دقيقة لعروض أسعار الموردين المتعددين لضمان أفضل تكلفة وشروط سداد.' : 'Structured price comparison across multiple vendors to optimize costs and payment terms.'}</p>
+                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشروع B.V.4' : 'B.V.4'}</h3>
+                <p className="text-[#C2B8D4] text-sm mb-6 leading-relaxed">{isAr ? 'متابعة أنابيب UPVC والوصلات ومعدات السلامة وسجلات المشتريات الخاصة بالمشروع.' : 'Tracking UPVC pipes, fittings, safety gear, and dedicated project purchase records.'}</p>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
                 <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Procurement</span>
@@ -325,7 +325,7 @@ export default function App() {
               </div>
               <ul className="space-y-2.5 text-[#C2B8D4] text-sm leading-relaxed">
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة طلبات عروض الأسعار (RFQs) وأوامر الشراء (POs) عبر نظام Odoo ERP.' : 'Managing RFQs, purchase orders, and vendor follow-ups using Odoo ERP.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'متابعة شحنات المواد وأرصدة المخزون للمشاريع الكبرى مثل مشروع فنار وB.V.4.' : 'Tracking material stock levels and balances for major projects like Project Fanar and B.V.4.'}</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'متابعة شحنات المواد وأرصدة المخزون للمشاريع الكبرى مثل Fanar Bannan وHomes Bannan وB.V.4.' : 'Tracking material stock levels and balances for major projects like Fanar Bannan, Homes Bannan, and B.V.4.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إعداد جداول مقارنة الأسعار بين الموردين لتحسين التكلفة.' : 'Preparing comparative pricing sheets across vendors to optimize procurement costs.'}</li>
               </ul>
             </div>
@@ -348,7 +348,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Certifications Section Updated */}
+        {/* Certifications Section Updated with correct Odoo Link */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات' : '05 / Certifications'}</span>
