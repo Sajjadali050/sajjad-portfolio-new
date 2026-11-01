@@ -348,7 +348,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Certifications Section Updated with Learner Verification */}
+        {/* Certifications Section Updated */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات' : '05 / Certifications'}</span>
@@ -381,8 +381,8 @@ export default function App() {
                 <h3 className="font-bold text-base mb-1">Odoo ERP Procurement Certification</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">Odoo eLearning</p>
               </div>
-              <a href="https://drive.google.com/file/d/1RNmouiSc8x9jfsoC0C3O03oGspnD9UXG/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
-                View Certificate ↗
+              <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View eLearning Proof ↗
               </a>
             </div>
 
@@ -409,7 +409,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Education Section Updated with Uttar Pradesh India */}
+        {/* Education Section */}
         <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
@@ -437,7 +437,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section Updated with new Email */}
+        {/* Contact Section */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
             <div className="max-w-[600px]">
