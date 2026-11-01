@@ -378,10 +378,10 @@ export default function App() {
 
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
-                <h3 className="font-bold text-base mb-1">Odoo ERP Procurement Certification</h3>
+                <h3 className="font-bold text-base mb-1">Odoo Purchase eLearning</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">Odoo eLearning</p>
               </div>
-              <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+              <a href="https://drive.google.com/file/d/1RNmouiSc8x9jfsoC0C3O03oGspnD9UXG/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
                 View eLearning Proof ↗
               </a>
             </div>
