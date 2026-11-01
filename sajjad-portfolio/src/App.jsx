@@ -249,7 +249,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects Section Updated with Fanar Bannan, Homes Bannan, B.V.4 */}
+        {/* Projects Section */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Work samples'}</span>
@@ -306,7 +306,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Experience Section */}
+        {/* Experience Section Updated with "View Experience Letter" */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
@@ -338,7 +338,7 @@ export default function App() {
                   <p className="text-[#C4B5FD] text-sm font-semibold mt-1">{isAr ? 'خبرة سابقة في الأرشيف وإدارة المستندات' : 'Previous Experience in Archiving & Document Management'}</p>
                 </div>
                 <a href="https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/30 text-[#C4B5FD] border border-[#8B5CF6]/50 px-3 py-1.5 rounded-xl font-bold mt-2 md:mt-0 w-fit hover:bg-[#7C3AED] hover:text-white transition-colors">
-                  View Document ↗
+                  View Experience Letter ↗
                 </a>
               </div>
               <p className="text-[#C2B8D4] text-sm leading-relaxed">
@@ -348,7 +348,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Certifications Section Updated with correct Odoo Link */}
+        {/* Certifications Section */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات' : '05 / Certifications'}</span>
