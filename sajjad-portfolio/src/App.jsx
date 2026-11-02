@@ -297,18 +297,16 @@ export default function App() {
 
           </div>
 
-          {/* Additional IT Skills with direct embedded image thumbnails beside text */}
+          {/* Additional IT Skills with Professional Styled Badges */}
           <div className="mt-8 p-6 border border-[#30263F]/60 rounded-[18px] bg-[#15111F]/50">
             <h3 className="font-bold text-sm text-[#C4B5FD] mb-4 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills (Windows 11 & Microsoft Office)'}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               {/* Windows 11 Item */}
               <div className="flex items-center gap-3.5 bg-[#100E18] p-4 rounded-xl border border-[#30263F]">
-                <img 
-                  src="https://images.unsplash.com/photo-1622653526682-14376b5d5395?w=120&auto=format&fit=crop&q=80" 
-                  alt="Windows 11" 
-                  className="w-12 h-12 rounded-lg object-cover border border-[#30263F] shrink-0" 
-                />
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
+                  WIN 11
+                </div>
                 <div>
                   <strong className="block text-sm text-[#EDE7F7]">Windows 11 Setup</strong>
                   <span className="text-xs text-[#A79CB8]">Installation & Configuration</span>
@@ -317,11 +315,9 @@ export default function App() {
 
               {/* Microsoft Office Item */}
               <div className="flex items-center gap-3.5 bg-[#100E18] p-4 rounded-xl border border-[#30263F]">
-                <img 
-                  src="https://images.unsplash.com/photo-1618401471353-b98aedd04e11?w=120&auto=format&fit=crop&q=80" 
-                  alt="Microsoft Office" 
-                  className="w-12 h-12 rounded-lg object-cover border border-[#30263F] shrink-0" 
-                />
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-600 to-amber-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
+                  OFFICE
+                </div>
                 <div>
                   <strong className="block text-sm text-[#EDE7F7]">Microsoft Office Suite</strong>
                   <span className="text-xs text-[#A79CB8]">Setup & Troubleshooting</span>
