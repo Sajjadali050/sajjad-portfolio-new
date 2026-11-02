@@ -214,7 +214,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills & Tools Section - Updated with Inventory sample & visual badges */}
+        {/* Skills & Tools Section */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -271,7 +271,7 @@ export default function App() {
               </a>
             </div>
 
-            {/* Inventory & Materials (Updated with Inventory Management Sample Button) */}
+            {/* Inventory & Materials */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">INV</div>
@@ -297,28 +297,37 @@ export default function App() {
 
           </div>
 
-          {/* Additional IT Skills with Visual Logos & Text */}
+          {/* Additional IT Skills with direct embedded image thumbnails beside text */}
           <div className="mt-8 p-6 border border-[#30263F]/60 rounded-[18px] bg-[#15111F]/50">
-            <h3 className="font-bold text-sm text-[#C4B5FD] mb-4 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills (Windows & Microsoft Office)'}</h3>
+            <h3 className="font-bold text-sm text-[#C4B5FD] mb-4 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills (Windows 11 & Microsoft Office)'}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              {/* Windows 11 Item */}
               <div className="flex items-center gap-3.5 bg-[#100E18] p-4 rounded-xl border border-[#30263F]">
-                <div className="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-black text-xs shrink-0 shadow-inner">
-                  WIN
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1622653526682-14376b5d5395?w=120&auto=format&fit=crop&q=80" 
+                  alt="Windows 11" 
+                  className="w-12 h-12 rounded-lg object-cover border border-[#30263F] shrink-0" 
+                />
                 <div>
-                  <strong className="block text-sm text-[#EDE7F7]">Windows Operating System</strong>
-                  <span className="text-xs text-[#A79CB8]">Installation, Configuration and Setup</span>
+                  <strong className="block text-sm text-[#EDE7F7]">Windows 11 Setup</strong>
+                  <span className="text-xs text-[#A79CB8]">Installation & Configuration</span>
                 </div>
               </div>
+
+              {/* Microsoft Office Item */}
               <div className="flex items-center gap-3.5 bg-[#100E18] p-4 rounded-xl border border-[#30263F]">
-                <div className="w-12 h-12 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center font-black text-xs shrink-0 shadow-inner">
-                  OFF
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1618401471353-b98aedd04e11?w=120&auto=format&fit=crop&q=80" 
+                  alt="Microsoft Office" 
+                  className="w-12 h-12 rounded-lg object-cover border border-[#30263F] shrink-0" 
+                />
                 <div>
                   <strong className="block text-sm text-[#EDE7F7]">Microsoft Office Suite</strong>
-                  <span className="text-xs text-[#A79CB8]">Installation, Setup and Troubleshooting</span>
+                  <span className="text-xs text-[#A79CB8]">Setup & Troubleshooting</span>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
