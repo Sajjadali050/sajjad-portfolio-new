@@ -336,14 +336,14 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Fanar Banan */}
+            {/* Fanar Bannan */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
                 <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Material Procurement</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع Fanar Banan' : 'Fanar Bannan'}</h3>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع Fanar Bannan' : 'Fanar Bannan'}</h3>
                 <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">Material Procurement & Stock Monitoring</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
                   <li>• Sewer materials and rubber rings tracking</li>
@@ -731,7 +731,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section - Updated with balanced 2-column layout & Quick QR Code Card */}
+        {/* Contact Section - Updated with Real QR Code Image */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
             <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
@@ -755,28 +755,24 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Right Side: Quick QR Code & Direct Connect Box */}
+              {/* Right Side: Real QR Code Card */}
               <div className="bg-[#100E18] border border-[#30263F] p-6 rounded-2xl flex flex-col items-center text-center shadow-xl">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#8B5CF6] text-white flex items-center justify-center font-black text-xl mb-3 shadow-lg">
-                  SA
+                <div className="w-36 h-36 bg-white p-2.5 rounded-xl shadow-inner mb-3 flex items-center justify-center">
+                  <img 
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/966542475245" 
+                    alt="WhatsApp QR Code" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <h3 className="font-bold text-base text-[#EDE7F7] mb-1">Connect Instantly</h3>
-                <p className="text-xs text-[#A79CB8] mb-4">Scan or click below to connect with Sajjad Ali directly on WhatsApp.</p>
+                <h3 className="font-bold text-base text-[#EDE7F7] mb-1">Scan to Chat</h3>
+                <p className="text-xs text-[#A79CB8] mb-4">Scan with your phone camera to chat with Sajjad Ali on WhatsApp instantly.</p>
                 <a 
                   href={whatsappLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="w-full py-3 px-4 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-2"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-2"
                 >
                   <span>💬 Open WhatsApp Chat</span> ↗
-                </a>
-                <a 
-                  href={businessCardUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-full mt-2.5 py-2.5 px-4 rounded-xl bg-[#171321] border border-[#493765] text-[#C4B5FD] font-bold text-xs hover:bg-[#7C3AED] hover:text-white transition-colors"
-                >
-                  📇 View Business Card
                 </a>
               </div>
 
