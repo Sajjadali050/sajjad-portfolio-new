@@ -15,10 +15,7 @@ export default function App() {
 
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
   const businessCardUrl = "https://drive.google.com/file/d/1obKef4eOzFS4D0RPrRpd9lPl6gMSgDMK/view?usp=sharing";
-  const whatsappNumber = "+966542475245";
   const whatsappLink = "https://wa.me/966542475245";
-  const personalEmail = "sajjad.ali.procurement@gmail.com";
-  const companyEmail = "sajjad.ali@sscc-sa.com";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
 
   return (
@@ -47,7 +44,7 @@ export default function App() {
             <div>
               <span className="text-[0.96rem] font-extrabold leading-tight block">Sajjad Ali</span>
               <span className="text-stone-400 text-[0.68rem] font-semibold tracking-wider uppercase block mt-1">
-                {isAr ? 'المشتريات والأنظمة' : 'Procurement & Systems'}
+                {isAr ? 'مسؤول مشتريات' : 'Procurement Officer'}
               </span>
             </div>
           </a>
@@ -56,6 +53,7 @@ export default function App() {
             <a href="#about" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'نبذة' : 'About'}</a>
             <a href="#skills" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'المهارات' : 'Skills'}</a>
             <a href="#projects" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'المشاريع' : 'Projects'}</a>
+            <a href="#samplework" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'أعمال نموذجية' : 'Sample Work'}</a>
             <a href="#experience" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'الخبرة' : 'Experience'}</a>
             <a href="#certifications" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'الشهادات' : 'Certificates'}</a>
             <a href="#education" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'التعليم' : 'Education'}</a>
@@ -89,30 +87,30 @@ export default function App() {
                 {isAr ? 'الرياض، المملكة العربية السعودية' : 'Riyadh, Saudi Arabia'}
               </div>
 
-              <h1 className="text-[clamp(2.75rem,6vw,5rem)] tracking-tight leading-[1.05] my-6 font-extrabold">
+              <h1 className="text-[clamp(2.75rem,6vw,4.5rem)] tracking-tight leading-[1.05] my-6 font-extrabold">
                 {isAr ? (
-                  <>مسؤول مشتريات <span className="block text-[#8B5CF6]">وتوريد</span></>
+                  <>مسؤول <span className="block text-[#8B5CF6]">مشتريات</span></>
                 ) : (
                   <>Procurement <span className="block text-[#8B5CF6]">Officer</span></>
                 )}
               </h1>
 
-              <div className="flex gap-2 flex-wrap text-xs text-[#C4B5FD] font-semibold mb-4">
-                <span>Odoo ERP</span> • <span>Purchasing</span> • <span>Supplier Coordination</span> • <span>Excel</span>
-              </div>
+              <p className="text-[#8B5CF6] font-semibold text-lg mb-4">
+                Odoo ERP | Purchasing | Supplier Coordination | Excel
+              </p>
 
-              <p className="text-[#C2B8D4] text-[1.07rem] max-w-[660px] mb-6 leading-relaxed">
+              <p className="text-[#C2B8D4] text-[1.05rem] max-w-[660px] mb-6 leading-relaxed">
                 {isAr 
-                  ? 'متخصص في المشتريات والتوريد، لديه خبرة عملية في طلبات عروض الأسعار، وأوامر الشراء، وتنسيق الموردين، وتتبع المواد، ومستندات المشتريات باستخدام نظام Odoo ERP ومايكروسوفت إكسل.'
+                  ? 'متخصص في المشتريات ولديه خبرة عملية في طلبات عروض الأسعار (RFQs)، وأوامر الشراء (POs)، وتنسيق الموردين، وتتبع المواد، وتوثيق المشتريات باستخدام Odoo ERP وMicrosoft Excel.'
                   : 'Procurement professional with hands-on experience in RFQs, purchase orders, supplier coordination, material tracking, and procurement documentation using Odoo ERP and Microsoft Excel.'}
               </p>
 
               <div className="flex gap-2.5 flex-wrap mb-8">
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Odoo ERP</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & Purchase Orders</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Supplier Coordination</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Material Tracking</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & POs</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel Tracking</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تتبع المواد' : 'Material Tracking'}</span>
               </div>
 
               <div className="flex gap-3 flex-wrap">
@@ -134,7 +132,6 @@ export default function App() {
                 <img src={profilePhotoUrl} alt="Sajjad Ali" className="w-full h-full object-cover" />
               </div>
 
-              {/* SSCC Official Business Card embedded directly */}
               <div className="mt-4 w-full p-3.5 rounded-[16px] border border-[#8B5CF6]/40 bg-[#100D17]/95 shadow-[0_4px_20px_rgba(139,92,246,0.2)]">
                 <div className="flex items-center justify-between mb-2">
                   <strong className="block text-sm text-[#EDE7F7]">SSCC Official Business Card</strong>
@@ -180,13 +177,8 @@ export default function App() {
                 <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
                 <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base">
                   {isAr 
-                    ? 'مقيم في الرياض، المملكة العربية السعودية، أعمل كمسؤول مشتريات وتوريد مع خبرة في العمليات الشرائية، إدارة طلبات عروض الأسعار (RFQs)، أوامر الشراء، تنسيق الموردين، وتتبع المواد باستخدام نظام Odoo ERP ومايكروسوفت إكسل.'
-                    : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer with experience in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.'}
-                </p>
-                <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base mt-4">
-                  {isAr 
-                    ? 'خبرتي السابقة كراقب مستندات عززت من مهاراتي في إدارة المستندات، التحكم في الإصدارات، تنظيم السجلات والأرشفة الرقمية. أجمع بين تنسيق المشتريات والتوثيق المنظم والتتبع الدقيق لدعم العمليات التشغيلية بكفاءة.'
-                    : 'My previous experience as a Document Controller strengthened my skills in document management, revision control, record organization, and digital archiving. I combine procurement coordination with structured documentation and accurate tracking to support efficient project operations.'}
+                    ? 'أعمل في الرياض بالمملكة العربية السعودية، كمسؤول مشتريات وتوريد لديه خبرة في عمليات المشتريات، وإدارة طلبات عروض الأسعار (RFQ)، وأوامر الشراء (PO)، وتنسيق الموردين، وتتبع المواد باستخدام Odoo ERP وMicrosoft Excel.\n\nعززت خبرتي السابقة كمراقب مستندات مهاراتي في إدارة المستندات، والتحكم في الإصدارات، وتنظيم السجلات، والأرشفة الرقمية. أجمع بين تنسيق المشتريات التوثيق المنظم والتتبع الدقيق لدعم العمليات التشغيلية للمشاريع بكفاءة.'
+                    : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer with experience in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.\n\nMy previous experience as a Document Controller strengthened my skills in document management, revision control, record organization, and digital archiving. I combine procurement coordination with structured documentation and accurate tracking to support efficient project operations.'}
                 </p>
               </div>
             </article>
@@ -210,9 +202,9 @@ export default function App() {
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المهارات والأدوات' : 'Skills & tools'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات الأساسية للمشتريات وإدارة المشاريع.' : 'Core tools and capabilities for procurement and operations.'}</p>
+            <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات العملية الواردة في الملف المهني الحالي.' : 'Tools and day-to-day capabilities listed in the existing portfolio.'}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
@@ -238,125 +230,200 @@ export default function App() {
               <p className="text-[#A79CB8] text-sm">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
             </div>
 
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] md:col-span-2">
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">INV</div>
               <h3 className="font-bold text-base mb-1">{isAr ? 'المخزون والمواد' : 'Inventory & Materials'}</h3>
               <p className="text-[#A79CB8] text-sm">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
             </div>
 
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
+              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
+              <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
+              <p className="text-[#A79CB8] text-sm">{isAr ? 'إدارة المستندات والعروض التقديمية والبيانات.' : 'Document preparation, presentation, and data management.'}</p>
+            </div>
+
           </div>
 
-          {/* Additional IT Skills Section */}
-          <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]/60">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-[#C4B5FD] mb-3">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills'}</h3>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[#C2B8D4]">
-              <li className="flex items-center gap-2"><span>▪</span> Windows Installation & Configuration</li>
-              <li className="flex items-center gap-2"><span>▪</span> Microsoft Office Installation & Configuration</li>
-            </ul>
+          <div className="mt-8 p-6 border border-[#30263F]/60 rounded-[18px] bg-[#15111F]/50">
+            <h3 className="font-bold text-sm text-[#C4B5FD] mb-3 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills'}</h3>
+            <div className="flex gap-4 flex-wrap text-xs text-[#C2B8D4]">
+              <span className="bg-[#100E18] px-3 py-1.5 rounded-lg border border-[#30263F]">Windows – Installation and Setup</span>
+              <span className="bg-[#100E18] px-3 py-1.5 rounded-lg border border-[#30263F]">Microsoft Office – Installation and Configuration</span>
+            </div>
           </div>
         </section>
 
-        {/* Projects Section Updated with 4 Projects */}
+        {/* Projects Section (4 Projects) */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Portfolio Demonstration'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'لوحات التتبع ومشاريع العينة' : 'Sample Tracking Dashboards'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'نماذج استعراضية لعمليات المشتريات وتتبع المواد وإدارة المستندات.' : 'Portfolio demonstration tracking dashboards for procurement, materials, and documentation.'}</p>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Portfolio Demonstrations'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'لوحات تحكم تتبع المشتريات' : 'Sample Tracking Dashboards'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'نماذج توضيحية لنظم التتبع وإدارة المشتريات والمستندات.' : 'Portfolio demonstration models of procurement, material tracking, and document registers.'}</p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Project 01 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT 01</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Fanar Bannan</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Material Procurement</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'مراقبة مخزون ومشتريات المواد' : 'Material Procurement & Stock Monitoring'}</h3>
-                <ul className="space-y-1.5 text-[#C2B8D4] text-sm mb-6">
-                  <li>• Sewer materials and rubber rings</li>
-                  <li>• Safety equipment tracking</li>
-                  <li>• Stock balance and reorder monitoring</li>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع Fanar Bannan' : 'Fanar Bannan'}</h3>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">Material Procurement & Stock Monitoring</h4>
+                <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
+                  <li>• Sewer materials and rubber rings tracking</li>
+                  <li>• Safety equipment inventory control</li>
+                  <li>• Stock balance and reorder level monitoring</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Stock Monitoring</span>
                 <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel Dashboard</span>
               </div>
             </div>
 
-            {/* Project 02 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT 02</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Homes Bannan</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 02</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">PR & PO Control</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'إدارة طلبات الشراء وأوامر الدفع' : 'PR, PO & Payment Request Management'}</h3>
-                <ul className="space-y-1.5 text-[#C2B8D4] text-sm mb-6">
-                  <li>• Purchase requisition tracking</li>
-                  <li>• Purchase order monitoring</li>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع Homes Bannan' : 'Homes Bannan'}</h3>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">PR, PO & Payment Request Management</h4>
+                <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
+                  <li>• Purchase Requisition (PR) tracking log</li>
+                  <li>• Purchase Order (PO) monitoring system</li>
                   <li>• Supplier payment status & delivery follow-up</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">PR & PO Logs</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Supplier Follow-up</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Payment Tracking</span>
               </div>
             </div>
 
-            {/* Project 03 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT 03</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">B.V.4</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 03</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Delivery Control</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'مشتريات وتوريد مواد المشروع' : 'Project Material Procurement & Delivery'}</h3>
-                <ul className="space-y-1.5 text-[#C2B8D4] text-sm mb-6">
-                  <li>• UPVC pipes and fittings tracking</li>
-                  <li>• Required vs ordered quantity analysis</li>
-                  <li>• Received vs balance quantity & site delivery monitoring</li>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع B.V.4' : 'B.V.4'}</h3>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">Project Material Procurement & Delivery</h4>
+                <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
+                  <li>• UPVC pipes and fittings quantity balance</li>
+                  <li>• Required vs. ordered vs. received quantity reconciliation</li>
+                  <li>• Site delivery monitoring & logs</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">UPVC Logs</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Delivery Tracking</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Material Balance</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Logistics</span>
               </div>
             </div>
 
-            {/* Project 04 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT 04</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 04</span>
                 <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Document Control</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-lg mb-2">{isAr ? 'سجل المستندات وإدارة الإصدارات' : 'Document Register & Revision Management'}</h3>
-                <ul className="space-y-1.5 text-[#C2B8D4] text-sm mb-6">
-                  <li>• Document numbering & revision history</li>
-                  <li>• Approval status tracking</li>
-                  <li>• File reference and retrieval system</li>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'سجل المستندات' : 'Document Control'}</h3>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">Document Register & Revision Management</h4>
+                <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
+                  <li>• Standardized document numbering register</li>
+                  <li>• Revision history & approval status tracking</li>
+                  <li>• Digital file referencing & retrieval archive</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Archiving</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Version Control</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Doc Register</span>
+                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Revision Control</span>
               </div>
             </div>
 
           </div>
         </section>
 
-        {/* Experience Section Updated */}
+        {/* NEW SECTION: Procurement Tools & Sample Work (Screenshots added) */}
+        <section id="samplework" className="py-20 max-w-[1160px] mx-auto px-5 border-t border-[#30263F]/40">
+          <div className="max-w-[720px] mb-12">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / أعمال نموذجية' : '04 / Sample Work & Dashboards'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أدوات المشتريات وعينات العمل' : 'Procurement Tools & Sample Work'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'معاينة بصرية لكيفية تنفيذ تتبع طلبات الشراء، مقارنة الموردين، ودورة سير العمل.' : 'Visual demonstration of how Purchase Order tracking, Vendor Comparisons, and P2P workflows are handled.'}</p>
+          </div>
+
+          <div className="space-y-12">
+            
+            {/* Sample 1: Purchase Order Tracker Excel Template */}
+            <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
+              <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                <div>
+                  <span className="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider">Dashboard Sample 01</span>
+                  <h3 className="text-xl font-bold text-[#EDE7F7]">Purchase Order Tracker Excel Template</h3>
+                </div>
+                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Analytics & Metrics</span>
+              </div>
+              <div className="p-6">
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-black/40 mb-6 max-h-[480px] flex items-center justify-center">
+                  <img src="https://i.imgur.com/8QG4q4p.png" alt="Purchase Order Tracker Excel Template" className="w-full h-auto object-cover" />
+                </div>
+                <p className="text-[#C2B8D4] text-sm leading-relaxed">
+                  Advanced Excel dashboard tracking total Purchase Orders, ordered vs. delivered volumes across months, financial metrics (Total Amount, Paid, Due), and monthly distribution percentages to maintain complete oversight over purchasing status.
+                </p>
+              </div>
+            </div>
+
+            {/* Sample 2: Vendor Comparative Statement */}
+            <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
+              <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                <div>
+                  <span className="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider">Dashboard Sample 02</span>
+                  <h3 className="text-xl font-bold text-[#EDE7F7]">Vendor Comparative Statement (CS)</h3>
+                </div>
+                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Quotation Analysis</span>
+              </div>
+              <div className="p-6">
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-black/40 mb-6 max-h-[480px] flex items-center justify-center">
+                  <img src="https://i.imgur.com/r62Kq3P.png" alt="Vendor Comparative Statement" className="w-full h-auto object-cover" />
+                </div>
+                <p className="text-[#C2B8D4] text-sm leading-relaxed">
+                  Structured comparison sheet evaluating multiple suppliers (Supplier A, B, C) for UPVC Pipes & Fittings. Highlights unit pricing, grand totals including VAT, delivery timelines, and automatic recommendation logic for optimal cost savings.
+                </p>
+              </div>
+            </div>
+
+            {/* Sample 3: P2P Process Flow */}
+            <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
+              <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                <div>
+                  <span className="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider">Process Workflow Sample 03</span>
+                  <h3 className="text-xl font-bold text-[#EDE7F7]">P2P (Procure to Pay) Process Flow</h3>
+                </div>
+                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Workflow Lifecycle</span>
+              </div>
+              <div className="p-6">
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-black/40 mb-6 max-h-[480px] flex items-center justify-center p-4 bg-[#0B0B12]">
+                  <img src="https://i.imgur.com/6Xy1m3B.png" alt="P2P Process Flow" className="max-h-[350px] w-auto object-contain" />
+                </div>
+                <p className="text-[#C2B8D4] text-sm leading-relaxed">
+                  End-to-end procurement lifecycle illustration covering Purchase Requisitions (PR), Request for Quotations (RFQ), Quotation Comparisons, Purchase Orders (PO), Goods Receipts (GR), Invoice Verification (IV), and Vendor Payments.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Experience Section */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الخبرة' : '05 / Experience'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الخبرة العملية' : 'Work experience'}</h2>
           </div>
           <div className="space-y-6">
             
-            {/* Current Position */}
             <div className="p-8 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <div>
@@ -367,16 +434,15 @@ export default function App() {
                   September 2026 – Present
                 </span>
               </div>
-              <ul className="space-y-2.5 text-[#C2B8D4] text-sm leading-relaxed">
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة طلبات عروض الأسعار (RFQs)، أوامر الشراء، وسير عمل المشتريات باستخدام نظام Odoo ERP.' : 'Managing RFQs, purchase orders, and procurement workflows using Odoo ERP.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'التنسيق مع الموردين بخصوص عروض الأسعار، التسعير، ومواعيد التسليم.' : 'Coordinating with suppliers regarding quotations, pricing, and delivery schedules.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'متابعة متطلبات مواد المشاريع، أرصدة المخزون، وحالة المشتريات.' : 'Monitoring project material requirements, stock balances, and procurement status.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إعداد متتبعات المشتريات عبر الإكسل وجداول مقارنة الموردين.' : 'Preparing Excel-based procurement trackers and vendor comparison sheets.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'الحفاظ على سجلات الشراء وتنسيق متابعة المدفوعات والتسليم.' : 'Maintaining purchase records and coordinating payment and delivery follow-ups.'}</li>
+              <ul className="space-y-2 text-[#C2B8D4] text-sm leading-relaxed">
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Managing RFQs, purchase orders, and procurement workflows using Odoo ERP.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Coordinating with suppliers regarding quotations, pricing, and delivery schedules.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Monitoring project material requirements, stock balances, and procurement status.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Preparing Excel-based procurement trackers and vendor comparison sheets.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Maintaining purchase records and coordinating payment and delivery follow-ups.</li>
               </ul>
             </div>
 
-            {/* Previous Position */}
             <div className="p-8 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <div>
@@ -392,29 +458,29 @@ export default function App() {
                   </a>
                 </div>
               </div>
-              <ul className="space-y-2.5 text-[#C2B8D4] text-sm leading-relaxed">
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'الحفاظ على أنظمة حفظ الملفات الورقية والإلكترونية.' : 'Maintained physical and electronic document filing systems.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة ترقيم المستندات، مراقبة التعديلات، وسجلات المستندات.' : 'Managed document numbering, revision control, and document registers.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'تنظيم السجلات الفنية والإدارية لسهولة الاسترجاع.' : 'Organized technical and administrative records for easy retrieval.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'دعم توزيع المستندات، الأرشفة، وصيانة السجلات.' : 'Supported document distribution, archiving, and record maintenance.'}</li>
+              <ul className="space-y-2 text-[#C2B8D4] text-sm leading-relaxed">
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Maintained physical and electronic document filing systems.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Managed document numbering, revision control, and document registers.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Organized technical and administrative records for easy retrieval.</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>Supported document distribution, archiving, and record maintenance.</li>
               </ul>
             </div>
-
           </div>
         </section>
 
-        {/* Certifications & Learning Credentials Section */}
+        {/* Certifications Section */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الدورات والاعتمادات' : '05 / Courses & Learning Credentials'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات وسجلات التعلم' : 'Certifications & Learning Credentials'}</h2>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / الشهادات' : '06 / Certifications & Credentials'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والدورات' : 'Certifications & Credentials'}</h2>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <h3 className="font-bold text-base mb-1">Odoo Purchase eLearning</h3>
-                <p className="text-[#A79CB8] text-sm mb-4">Odoo eLearning</p>
+                <p className="text-[#A79CB8] text-sm mb-4">Odoo eLearning Proof</p>
               </div>
               <a href="https://drive.google.com/file/d/1RNmouiSc8x9jfsoC0C3O03oGspnD9UXG/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
                 View eLearning Proof ↗
@@ -443,7 +509,7 @@ export default function App() {
 
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
-                <h3 className="font-bold text-base mb-1">Microsoft Excel, Word, & PowerPoint</h3>
+                <h3 className="font-bold text-base mb-1">Microsoft Excel, Word & PowerPoint</h3>
                 <p className="text-[#A79CB8] text-sm mb-4">Udemy Verified Certification</p>
               </div>
               <a href="https://drive.google.com/file/d/1l0XKPGNxr2jLh95vhPPDibKlnRuWaoC9/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/40 px-3 py-2 rounded-xl hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
@@ -467,7 +533,7 @@ export default function App() {
         {/* Education Section */}
         <section id="education" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / التعليم' : '06 / Education'}</span>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '07 / التعليم' : '07 / Education'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'التعليم المؤهل' : 'Education'}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -496,11 +562,24 @@ export default function App() {
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
             <div className="max-w-[600px]">
-              <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '07 / التواصل' : '07 / Contact'}</span>
+              <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
               <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
               <p className="text-[#C2B8D4] mb-8 leading-relaxed">
-                {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد أو الواتساب.' : 'Looking for a dedicated Procurement Officer in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
+                {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
               </p>
               <div className="space-y-4 text-sm font-medium">
                 <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:sajjad.ali.procurement@gmail.com" className="text-[#C4B5FD] hover:underline">sajjad.ali.procurement@gmail.com</a></p>
-                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">🏢</span> Company Email: <a href="mailto:sajjad.ali@sscc-sa.com" className="text-[#C4B5FD] hover:underline">sajjad.ali@sscc-
+                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">🏢</span> Company Email: <a href="mailto:sajjad.ali@sscc-sa.com" className="text-[#C4B5FD] hover:underline">sajjad.ali@sscc-sa.com</a></p>
+                <p className="flex items-center gap-3"><span className="text-[#8B5CF6]">📱</span> Phone / WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">+966 54 247 5245</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-[#30263F] py-8 text-center text-xs text-[#A79CB8]">
+        © 2026 Sajjad Ali. All rights reserved.
+      </footer>
+    </div>
+  );
+}
