@@ -384,7 +384,60 @@ export default function App() {
 
           </div>
         </section>
+</div>
+        </section>
 
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION - New Section */}
+        <section id="tools" className="py-20 max-w-[1160px] mx-auto px-5 bg-[#100D17]/40 rounded-[28px] mt-12 border border-[#30263F]/50">
+          <div className="max-w-[720px] mb-8 mx-auto text-center">
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">03b / Sample Output</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">Procurement Tools & Sample Work</h2>
+            <p className="text-[#A79CB8]">Actual dashboards and process flows used for managing procurement activities.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Tool 1 - PO Tracker */}
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between group cursor-pointer">
+              <div className="p-4 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
+                <span className="text-xs text-[#C4B5FD] font-extrabold">Excel Tool</span>
+              </div>
+              <div className="w-full h-40 bg-[#0D0B14] border-b border-[#30263F] relative overflow-hidden">
+                <img src={image_0.png} alt="PO Tracker Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-base mb-1.5">Purchase Order Tracker</h3>
+                <p className="text-[#C2B8D4] text-[11px] leading-relaxed">Comprehensive Excel dashboard for tracking order statuses, amounts, and payments.</p>
+              </div>
+            </div>
+
+            {/* Tool 2 - Vendor Comparison */}
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between group cursor-pointer">
+              <div className="p-4 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
+                <span className="text-xs text-[#C4B5FD] font-extrabold">Analysis Tool</span>
+              </div>
+              <div className="w-full h-40 bg-[#0D0B14] border-b border-[#30263F] relative overflow-hidden">
+                <img src={image_1.png} alt="Vendor Comparative Statement" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-base mb-1.5">Vendor Comparative Statement (CS)</h3>
+                <p className="text-[#C2B8D4] text-[11px] leading-relaxed">Detailed tool for multi-vendor price and terms comparison for informed purchasing.</p>
+              </div>
+            </div>
+
+            {/* Tool 3 - P2P Process */}
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between group cursor-pointer md:col-span-1 md:mx-auto md:w-3/4">
+              <div className="p-4 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
+                <span className="text-xs text-[#C4B5FD] font-extrabold">Process Diagram</span>
+              </div>
+              <div className="w-full h-40 bg-[#0D0B14] border-b border-[#30263F] relative overflow-hidden">
+                <img src={image_2.png} alt="Procure to Pay Process Flow" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              </div>
+              <div className="p-5">
+                <h3 className="font-bold text-base mb-1.5">Procure to Pay (P2P) Process Flow</h3>
+                <p className="text-[#C2B8D4] text-[11px] leading-relaxed">Workflow diagram showing the complete procurement cycle from requisition to payment.</p>
+              </div>
+            </div>
         {/* Experience Section */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
