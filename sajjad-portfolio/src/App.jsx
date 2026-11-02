@@ -25,6 +25,11 @@ export default function App() {
 
   // Skill & Projects Specific Links
   const odooSampleLink = "https://drive.google.com/file/d/1_TEdHoNPOUmozXh-m1vG2BMG0Z_oKekM/view?usp=sharing";
+  const excelPoTrackingLink = "https://drive.google.com/file/d/1hgBAokxfa8GgLA8i_WqZSQhiwE79Cgi9/view?usp=sharing";
+  const dcDocManagementLink = "https://drive.google.com/file/d/1cEVFnmQYM371oIYJmT27zLoi2fvEw2Rq/view?usp=sharing";
+  const scSupplierCompLink = "https://drive.google.com/file/d/1cqBXlTmC2XIiamaA2zbGZG0R9081lnyJ/view?usp=sharing";
+  const msPrPaymentLink = "https://drive.google.com/file/d/1-FWhJ0nsFUOjt8_IY6LYUxan7Xiqf1b6/view?usp=sharing";
+
   const bv4SampleLink = "https://drive.google.com/file/d/1ocLaA1u7YhRVZrsg86EfTGUDP4K8QpHF/view?usp=sharing";
   const projectDocLink = "https://drive.google.com/file/d/1cEVFnmQYM371oIYJmT27zLoi2fvEw2Rq/view?usp=sharing";
   const fanarBananLink = "https://drive.google.com/file/d/1VEeKPhCBR_D1nQa_IkIGuLqgzhbtFuM0/view?usp=sharing";
@@ -208,15 +213,16 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section - Updated with Odoo Sample Button */}
+        {/* Skills & Tools Section - Updated with buttons & samples */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المهارات والأدوات' : 'Skills & Tools'}</h2>
             <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات العملية الواردة في الملف المهني الحالي.' : 'Tools and day-to-day capabilities listed in the portfolio.'}</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
+            {/* Odoo ERP */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
               <div>
                 <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
@@ -228,48 +234,86 @@ export default function App() {
               </a>
             </div>
 
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">XL</div>
-              <h3 className="font-bold text-base mb-1">Microsoft Excel</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'جداول تتبع متقدمة والأرصدة وسجلات المواد.' : 'Advanced tracking sheets, balances, and material logs.'}</p>
+            {/* Microsoft Excel */}
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">XL</div>
+                <h3 className="font-bold text-base mb-1">Microsoft Excel</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'جداول تتبع متقدمة والأرصدة وسجلات المواد.' : 'Advanced tracking sheets, balances, and material logs.'}</p>
+              </div>
+              <a href={excelPoTrackingLink} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-2 rounded-xl font-bold hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                po tracking sample ↗
+              </a>
             </div>
 
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">DC</div>
-              <h3 className="font-bold text-base mb-1">{isAr ? 'ضبط المستندات' : 'Document Control'}</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'تنظيم الملفات وإدارة الإصدارات واسترجاع السجلات.' : 'File organization, versioning, and record retrieval.'}</p>
+            {/* Document Control */}
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">DC</div>
+                <h3 className="font-bold text-base mb-1">{isAr ? 'ضبط المستندات' : 'Document Control'}</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'تنظيم الملفات وإدارة الإصدارات واسترجاع السجلات.' : 'File organization, versioning, and record retrieval.'}</p>
+              </div>
+              <a href={dcDocManagementLink} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-2 rounded-xl font-bold hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                document management sample ↗
+              </a>
             </div>
 
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">SC</div>
-              <h3 className="font-bold text-base mb-1">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
+            {/* Supplier Coordination */}
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">SC</div>
+                <h3 className="font-bold text-base mb-1">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'أسعار الموردين والمتابعة وتنسيق التسليم.' : 'Supplier pricing, follow-ups, and delivery coordination.'}</p>
+              </div>
+              <a href={scSupplierCompLink} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-2 rounded-xl font-bold hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                SUPPLIER comparison sheet sample ↗
+              </a>
             </div>
 
+            {/* Inventory & Materials */}
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">INV</div>
               <h3 className="font-bold text-base mb-1">{isAr ? 'المخزون والمواد' : 'Inventory & Materials'}</h3>
               <p className="text-[#A79CB8] text-sm">{isAr ? 'متابعة مستويات المخزون والتحقق من أرصدة المواد.' : 'Stock-level monitoring and material balance verification.'}</p>
             </div>
 
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
-              <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'إدارة المستندات والعروض التقديمية والبيانات.' : 'Document preparation, presentation, and data management.'}</p>
+            {/* Microsoft Office */}
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">MS</div>
+                <h3 className="font-bold text-base mb-1">Microsoft Office</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'إدارة المستندات والعروض التقديمية والبيانات.' : 'Document preparation, presentation, and data management.'}</p>
+              </div>
+              <a href={msPrPaymentLink} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-2 rounded-xl font-bold hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                pr and payment request sample ↗
+              </a>
             </div>
 
           </div>
 
+          {/* Additional IT Skills with Text and Visual Picture Representation */}
           <div className="mt-8 p-6 border border-[#30263F]/60 rounded-[18px] bg-[#15111F]/50">
-            <h3 className="font-bold text-sm text-[#C4B5FD] mb-3 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills'}</h3>
-            <div className="flex gap-4 flex-wrap text-xs text-[#C2B8D4]">
-              <span className="bg-[#100E18] px-3 py-1.5 rounded-lg border border-[#30263F]">Windows – Installation and Setup</span>
-              <span className="bg-[#100E18] px-3 py-1.5 rounded-lg border border-[#30263F]">Microsoft Office – Installation and Configuration</span>
+            <h3 className="font-bold text-sm text-[#C4B5FD] mb-4 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills (Microsoft Office & Windows Setup)'}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3 bg-[#100E18] p-3.5 rounded-xl border border-[#30263F]">
+                <div className="w-10 h-10 rounded-lg bg-blue-600/20 text-blue-400 flex items-center justify-center font-extrabold text-xs">WIN</div>
+                <div>
+                  <strong className="block text-sm text-[#EDE7F7]">Windows Operating System</strong>
+                  <span className="text-xs text-[#A79CB8]">Installation, Configuration and Setup</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 bg-[#100E18] p-3.5 rounded-xl border border-[#30263F]">
+                <div className="w-10 h-10 rounded-lg bg-amber-600/20 text-amber-400 flex items-center justify-center font-extrabold text-xs">OFF</div>
+                <div>
+                  <strong className="block text-sm text-[#EDE7F7]">Microsoft Office Suite</strong>
+                  <span className="text-xs text-[#A79CB8]">Installation, Setup and Troubleshooting</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Projects Section - Updated with buttons for all projects */}
+        {/* Projects Section */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / المشاريع' : '03 / Projects'}</span>
