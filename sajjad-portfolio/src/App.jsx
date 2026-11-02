@@ -253,12 +253,12 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects Section (4 Projects) */}
+        {/* Projects Section (Heading restored to "Projects") */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / نماذج العمل' : '03 / Portfolio Demonstrations'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'لوحات تحكم تتبع المشتريات' : 'Sample Tracking Dashboards'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'نماذج توضيحية لنظم التتبع وإدارة المشتريات والمستندات.' : 'Portfolio demonstration models of procurement, material tracking, and document registers.'}</p>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / المشاريع' : '03 / Projects'}</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز مشاريع المشتريات' : 'Featured Procurement Projects'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'نظرة عامة على مشاريع المشتريات والأنظمة والتتبع.' : 'Overview of procurement operations, tracking, and management projects.'}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -346,7 +346,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* NEW SECTION: Procurement Tools & Sample Work (Screenshots added) */}
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (Images Fixed with Reliable Placeholders / Direct Links Support) */}
         <section id="samplework" className="py-20 max-w-[1160px] mx-auto px-5 border-t border-[#30263F]/40">
           <div className="max-w-[720px] mb-12">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / أعمال نموذجية' : '04 / Sample Work & Dashboards'}</span>
@@ -356,7 +356,7 @@ export default function App() {
 
           <div className="space-y-12">
             
-            {/* Sample 1: Purchase Order Tracker Excel Template */}
+            {/* Sample 1: Purchase Order Tracker */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
@@ -366,8 +366,12 @@ export default function App() {
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Analytics & Metrics</span>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-black/40 mb-6 max-h-[480px] flex items-center justify-center">
-                  <img src="https://i.imgur.com/8QG4q4p.png" alt="Purchase Order Tracker Excel Template" className="w-full h-auto object-cover" />
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-4 flex flex-col items-center justify-center text-center">
+                  {/* Note: Replace this src link with your Google Drive image link if needed */}
+                  <div className="w-full bg-[#100E18] border border-[#30263F] rounded-xl p-8 mb-4">
+                    <p className="text-[#C4B5FD] font-bold text-base mb-2">📊 Purchase Order Tracker Excel Template Preview</p>
+                    <p className="text-[#A79CB8] text-sm">Tracks total POs, monthly ordered vs delivered amounts, and payment statuses.</p>
+                  </div>
                 </div>
                 <p className="text-[#C2B8D4] text-sm leading-relaxed">
                   Advanced Excel dashboard tracking total Purchase Orders, ordered vs. delivered volumes across months, financial metrics (Total Amount, Paid, Due), and monthly distribution percentages to maintain complete oversight over purchasing status.
@@ -385,8 +389,11 @@ export default function App() {
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Quotation Analysis</span>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-black/40 mb-6 max-h-[480px] flex items-center justify-center">
-                  <img src="https://i.imgur.com/r62Kq3P.png" alt="Vendor Comparative Statement" className="w-full h-auto object-cover" />
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-4 flex flex-col items-center justify-center text-center">
+                  <div className="w-full bg-[#100E18] border border-[#30263F] rounded-xl p-8 mb-4">
+                    <p className="text-[#C4B5FD] font-bold text-base mb-2">📋 Vendor Comparative Statement Preview</p>
+                    <p className="text-[#A79CB8] text-sm">Evaluates supplier unit prices, grand totals with VAT, delivery days, and best price recommendations.</p>
+                  </div>
                 </div>
                 <p className="text-[#C2B8D4] text-sm leading-relaxed">
                   Structured comparison sheet evaluating multiple suppliers (Supplier A, B, C) for UPVC Pipes & Fittings. Highlights unit pricing, grand totals including VAT, delivery timelines, and automatic recommendation logic for optimal cost savings.
@@ -404,8 +411,11 @@ export default function App() {
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Workflow Lifecycle</span>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-black/40 mb-6 max-h-[480px] flex items-center justify-center p-4 bg-[#0B0B12]">
-                  <img src="https://i.imgur.com/6Xy1m3B.png" alt="P2P Process Flow" className="max-h-[350px] w-auto object-contain" />
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-4 flex flex-col items-center justify-center text-center">
+                  <div className="w-full bg-[#100E18] border border-[#30263F] rounded-xl p-8 mb-4">
+                    <p className="text-[#C4B5FD] font-bold text-base mb-2">🔄 P2P Process Flow Diagram Preview</p>
+                    <p className="text-[#A79CB8] text-sm">Covers PR, RFQ, Quotation Comparison, PO, Goods Receipt, Invoice Verification, and Vendor Payment.</p>
+                  </div>
                 </div>
                 <p className="text-[#C2B8D4] text-sm leading-relaxed">
                   End-to-end procurement lifecycle illustration covering Purchase Requisitions (PR), Request for Quotations (RFQ), Quotation Comparisons, Purchase Orders (PO), Goods Receipts (GR), Invoice Verification (IV), and Vendor Payments.
