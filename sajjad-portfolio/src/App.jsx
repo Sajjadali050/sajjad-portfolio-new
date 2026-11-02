@@ -15,11 +15,26 @@ export default function App() {
 
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
   const businessCardUrl = "https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing";
+  const whatsappNumber = "+966542475245";
+  const whatsappLink = "https://wa.me/966542475245";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
 
   return (
     <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
       
+      {/* Floating WhatsApp Button (Restored) */}
+      <a 
+        href={whatsappLink} 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300 group"
+        title="Chat on WhatsApp"
+      >
+        <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+      </a>
+
       {/* Topbar / Navigation */}
       <header className="sticky top-0 z-30 bg-[#0B0B12]/90 border-b border-[#59447A]/38 backdrop-blur-md">
         <div className="max-w-[1160px] mx-auto px-5 min-h-[76px] flex items-center justify-between gap-5">
@@ -331,7 +346,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (Images directly embedded with SVGs/visual representations) */}
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (Updated with visual previews & Google Drive Links) */}
         <section id="samplework" className="py-20 max-w-[1160px] mx-auto px-5 border-t border-[#30263F]/40">
           <div className="max-w-[720px] mb-12">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / أعمال نموذجية' : '04 / Sample Work & Dashboards'}</span>
@@ -351,12 +366,13 @@ export default function App() {
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Analytics & Metrics</span>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-6">
-                  {/* Styled Visual Component mimicking PO Tracker */}
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5 space-y-4">
                   <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5 space-y-4">
                     <div className="flex justify-between items-center border-b border-[#30263F] pb-3">
-                      <span className="font-bold text-sm text-[#E3DCEE]">Purchase Order Tracker Dashboard</span>
-                      <span className="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono">Live Metrics</span>
+                      <span className="font-bold text-sm text-[#E3DCEE]">📊 Purchase Order Tracker Excel Template</span>
+                      <a href="https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED] text-white px-3 py-1 rounded-md font-bold hover:bg-[#8B5CF6] transition-colors">
+                        View Full Screenshot ↗
+                      </a>
                     </div>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
                       <div className="bg-[#171321] p-3 rounded-lg border border-[#30263F]">
@@ -394,12 +410,13 @@ export default function App() {
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Quotation Analysis</span>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-6">
-                  {/* Styled Visual Component mimicking Vendor CS */}
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
                   <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5 space-y-3">
                     <div className="flex justify-between items-center border-b border-[#30263F] pb-3">
-                      <span className="font-bold text-sm text-[#E3DCEE]">Purchase of UPVC Pipes & Fittings — Quotation Comparison</span>
-                      <span className="text-xs bg-purple-500/20 text-purple-300 px-2.5 py-0.5 rounded font-semibold">PR-2025-001</span>
+                      <span className="font-bold text-sm text-[#E3DCEE]">📋 Vendor Comparative Statement (CS) - UPVC Pipes</span>
+                      <a href="https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED] text-white px-3 py-1 rounded-md font-bold hover:bg-[#8B5CF6] transition-colors">
+                        View Full Screenshot ↗
+                      </a>
                     </div>
                     <div className="overflow-x-auto">
                       <table className="w-full text-left text-xs font-mono">
@@ -407,7 +424,7 @@ export default function App() {
                           <tr className="border-b border-[#30263F] text-[#A79CB8]">
                             <th className="py-2">Item</th>
                             <th className="py-2">Supplier A</th>
-                            <th className="py-2">Supplier B (Selected)</th>
+                            <th className="py-2">Supplier B (Recommended)</th>
                             <th className="py-2">Supplier C</th>
                           </tr>
                         </thead>
@@ -419,16 +436,13 @@ export default function App() {
                             <td className="py-2">9,500.00 SAR</td>
                           </tr>
                           <tr>
-                            <td className="py-2">Total Amount (incl. VAT)</td>
+                            <td className="py-2">Grand Total (incl. VAT)</td>
                             <td className="py-2">19,650.00 SAR</td>
                             <td className="py-2 text-emerald-400 font-bold">18,890.00 SAR</td>
                             <td className="py-2">20,530.00 SAR</td>
                           </tr>
                         </tbody>
                       </table>
-                    </div>
-                    <div className="mt-3 p-3 bg-emerald-500/10 border border-emerald-500/30 rounded-lg flex items-center justify-between text-xs text-emerald-300">
-                      <span>✓ <strong>Recommendation:</strong> Select Supplier B for best price (Savings: 1,640.00 SAR / 7.99%)</span>
                     </div>
                   </div>
                 </div>
@@ -448,8 +462,13 @@ export default function App() {
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Workflow Lifecycle</span>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-6">
-                  {/* Styled Step Flow visual */}
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
+                  <div className="flex justify-between items-center border-b border-[#30263F] pb-3 mb-4">
+                    <span className="font-bold text-sm text-[#E3DCEE]">🔄 P2P (Procure to Pay) End-to-End Workflow</span>
+                    <a href="https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED] text-white px-3 py-1 rounded-md font-bold hover:bg-[#8B5CF6] transition-colors">
+                      View Process Diagram ↗
+                    </a>
+                  </div>
                   <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 text-center text-xs font-semibold">
                     <div className="p-2.5 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300">1. Requisition (PR)</div>
                     <div className="p-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-300">2. RFQ</div>
@@ -611,18 +630,21 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section - Updated as requested */}
+        {/* Contact Section (WhatsApp + Personal Email + Personal Business Card) */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
             <div className="max-w-[600px]">
               <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
               <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
               <p className="text-[#C2B8D4] mb-8 leading-relaxed">
-                {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد الإلكتروني.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email.'}
+                {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد الإلكتروني أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
               </p>
               <div className="space-y-4 text-sm font-medium">
                 <p className="flex items-center gap-3">
                   <span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:sajjad.ali.procurement@gmail.com" className="text-[#C4B5FD] hover:underline">sajjad.ali.procurement@gmail.com</a>
+                </p>
+                <p className="flex items-center gap-3">
+                  <span className="text-[#8B5CF6]">📱</span> Phone / WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{whatsappNumber}</a>
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="text-[#8B5CF6]">📇</span> Personal Business Card: <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">View Digital Business Card ↗</a>
