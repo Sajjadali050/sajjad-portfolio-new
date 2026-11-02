@@ -297,12 +297,11 @@ export default function App() {
 
           </div>
 
-          {/* Additional IT Skills with Professional Styled Badges */}
+          {/* Additional IT Skills */}
           <div className="mt-8 p-6 border border-[#30263F]/60 rounded-[18px] bg-[#15111F]/50">
             <h3 className="font-bold text-sm text-[#C4B5FD] mb-4 tracking-wider uppercase">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills (Windows 11 & Microsoft Office)'}</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
-              {/* Windows 11 Item */}
               <div className="flex items-center gap-3.5 bg-[#100E18] p-4 rounded-xl border border-[#30263F]">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
                   WIN 11
@@ -313,7 +312,6 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Microsoft Office Item */}
               <div className="flex items-center gap-3.5 bg-[#100E18] p-4 rounded-xl border border-[#30263F]">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-600 to-amber-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-md">
                   OFFICE
@@ -338,14 +336,14 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Fanar Bannan */}
+            {/* Fanar Banan */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
                 <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">Material Procurement</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع Fanar Bannan' : 'Fanar Bannan'}</h3>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع Fanar Banan' : 'Fanar Bannan'}</h3>
                 <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">Material Procurement & Stock Monitoring</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
                   <li>• Sewer materials and rubber rings tracking</li>
@@ -455,7 +453,7 @@ export default function App() {
 
           <div className="space-y-12">
             
-            {/* Sample 1: Purchase Order Tracker Excel Template */}
+            {/* Sample 1 */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
@@ -499,7 +497,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Sample 2: Vendor Comparative Statement (CS) */}
+            {/* Sample 2 */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
@@ -554,7 +552,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Sample 3: P2P Process Flow */}
+            {/* Sample 3 */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
@@ -733,26 +731,55 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section - Updated with balanced 2-column layout & Quick QR Code Card */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
-            <div className="max-w-[600px]">
-              <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
-              <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
-              <p className="text-[#C2B8D4] mb-8 leading-relaxed">
-                {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد الإلكتروني أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
-              </p>
-              <div className="space-y-4 text-sm font-medium">
-                <p className="flex items-center gap-3">
-                  <span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:sajjad.ali.procurement@gmail.com" className="text-[#C4B5FD] hover:underline">sajjad.ali.procurement@gmail.com</a>
+            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+              
+              <div>
+                <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
+                <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
+                <p className="text-[#C2B8D4] mb-8 leading-relaxed">
+                  {isAr ? 'هل لديك استفسار أو فرصة عمل؟ يسعدني تواصلك معي عبر البريد الإلكتروني أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
                 </p>
-                <p className="flex items-center gap-3">
-                  <span className="text-[#8B5CF6]">📱</span> WhatsApp Chat: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">Click to Chat on WhatsApp ↗</a>
-                </p>
-                <p className="flex items-center gap-3">
-                  <span className="text-[#8B5CF6]">📇</span> Personal Business Card: <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">View Digital Business Card ↗</a>
-                </p>
+                <div className="space-y-4 text-sm font-medium">
+                  <p className="flex items-center gap-3">
+                    <span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:sajjad.ali.procurement@gmail.com" className="text-[#C4B5FD] hover:underline">sajjad.ali.procurement@gmail.com</a>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-[#8B5CF6]">📱</span> WhatsApp Chat: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">Click to Chat on WhatsApp ↗</a>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-[#8B5CF6]">📇</span> Personal Business Card: <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">View Digital Business Card ↗</a>
+                  </p>
+                </div>
               </div>
+
+              {/* Right Side: Quick QR Code & Direct Connect Box */}
+              <div className="bg-[#100E18] border border-[#30263F] p-6 rounded-2xl flex flex-col items-center text-center shadow-xl">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#8B5CF6] text-white flex items-center justify-center font-black text-xl mb-3 shadow-lg">
+                  SA
+                </div>
+                <h3 className="font-bold text-base text-[#EDE7F7] mb-1">Connect Instantly</h3>
+                <p className="text-xs text-[#A79CB8] mb-4">Scan or click below to connect with Sajjad Ali directly on WhatsApp.</p>
+                <a 
+                  href={whatsappLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full py-3 px-4 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-2"
+                >
+                  <span>💬 Open WhatsApp Chat</span> ↗
+                </a>
+                <a 
+                  href={businessCardUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-full mt-2.5 py-2.5 px-4 rounded-xl bg-[#171321] border border-[#493765] text-[#C4B5FD] font-bold text-xs hover:bg-[#7C3AED] hover:text-white transition-colors"
+                >
+                  📇 View Business Card
+                </a>
+              </div>
+
             </div>
           </div>
         </section>
