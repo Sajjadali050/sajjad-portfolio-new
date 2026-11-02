@@ -18,10 +18,17 @@ export default function App() {
   const whatsappLink = "https://wa.me/966542475245";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
 
-  // Corrected Google Drive Links for each sample
+  // Sample Work Links
   const sample1DriveLink = "https://drive.google.com/file/d/17yTt58V-Lk_mScmBZYFCxJWJPaGlB_7d/view?usp=sharing"; // PO Tracker
   const sample2DriveLink = "https://drive.google.com/file/d/1cqBXlTmC2XIiamaA2zbGZG0R9081lnyJ/view?usp=sharing"; // Vendor CS
   const sample3DriveLink = "https://drive.google.com/file/d/1GJEJvnw-YNP75Luv66afXLlhbISrtUWn/view?usp=sharing"; // P2P Flow
+
+  // Skill & Projects Specific Links
+  const odooSampleLink = "https://drive.google.com/file/d/1_TEdHoNPOUmozXh-m1vG2BMG0Z_oKekM/view?usp=sharing";
+  const bv4SampleLink = "https://drive.google.com/file/d/1ocLaA1u7YhRVZrsg86EfTGUDP4K8QpHF/view?usp=sharing";
+  const projectDocLink = "https://drive.google.com/file/d/1cEVFnmQYM371oIYJmT27zLoi2fvEw2Rq/view?usp=sharing";
+  const fanarBananLink = "https://drive.google.com/file/d/1VEeKPhCBR_D1nQa_IkIGuLqgzhbtFuM0/view?usp=sharing";
+  const homesBananLink = "https://drive.google.com/file/d/1fYXKgpBExFu-o0Jn7nFdnM8Z-Ih1s4qx/view?usp=sharing";
 
   return (
     <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
@@ -201,7 +208,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills Section - Updated with Odoo Sample Button */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
@@ -210,10 +217,15 @@ export default function App() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
-            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
-              <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
-              <h3 className="font-bold text-base mb-1">Odoo ERP</h3>
-              <p className="text-[#A79CB8] text-sm">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
+            <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
+              <div>
+                <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
+                <h3 className="font-bold text-base mb-1">Odoo ERP</h3>
+                <p className="text-[#A79CB8] text-sm mb-4">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
+              </div>
+              <a href={odooSampleLink} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-2 rounded-xl font-bold hover:bg-[#7C3AED] hover:text-white transition-colors text-center">
+                View Odoo Sample ↗
+              </a>
             </div>
 
             <div className="p-6 border border-[#30263F] rounded-[18px] bg-[#100E18]">
@@ -257,7 +269,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects Section */}
+        {/* Projects Section - Updated with buttons for all projects */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / المشاريع' : '03 / Projects'}</span>
@@ -267,6 +279,7 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
+            {/* Fanar Bannan */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
@@ -281,12 +294,18 @@ export default function App() {
                   <li>• Stock balance and reorder level monitoring</li>
                 </ul>
               </div>
-              <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Stock Monitoring</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel Dashboard</span>
+              <div className="p-6 pt-0 flex flex-col gap-3">
+                <div className="flex gap-2 flex-wrap">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Stock Monitoring</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Excel Dashboard</span>
+                </div>
+                <a href={fanarBananLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  project fanar banan ↗
+                </a>
               </div>
             </div>
 
+            {/* Homes Bannan */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 02</span>
@@ -301,12 +320,18 @@ export default function App() {
                   <li>• Supplier payment status & delivery follow-up</li>
                 </ul>
               </div>
-              <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Payment Tracking</span>
+              <div className="p-6 pt-0 flex flex-col gap-3">
+                <div className="flex gap-2 flex-wrap">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Payment Tracking</span>
+                </div>
+                <a href={homesBananLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  homes banan ↗
+                </a>
               </div>
             </div>
 
+            {/* Project B.V.4 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 03</span>
@@ -321,12 +346,18 @@ export default function App() {
                   <li>• Site delivery monitoring & logs</li>
                 </ul>
               </div>
-              <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Material Balance</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Logistics</span>
+              <div className="p-6 pt-0 flex flex-col gap-3">
+                <div className="flex gap-2 flex-wrap">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Material Balance</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Logistics</span>
+                </div>
+                <a href={bv4SampleLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  project bv.4 sample ↗
+                </a>
               </div>
             </div>
 
+            {/* Document Control */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 04</span>
@@ -341,16 +372,21 @@ export default function App() {
                   <li>• Digital file referencing & retrieval archive</li>
                 </ul>
               </div>
-              <div className="p-6 pt-0 flex gap-2 flex-wrap">
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Doc Register</span>
-                <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Revision Control</span>
+              <div className="p-6 pt-0 flex flex-col gap-3">
+                <div className="flex gap-2 flex-wrap">
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Doc Register</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Revision Control</span>
+                </div>
+                <a href={projectDocLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  project document ↗
+                </a>
               </div>
             </div>
 
           </div>
         </section>
 
-        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (With dashboard previews and corrected Drive Links) */}
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION */}
         <section id="samplework" className="py-20 max-w-[1160px] mx-auto px-5 border-t border-[#30263F]/40">
           <div className="max-w-[720px] mb-12">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / أعمال نموذجية' : '04 / Sample Work & Dashboards'}</span>
@@ -372,7 +408,6 @@ export default function App() {
                 </a>
               </div>
               <div className="p-6">
-                {/* Styled Interactive Dashboard Visual Preview */}
                 <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
                   <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5 space-y-4">
                     <div className="flex justify-between items-center border-b border-[#30263F] pb-3">
@@ -417,7 +452,6 @@ export default function App() {
                 </a>
               </div>
               <div className="p-6">
-                {/* Styled Vendor CS Table Preview */}
                 <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
                   <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5 space-y-3">
                     <div className="flex justify-between items-center border-b border-[#30263F] pb-3">
@@ -473,7 +507,6 @@ export default function App() {
                 </a>
               </div>
               <div className="p-6">
-                {/* Styled Process Steps Preview */}
                 <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
                   <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5">
                     <div className="flex justify-between items-center border-b border-[#30263F] pb-3 mb-4">
