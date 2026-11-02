@@ -19,6 +19,11 @@ export default function App() {
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
   const expLetterLink = "https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing";
 
+  // Sample Work images setup
+  const poTrackerImg = "https://i.imgur.com/6TM43Gv.jpg"; // Aap yahan apni actual image link daal sakte hain
+  const vendorCompImg = "https://i.imgur.com/6TM43Gv.jpg";
+  const p2pFlowImg = "https://i.imgur.com/6TM43Gv.jpg";
+
   return (
     <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
       
@@ -54,6 +59,7 @@ export default function App() {
             <a href="#about" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'نبذة' : 'About'}</a>
             <a href="#skills" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'المهارات' : 'Skills'}</a>
             <a href="#projects" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'المشاريع' : 'Projects'}</a>
+            <a href="#tools" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">Sample Work</a>
             <a href="#experience" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'الخبرة' : 'Experience'}</a>
             <a href="#certifications" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'الشهادات والتعليم' : 'Certificates & Education'}</a>
             <a href="#contact" onClick={() => setNavOpen(false)} className="hover:text-[#C4B5FD]">{isAr ? 'التواصل' : 'Contact'}</a>
@@ -215,7 +221,6 @@ export default function App() {
               <div className="h-10 w-10 rounded-xl bg-[#A79CB8]/16 text-[#C4B5FD] flex items-center justify-center mb-4 font-bold">ERP</div>
               <h3 className="font-bold text-base mb-1">Odoo ERP</h3>
               <p className="text-[#A79CB8] text-sm">{isAr ? 'طلبات عروض الأسعار وأوامر الشراء وسير عمل المشتريات.' : 'RFQs, purchase orders, and procurement workflows.'}</p>
-              {/* Odoo Purchase Screenshot Preview Badge Placeholder */}
               <span className="inline-block mt-3 text-[10px] text-[#C4B5FD] bg-[#7C3AED]/20 border border-[#8B5CF6]/30 px-2 py-0.5 rounded">Odoo Purchase System</span>
             </div>
 
@@ -250,7 +255,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Additional IT Skills Section */}
           <div className="p-5 border border-[#30263F]/60 rounded-[16px] bg-[#100E18]/50">
             <h4 className="text-xs font-bold text-[#C4B5FD] uppercase tracking-wider mb-2">{isAr ? 'مهارات تقنية إضافية' : 'Additional IT Skills'}</h4>
             <div className="flex flex-wrap gap-4 text-xs text-[#A79CB8]">
@@ -277,7 +281,6 @@ export default function App() {
                   <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2.5 py-0.5 rounded font-bold">Fanar Bannan</span>
                 </div>
-                {/* Screenshot Placeholder Thumbnail */}
                 <div className="w-full h-44 bg-[#0D0B14] border-b border-[#30263F] flex flex-col items-center justify-center p-4 text-center group cursor-pointer">
                   <svg className="w-8 h-8 text-[#8B5CF6] mb-2 opacity-70 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   <span className="text-xs text-[#C4B5FD] font-semibold">[ Add Fanar Bannan Dashboard Screenshot ]</span>
@@ -305,7 +308,6 @@ export default function App() {
                   <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 02</span>
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2.5 py-0.5 rounded font-bold">Homes Bannan</span>
                 </div>
-                {/* Screenshot Placeholder Thumbnail */}
                 <div className="w-full h-44 bg-[#0D0B14] border-b border-[#30263F] flex flex-col items-center justify-center p-4 text-center group cursor-pointer">
                   <svg className="w-8 h-8 text-[#8B5CF6] mb-2 opacity-70 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   <span className="text-xs text-[#C4B5FD] font-semibold">[ Add Homes Bannan Dashboard & Odoo Screenshots ]</span>
@@ -333,7 +335,6 @@ export default function App() {
                   <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 03</span>
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2.5 py-0.5 rounded font-bold">B.V.4 Project</span>
                 </div>
-                {/* Screenshot Placeholder Thumbnail */}
                 <div className="w-full h-44 bg-[#0D0B14] border-b border-[#30263F] flex flex-col items-center justify-center p-4 text-center group cursor-pointer">
                   <svg className="w-8 h-8 text-[#8B5CF6] mb-2 opacity-70 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   <span className="text-xs text-[#C4B5FD] font-semibold">[ Add B.V.4 Dashboard Screenshot ]</span>
@@ -361,7 +362,6 @@ export default function App() {
                   <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 04</span>
                   <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2.5 py-0.5 rounded font-bold">Document Control</span>
                 </div>
-                {/* Screenshot Placeholder Thumbnail */}
                 <div className="w-full h-44 bg-[#0D0B14] border-b border-[#30263F] flex flex-col items-center justify-center p-4 text-center group cursor-pointer">
                   <svg className="w-8 h-8 text-[#8B5CF6] mb-2 opacity-70 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                   <span className="text-xs text-[#C4B5FD] font-semibold">[ Add Document Control Register Screenshot ]</span>
@@ -384,10 +384,11 @@ export default function App() {
 
           </div>
         </section>
-        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION - New Section */}
+
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION */}
         <section id="tools" className="py-20 max-w-[1160px] mx-auto px-5 bg-[#100D17]/40 rounded-[28px] mt-12 border border-[#30263F]/50">
           <div className="max-w-[720px] mb-8 mx-auto text-center">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">03b / Sample Output</span>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">04 / Sample Output</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">Procurement Tools & Sample Work</h2>
             <p className="text-[#A79CB8]">Actual dashboards and process flows used for managing procurement activities.</p>
           </div>
@@ -400,7 +401,7 @@ export default function App() {
                 <span className="text-xs text-[#C4B5FD] font-extrabold">Excel Tool</span>
               </div>
               <div className="w-full h-40 bg-[#0D0B14] border-b border-[#30263F] relative overflow-hidden">
-                <img src={image_0.png} alt="PO Tracker Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={poTrackerImg} alt="PO Tracker Dashboard" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-5">
                 <h3 className="font-bold text-base mb-1.5">Purchase Order Tracker</h3>
@@ -414,7 +415,7 @@ export default function App() {
                 <span className="text-xs text-[#C4B5FD] font-extrabold">Analysis Tool</span>
               </div>
               <div className="w-full h-40 bg-[#0D0B14] border-b border-[#30263F] relative overflow-hidden">
-                <img src={image_1.png} alt="Vendor Comparative Statement" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={vendorCompImg} alt="Vendor Comparative Statement" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-5">
                 <h3 className="font-bold text-base mb-1.5">Vendor Comparative Statement (CS)</h3>
@@ -423,22 +424,26 @@ export default function App() {
             </div>
 
             {/* Tool 3 - P2P Process */}
-            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between group cursor-pointer md:col-span-1 md:mx-auto md:w-3/4">
+            <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between group cursor-pointer">
               <div className="p-4 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">Process Diagram</span>
               </div>
               <div className="w-full h-40 bg-[#0D0B14] border-b border-[#30263F] relative overflow-hidden">
-                <img src={image_2.png} alt="Procure to Pay Process Flow" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src={p2pFlowImg} alt="Procure to Pay Process Flow" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div className="p-5">
                 <h3 className="font-bold text-base mb-1.5">Procure to Pay (P2P) Process Flow</h3>
                 <p className="text-[#C2B8D4] text-[11px] leading-relaxed">Workflow diagram showing the complete procurement cycle from requisition to payment.</p>
               </div>
             </div>
+
+          </div>
+        </section>
+
         {/* Experience Section */}
         <section id="experience" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / الخبرة' : '04 / Experience'}</span>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الخبرة' : '05 / Experience'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الخبرة العملية' : 'Work Experience'}</h2>
           </div>
           <div className="space-y-6">
@@ -492,7 +497,7 @@ export default function App() {
         {/* Certifications & Education Section */}
         <section id="certifications" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
-            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '05 / الشهادات والتعليم' : '05 / Credentials'}</span>
+            <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '06 / الشهادات والتعليم' : '06 / Credentials'}</span>
             <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'الشهادات والتعليم' : 'Certifications & Education'}</h2>
           </div>
 
@@ -500,7 +505,6 @@ export default function App() {
             <h3 className="text-lg font-bold text-[#EDE7F7] mb-4 border-b border-[#30263F] pb-2">{isAr ? 'الشهادات والدورات' : 'Certifications & Learning Credentials'}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               
-              {/* 1. Odoo Purchase */}
               <div className="p-5 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
                 <div>
                   <h4 className="font-bold text-base mb-1">Odoo Purchase eLearning</h4>
@@ -511,7 +515,6 @@ export default function App() {
                 </a>
               </div>
 
-              {/* 2. Procurement Learner Verification */}
               <div className="p-5 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
                 <div>
                   <h4 className="font-bold text-base mb-1">Procurement Learner Verification</h4>
@@ -522,7 +525,6 @@ export default function App() {
                 </a>
               </div>
 
-              {/* 3. Electronic Document Management */}
               <div className="p-5 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
                 <div>
                   <h4 className="font-bold text-base mb-1">Electronic Document Management</h4>
@@ -533,7 +535,6 @@ export default function App() {
                 </a>
               </div>
 
-              {/* 4. Microsoft Excel, Word & PowerPoint */}
               <div className="p-5 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between">
                 <div>
                   <h4 className="font-bold text-base mb-1">Microsoft Excel, Word & PowerPoint</h4>
@@ -544,18 +545,9 @@ export default function App() {
                 </a>
               </div>
 
-              {/* 5. Professional Diploma in Administration Management */}
-              <div className="p-5 border border-[#30263F] rounded-[18px] bg-[#100E18] flex flex-col justify-between md:col-span-2">
-                <div>
-                  <h4 className="font-bold text-base mb-1">Professional Diploma in Administration Management</h4>
-                  <p className="text-[#A79CB8] text-xs mb-3">Udemy Verified Certification</p>
-                </div>
-              </div>
-
             </div>
           </div>
 
-          {/* Education Sub-section */}
           <div id="education">
             <h3 className="text-lg font-bold text-[#EDE7F7] mb-4 border-b border-[#30263F] pb-2">{isAr ? 'التعليم' : 'Education'}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
