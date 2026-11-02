@@ -107,8 +107,8 @@ export default function App() {
 
               <div className="flex gap-2.5 flex-wrap mb-8">
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Odoo ERP</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & POs</span>
-                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel Tracking</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">RFQs & Purchase Orders</span>
+                <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">Advanced Excel</span>
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تنسيق الموردين' : 'Supplier Coordination'}</span>
                 <span className="border border-[#332843] bg-[#15111F] text-[#E3DCEE] px-3 py-1.5 rounded-[9px] text-[0.78rem] font-medium">{isAr ? 'تتبع المواد' : 'Material Tracking'}</span>
               </div>
@@ -162,7 +162,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* About Section */}
+        {/* About Section - Point 2 Updated */}
         <section id="about" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '01 / الملف المهني' : '01 / Profile'}</span>
@@ -175,10 +175,9 @@ export default function App() {
             <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl flex flex-col justify-between">
               <div>
                 <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
-                <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base">
-                  {isAr 
-                    ? 'أعمل في الرياض بالمملكة العربية السعودية، كمسؤول مشتريات وتوريد لديه خبرة في عمليات المشتريات، وإدارة طلبات عروض الأسعار (RFQ)، وأوامر الشراء (PO)، وتنسيق الموردين، وتتبع المواد باستخدام Odoo ERP وMicrosoft Excel.\n\nعززت خبرتي السابقة كمراقب مستندات مهاراتي في إدارة المستندات، والتحكم في الإصدارات، وتنظيم السجلات، والأرشفة الرقمية. أجمع بين تنسيق المشتريات التوثيق المنظم والتتبع الدقيق لدعم العمليات التشغيلية للمشاريع بكفاءة.'
-                    : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer with experience in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.\n\nMy previous experience as a Document Controller strengthened my skills in document management, revision control, record organization, and digital archiving. I combine procurement coordination with structured documentation and accurate tracking to support efficient project operations.'}
+                <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base space-y-3">
+                  <span>Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer with experience in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.</span>
+                  <span className="block mt-3">My previous experience as a Document Controller strengthened my skills in document management, revision control, record organization, and digital archiving. I combine procurement coordination with structured documentation and accurate tracking to support efficient project operations.</span>
                 </p>
               </div>
             </article>
@@ -186,23 +185,23 @@ export default function App() {
             <article className="p-7 border border-[#30263F] rounded-[22px] bg-[#15111F]/96 shadow-xl">
               <h3 className="text-xl font-bold mb-3">{isAr ? 'نقاط القوة الأساسية' : 'Core Strengths'}</h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'نظام Odoo ERP: عروض الأسعار وأوامر الشراء' : 'Odoo ERP: RFQs & purchase orders'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'التتبع المتقدم باستخدام Excel' : 'Advanced Excel tracking'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'تنسيق الموردين والبائعين' : 'Supplier and vendor coordination'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'ضبط المستندات وإدارة الإصدارات' : 'Document control and versioning'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'إدارة المخزون والمستودعات' : 'Inventory and stock management'}</li>
-                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>{isAr ? 'أدوات Microsoft Office' : 'MS Office tools'}</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>Odoo ERP</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>Microsoft Excel</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>Document Control</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>Supplier Coordination</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>Inventory & Materials</li>
+                <li className="flex items-start gap-2.5 text-[#EDE7F7]"><span className="w-5 h-5 rounded-[7px] bg-[#A79CB8]/16 text-[#A78BFA] flex items-center justify-center font-bold text-xs shrink-0">✓</span>Microsoft Office</li>
               </ul>
             </article>
           </div>
         </section>
 
-        {/* Skills Section */}
+        {/* Skills Section - Point 3 Updated */}
         <section id="skills" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '02 / المهارات' : '02 / Capabilities'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المهارات والأدوات' : 'Skills & tools'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات العملية الواردة في الملف المهني الحالي.' : 'Tools and day-to-day capabilities listed in the existing portfolio.'}</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'المهارات والأدوات' : 'Skills & Tools'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'الأدوات والمهارات العملية الواردة في الملف المهني الحالي.' : 'Tools and day-to-day capabilities listed in the portfolio.'}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             
@@ -253,12 +252,12 @@ export default function App() {
           </div>
         </section>
 
-        {/* Projects Section (Heading restored to "Projects") */}
+        {/* Projects Section */}
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / المشاريع' : '03 / Projects'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز مشاريع المشتريات' : 'Featured Procurement Projects'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'نظرة عامة على مشاريع المشتريات والأنظمة والتتبع.' : 'Overview of procurement operations, tracking, and management projects.'}</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز المشاريع' : 'Projects'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'نظرة عامة على مشاريع المشتريات والأنظمة والتتبع.' : 'Overview of key projects and operational tracking systems.'}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -346,7 +345,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (Images Fixed with Reliable Placeholders / Direct Links Support) */}
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION */}
         <section id="samplework" className="py-20 max-w-[1160px] mx-auto px-5 border-t border-[#30263F]/40">
           <div className="max-w-[720px] mb-12">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / أعمال نموذجية' : '04 / Sample Work & Dashboards'}</span>
@@ -356,7 +355,6 @@ export default function App() {
 
           <div className="space-y-12">
             
-            {/* Sample 1: Purchase Order Tracker */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
@@ -367,7 +365,6 @@ export default function App() {
               </div>
               <div className="p-6">
                 <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-4 flex flex-col items-center justify-center text-center">
-                  {/* Note: Replace this src link with your Google Drive image link if needed */}
                   <div className="w-full bg-[#100E18] border border-[#30263F] rounded-xl p-8 mb-4">
                     <p className="text-[#C4B5FD] font-bold text-base mb-2">📊 Purchase Order Tracker Excel Template Preview</p>
                     <p className="text-[#A79CB8] text-sm">Tracks total POs, monthly ordered vs delivered amounts, and payment statuses.</p>
@@ -379,7 +376,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Sample 2: Vendor Comparative Statement */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
@@ -401,7 +397,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Sample 3: P2P Process Flow */}
             <div className="border border-[#30263F] rounded-[24px] overflow-hidden bg-[#15111F]/96 shadow-xl">
               <div className="p-6 border-b border-[#30263F] bg-[#100E18] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                 <div>
