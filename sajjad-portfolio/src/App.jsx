@@ -384,9 +384,6 @@ export default function App() {
 
           </div>
         </section>
-</div>
-        </section>
-
         {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION - New Section */}
         <section id="tools" className="py-20 max-w-[1160px] mx-auto px-5 bg-[#100D17]/40 rounded-[28px] mt-12 border border-[#30263F]/50">
           <div className="max-w-[720px] mb-8 mx-auto text-center">
