@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 export default function App() {
@@ -15,14 +16,18 @@ export default function App() {
 
   const profilePhotoUrl = "https://i.imgur.com/6TM43Gv.jpg";
   const businessCardUrl = "https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing";
-  const whatsappNumber = "+966542475245";
   const whatsappLink = "https://wa.me/966542475245";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
+
+  // Updated Direct View/Image links for the 3 samples provided
+  const sample1Img = "https://drive.google.com/uc?export=view&id=1cqBXlTmC2XIiamaA2zbGZG0R9081lnyJ";
+  const sample2Img = "https://drive.google.com/uc?export=view&id=17yTt58V-Lk_mScmBZYFCxJWJPaGlB_7d";
+  const sample3Img = "https://drive.google.com/uc?export=view&id=1GJEJvnw-YNP75Luv66afXLlhbISrtUWn";
 
   return (
     <div className={`min-h-screen bg-[#0B0B12] text-[#f3f6fb] font-sans selection:bg-[#7C3AED] selection:text-white ${isAr ? 'rtl' : 'ltr'}`} style={{ fontFamily: isAr ? '"Noto Sans Arabic", "Tahoma", Arial, sans-serif' : 'Inter, ui-sans-serif, system-ui, sans-serif' }}>
       
-      {/* Floating WhatsApp Button (Restored) */}
+      {/* Floating WhatsApp Button */}
       <a 
         href={whatsappLink} 
         target="_blank" 
@@ -346,7 +351,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (Updated with visual previews & Google Drive Links) */}
+        {/* PROCUREMENT TOOLS & SAMPLE WORK SECTION (With actual Drive Screenshot Images embedded) */}
         <section id="samplework" className="py-20 max-w-[1160px] mx-auto px-5 border-t border-[#30263F]/40">
           <div className="max-w-[720px] mb-12">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '04 / أعمال نموذجية' : '04 / Sample Work & Dashboards'}</span>
@@ -363,36 +368,13 @@ export default function App() {
                   <span className="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider">Dashboard Sample 01</span>
                   <h3 className="text-xl font-bold text-[#EDE7F7]">Purchase Order Tracker Excel Template</h3>
                 </div>
-                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Analytics & Metrics</span>
+                <a href="https://drive.google.com/file/d/1cqBXlTmC2XIiamaA2zbGZG0R9081lnyJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1.5 rounded-full font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  Open Full Image ↗
+                </a>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5 space-y-4">
-                  <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5 space-y-4">
-                    <div className="flex justify-between items-center border-b border-[#30263F] pb-3">
-                      <span className="font-bold text-sm text-[#E3DCEE]">📊 Purchase Order Tracker Excel Template</span>
-                      <a href="https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED] text-white px-3 py-1 rounded-md font-bold hover:bg-[#8B5CF6] transition-colors">
-                        View Full Screenshot ↗
-                      </a>
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
-                      <div className="bg-[#171321] p-3 rounded-lg border border-[#30263F]">
-                        <span className="text-[11px] text-[#A79CB8] block">Total PO</span>
-                        <strong className="text-lg text-white font-mono">66</strong>
-                      </div>
-                      <div className="bg-[#171321] p-3 rounded-lg border border-[#30263F]">
-                        <span className="text-[11px] text-[#A79CB8] block">Total Amount</span>
-                        <strong className="text-lg text-purple-400 font-mono">$35,127.00</strong>
-                      </div>
-                      <div className="bg-[#171321] p-3 rounded-lg border border-[#30263F]">
-                        <span className="text-[11px] text-[#A79CB8] block">Amount Paid</span>
-                        <strong className="text-lg text-emerald-400 font-mono">$25,050.00</strong>
-                      </div>
-                      <div className="bg-[#171321] p-3 rounded-lg border border-[#30263F]">
-                        <span className="text-[11px] text-[#A79CB8] block">% Paid</span>
-                        <strong className="text-lg text-amber-400 font-mono">71.3%</strong>
-                      </div>
-                    </div>
-                  </div>
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 flex items-center justify-center">
+                  <img src={sample1Img} alt="Purchase Order Tracker" className="w-full h-auto object-cover max-h-[500px]" />
                 </div>
                 <p className="text-[#C2B8D4] text-sm leading-relaxed">
                   Advanced Excel dashboard tracking total Purchase Orders, ordered vs. delivered volumes across months, financial metrics (Total Amount, Paid, Due), and monthly distribution percentages to maintain complete oversight over purchasing status.
@@ -407,47 +389,16 @@ export default function App() {
                   <span className="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider">Dashboard Sample 02</span>
                   <h3 className="text-xl font-bold text-[#EDE7F7]">Vendor Comparative Statement (CS)</h3>
                 </div>
-                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Quotation Analysis</span>
+                <a href="https://drive.google.com/file/d/17yTt58V-Lk_mScmBZYFCxJWJPaGlB_7d/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1.5 rounded-full font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  Open Full Image ↗
+                </a>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
-                  <div className="bg-[#100E18] border border-[#30263F] rounded-xl p-5 space-y-3">
-                    <div className="flex justify-between items-center border-b border-[#30263F] pb-3">
-                      <span className="font-bold text-sm text-[#E3DCEE]">📋 Vendor Comparative Statement (CS) - UPVC Pipes</span>
-                      <a href="https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED] text-white px-3 py-1 rounded-md font-bold hover:bg-[#8B5CF6] transition-colors">
-                        View Full Screenshot ↗
-                      </a>
-                    </div>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-left text-xs font-mono">
-                        <thead>
-                          <tr className="border-b border-[#30263F] text-[#A79CB8]">
-                            <th className="py-2">Item</th>
-                            <th className="py-2">Supplier A</th>
-                            <th className="py-2">Supplier B (Recommended)</th>
-                            <th className="py-2">Supplier C</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-[#30263F]/40 text-[#C2B8D4]">
-                          <tr>
-                            <td className="py-2">UPVC Pipe 110mm (500 Mtr)</td>
-                            <td className="py-2">9,000.00 SAR</td>
-                            <td className="py-2 text-emerald-400 font-bold">8,750.00 SAR</td>
-                            <td className="py-2">9,500.00 SAR</td>
-                          </tr>
-                          <tr>
-                            <td className="py-2">Grand Total (incl. VAT)</td>
-                            <td className="py-2">19,650.00 SAR</td>
-                            <td className="py-2 text-emerald-400 font-bold">18,890.00 SAR</td>
-                            <td className="py-2">20,530.00 SAR</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 flex items-center justify-center">
+                  <img src={sample2Img} alt="Vendor Comparative Statement" className="w-full h-auto object-cover max-h-[500px]" />
                 </div>
                 <p className="text-[#C2B8D4] text-sm leading-relaxed">
-                  Structured comparison sheet evaluating multiple suppliers (Supplier A, B, C) for UPVC Pipes & Fittings. Highlights unit pricing, grand totals including VAT, delivery timelines, and automatic recommendation logic for optimal cost savings.
+                  Structured comparison sheet evaluating multiple suppliers for UPVC Pipes & Fittings. Highlights unit pricing, grand totals including VAT, delivery timelines, and automatic recommendation logic for optimal cost savings.
                 </p>
               </div>
             </div>
@@ -459,25 +410,13 @@ export default function App() {
                   <span className="text-xs text-[#8B5CF6] font-bold uppercase tracking-wider">Process Workflow Sample 03</span>
                   <h3 className="text-xl font-bold text-[#EDE7F7]">P2P (Procure to Pay) Process Flow</h3>
                 </div>
-                <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold">Workflow Lifecycle</span>
+                <a href="https://drive.google.com/file/d/1GJEJvnw-YNP75Luv66afXLlhbISrtUWn/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1.5 rounded-full font-bold hover:bg-[#7C3AED] hover:text-white transition-colors">
+                  Open Full Image ↗
+                </a>
               </div>
               <div className="p-6">
-                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 p-5">
-                  <div className="flex justify-between items-center border-b border-[#30263F] pb-3 mb-4">
-                    <span className="font-bold text-sm text-[#E3DCEE]">🔄 P2P (Procure to Pay) End-to-End Workflow</span>
-                    <a href="https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED] text-white px-3 py-1 rounded-md font-bold hover:bg-[#8B5CF6] transition-colors">
-                      View Process Diagram ↗
-                    </a>
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 text-center text-xs font-semibold">
-                    <div className="p-2.5 rounded-lg bg-blue-600/20 border border-blue-500/40 text-blue-300">1. Requisition (PR)</div>
-                    <div className="p-2.5 rounded-lg bg-emerald-600/20 border border-emerald-500/40 text-emerald-300">2. RFQ</div>
-                    <div className="p-2.5 rounded-lg bg-orange-600/20 border border-orange-500/40 text-orange-300">3. CS Compare</div>
-                    <div className="p-2.5 rounded-lg bg-indigo-600/20 border border-indigo-500/40 text-indigo-300">4. Order (PO)</div>
-                    <div className="p-2.5 rounded-lg bg-teal-600/20 border border-teal-500/40 text-teal-300">5. Receipt (GR)</div>
-                    <div className="p-2.5 rounded-lg bg-purple-600/20 border border-purple-500/40 text-purple-300">6. Invoice (IV)</div>
-                    <div className="p-2.5 rounded-lg bg-amber-600/20 border border-amber-500/40 text-amber-300 col-span-2 sm:col-span-1">7. Payment</div>
-                  </div>
+                <div className="rounded-xl overflow-hidden border border-[#30263F] bg-[#0B0B12] mb-6 flex items-center justify-center p-4">
+                  <img src={sample3Img} alt="P2P Process Flow" className="w-auto h-auto max-h-[400px] object-contain" />
                 </div>
                 <p className="text-[#C2B8D4] text-sm leading-relaxed">
                   End-to-end procurement lifecycle illustration covering Purchase Requisitions (PR), Request for Quotations (RFQ), Quotation Comparisons, Purchase Orders (PO), Goods Receipts (GR), Invoice Verification (IV), and Vendor Payments.
@@ -630,7 +569,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section (WhatsApp + Personal Email + Personal Business Card) */}
+        {/* Contact Section (With WhatsApp restored & Plain Number removed, keeping Email & Business Card) */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
             <div className="max-w-[600px]">
@@ -644,7 +583,7 @@ export default function App() {
                   <span className="text-[#8B5CF6]">📧</span> Personal Email: <a href="mailto:sajjad.ali.procurement@gmail.com" className="text-[#C4B5FD] hover:underline">sajjad.ali.procurement@gmail.com</a>
                 </p>
                 <p className="flex items-center gap-3">
-                  <span className="text-[#8B5CF6]">📱</span> Phone / WhatsApp: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{whatsappNumber}</a>
+                  <span className="text-[#8B5CF6]">📱</span> WhatsApp Chat: <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">Click to Chat on WhatsApp ↗</a>
                 </p>
                 <p className="flex items-center gap-3">
                   <span className="text-[#8B5CF6]">📇</span> Personal Business Card: <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">View Digital Business Card ↗</a>
