@@ -17,7 +17,7 @@ export default function App() {
   const businessCardUrl = "https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing";
   const whatsappLink = "https://wa.me/966542475245";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
-  const linkedinLink = "https://linkedin.com/in/sajjad-ali-880a03338";
+  const linkedinLink = "https://www.linkedin.com/in/sajjad-ali-880a03338";
 
   // Sample Work Links
   const sample1DriveLink = "https://drive.google.com/file/d/17yTt58V-Lk_mScmBZYFCxJWJPaGlB_7d/view?usp=sharing"; // PO Tracker
@@ -789,7 +789,7 @@ export default function App() {
                   <h3 className="font-bold text-sm text-[#EDE7F7] mb-1">{isAr ? 'الملف المهني' : 'LinkedIn Profile'}</h3>
                   <p className="text-[11px] text-[#A79CB8] mb-3">{isAr ? 'تواصل معي عبر لينكد إن.' : 'Connect on LinkedIn.'}</p>
                   <a 
-                    href={`https://${linkedinLink}`} 
+                    href={linkedinLink} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="w-full py-2 px-3 rounded-xl bg-[#0A66C2] text-white font-bold text-xs hover:bg-[#084e96] transition-colors shadow-md flex items-center justify-center gap-1.5"
