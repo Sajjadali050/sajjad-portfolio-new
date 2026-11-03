@@ -17,6 +17,7 @@ export default function App() {
   const businessCardUrl = "https://drive.google.com/file/d/1-DgiBlf9JHkGFjpOtMyysha99J2KfkSx/view?usp=sharing";
   const whatsappLink = "https://wa.me/966542475245";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
+  const linkedinLink = "https://linkedin.com/in/sajjad-ali-880a03338";
 
   // Sample Work Links
   const sample1DriveLink = "https://drive.google.com/file/d/17yTt58V-Lk_mScmBZYFCxJWJPaGlB_7d/view?usp=sharing"; // PO Tracker
@@ -740,7 +741,7 @@ export default function App() {
                 <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
                 <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
                 <p className="text-[#C2B8D4] mb-8 leading-relaxed">
-                  {isAr ? 'هل تبحث عن متصفح أو مسؤول مشتريات متخصص في الرياض؟ تواصل معي مباشرة عبر البريد الإلكتروني أو الواتساب.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email or WhatsApp.'}
+                  {isAr ? 'هل تبحث عن مسؤول مشتريات متخصص في الرياض؟ تواصل معي مباشرة عبر البريد الإلكتروني أو الواتساب أو لينكد إن.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email, WhatsApp or LinkedIn.'}
                 </p>
                 <div className="space-y-4 text-sm font-medium">
                   <p className="flex items-center gap-3">
@@ -750,7 +751,10 @@ export default function App() {
                     <span className="text-[#8B5CF6]">📱</span> {isAr ? 'دردشة الواتساب:' : 'WhatsApp Chat:'} <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{isAr ? 'انقر للدردشة عبر الواتساب ↗' : 'Click to Chat on WhatsApp ↗'}</a>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="text-[#8B5CF6]">📇</span> {isAr ? 'البطاقة المهنية الشخصية:' : 'Personal Business Card:'} <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{isAr ? 'عرض بطاقة الأعمال الرقمية ↗' : 'View Digital Business Card ↗'}</a>
+                    <span className="text-[#8B5CF6]">💼</span> {isAr ? 'ملف لينكد إن:' : 'LinkedIn Profile:'} <a href={`https://${linkedinLink}`} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{isAr ? 'عرض ملف لينكد إن المهني ↗' : 'View Professional LinkedIn ↗'}</a>
+                  </p>
+                  <p className="flex items-center gap-3">
+                    <span className="text-[#8B5CF6]">📇</span> {isAr ? 'البطاقة المهنية الشخصية:' : 'Personal Business Card:'} <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">{isAr ? 'عرض البطاقة الرقمية ↗' : 'View Digital Business Card ↗'}</a>
                   </p>
                 </div>
               </div>
