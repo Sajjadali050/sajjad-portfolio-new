@@ -735,7 +735,7 @@ export default function App() {
         {/* Contact Section */}
         <section id="contact" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="p-8 md:p-12 border border-[#8B5CF6]/40 rounded-[28px] bg-gradient-to-br from-[#15111F] to-[#100D17] shadow-[0_0_50px_rgba(124,58,237,0.15)]">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-8 items-center">
               
               <div>
                 <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
@@ -751,33 +751,53 @@ export default function App() {
                     <span className="text-[#8B5CF6]">📱</span> {isAr ? 'دردشة الواتساب:' : 'WhatsApp Chat:'} <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{isAr ? 'انقر للدردشة عبر الواتساب ↗' : 'Click to Chat on WhatsApp ↗'}</a>
                   </p>
                   <p className="flex items-center gap-3">
-                    <span className="text-[#8B5CF6]">💼</span> {isAr ? 'ملف لينكد إن:' : 'LinkedIn Profile:'} <a href={`https://${linkedinLink}`} target="_blank" rel="noopener noreferrer" className="text-[#C4B5FD] hover:underline">{isAr ? 'عرض ملف لينكد إن المهني ↗' : 'View Professional LinkedIn ↗'}</a>
-                  </p>
-                  <p className="flex items-center gap-3">
                     <span className="text-[#8B5CF6]">📇</span> {isAr ? 'البطاقة المهنية الشخصية:' : 'Personal Business Card:'} <a href={businessCardUrl} target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1.5 rounded-lg hover:bg-[#7C3AED] hover:text-white transition-colors">{isAr ? 'عرض البطاقة الرقمية ↗' : 'View Digital Business Card ↗'}</a>
                   </p>
                 </div>
               </div>
 
-              {/* Right Side: QR Code Card */}
-              <div className="bg-[#100E18] border border-[#30263F] p-6 rounded-2xl flex flex-col items-center text-center shadow-xl">
-                <div className="w-36 h-36 bg-white p-2.5 rounded-xl shadow-inner mb-3 flex items-center justify-center">
-                  <img 
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/966542475245" 
-                    alt="WhatsApp QR Code" 
-                    className="w-full h-full object-contain"
-                  />
+              {/* Right Side: Two Cards Side by Side (WhatsApp QR & LinkedIn Box) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                {/* WhatsApp QR Card */}
+                <div className="bg-[#100E18] border border-[#30263F] p-5 rounded-2xl flex flex-col items-center text-center shadow-xl">
+                  <div className="w-28 h-28 bg-white p-2 rounded-xl shadow-inner mb-3 flex items-center justify-center">
+                    <img 
+                      src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/966542475245" 
+                      alt="WhatsApp QR Code" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="font-bold text-sm text-[#EDE7F7] mb-1">{isAr ? 'امسح للدردشة' : 'Scan to Chat'}</h3>
+                  <p className="text-[11px] text-[#A79CB8] mb-3">{isAr ? 'تواصل معنا فورا عبر الواتساب.' : 'Chat on WhatsApp.'}</p>
+                  <a 
+                    href={whatsappLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full py-2 px-3 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-1.5"
+                  >
+                    <span>💬 WhatsApp</span> ↗
+                  </a>
                 </div>
-                <h3 className="font-bold text-base text-[#EDE7F7] mb-1">{isAr ? 'امسح للدردشة' : 'Scan to Chat'}</h3>
-                <p className="text-xs text-[#A79CB8] mb-4">{isAr ? 'امسح الرمز بكاميرا هاتفك للتواصل الفوري مع سجاد علي عبر الواتساب.' : 'Scan with your phone camera to chat with Sajjad Ali on WhatsApp instantly.'}</p>
-                <a 
-                  href={whatsappLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-2"
-                >
-                  <span>{isAr ? '💬 فتح دردشة الواتساب' : '💬 Open WhatsApp Chat'}</span> ↗
-                </a>
+
+                {/* LinkedIn Professional Box */}
+                <div className="bg-[#100E18] border border-[#30263F] p-5 rounded-2xl flex flex-col items-center text-center shadow-xl justify-between">
+                  <div className="w-28 h-28 bg-[#0A66C2] p-2 rounded-xl shadow-inner mb-3 flex flex-col items-center justify-center text-white">
+                    <span className="text-3xl font-black tracking-tighter">in</span>
+                    <span className="text-[10px] font-semibold mt-1">Sajjad Ali</span>
+                  </div>
+                  <h3 className="font-bold text-sm text-[#EDE7F7] mb-1">{isAr ? 'الملف المهني' : 'LinkedIn Profile'}</h3>
+                  <p className="text-[11px] text-[#A79CB8] mb-3">{isAr ? 'تواصل معي عبر لينكد إن.' : 'Connect on LinkedIn.'}</p>
+                  <a 
+                    href={`https://${linkedinLink}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full py-2 px-3 rounded-xl bg-[#0A66C2] text-white font-bold text-xs hover:bg-[#084e96] transition-colors shadow-md flex items-center justify-center gap-1.5"
+                  >
+                    <span>💼 LinkedIn</span> ↗
+                  </a>
+                </div>
+
               </div>
 
             </div>
