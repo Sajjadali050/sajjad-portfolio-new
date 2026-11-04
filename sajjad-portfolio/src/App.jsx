@@ -195,8 +195,8 @@ export default function App() {
               <div>
                 <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
                 <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base space-y-3">
-                  <span>{isAr ? 'أقيم في الرياض بالمملكة العربية السعودية، وأعمل كمسؤول مشتريات وتوريد ولديه خبرة في عمليات الشراء وإدارة طلبات عروض الأسعار، أوامر الشراء، تنسيق الموردين، وتتبع المواد باستخدام نظام Odoo ERP وMicrosoft Excel.' : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer with experience in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.'}</span>
-                  <span className="block mt-3">{isAr ? 'خبرتي السابقة كمراقب مستندات عززت مهارات إدارة المستندات، التحكم في التعديلات، تنظيم السجلات والأرشفة الرقمية. أجمع بين تنسيق المشتريات والتوثيق المنظم والتتبع الدقيق لدعم كفاءة العمليات التشغيلية للمشاريع.' : 'My previous experience as a Document Controller strengthened my skills in document management, revision control, record organization, and digital archiving. I combine procurement coordination with structured documentation and accurate tracking to support efficient project operations.'}</span>
+                  <span>{isAr ? 'أقيم في الرياض بالمملكة العربية السعودية، وأعمل كمسؤول مشتريات وتوريد في مشروع مدينة بنان الضخم (تطوير سكني وبنيوي تابع لـ TMG و NHC بإشراف ZFP برقم J23-05900). أمتلك خبرة عملية في عمليات الشراء وإدارة طلبات عروض الأسعار، أوامر الشراء، تنسيق الموردين، وتتبع المواد باستخدام نظام Odoo ERP وMicrosoft Excel.' : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer working on the Banan City Mega Project (Residential & Infrastructure Development by TMG & NHC, supervised by ZFP, Project No: J23-05900). Experienced in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.'}</span>
+                  <span className="block mt-3">{isAr ? 'خبرتي السابقة كمراقب مستندات في Administrative Business Pattern Co. (من سبتمبر 2024 إلى أبريل 2026) عززت مهارات إدارة المستندات، التحكم في التعديلات، تنظيم السجلات والأرشفة الرقمية لدعم كفاءة العمليات التشغيلية.' : 'My previous experience as a Document Controller at Administrative Business Pattern Co. (Sep 2024 – Apr 2026) strengthened my skills in document management, revision control, record organization, and digital archiving supporting efficient project operations.'}</span>
                 </p>
               </div>
             </article>
@@ -331,8 +331,8 @@ export default function App() {
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / المشاريع' : '03 / Projects'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز المشاريع' : 'Projects'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'نظرة عامة على مشاريع المشتريات وأنظمة التتبع التشغيلي.' : 'Overview of key projects and operational tracking systems.'}</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز المشاريع (مشروع مدينة بنان الضخم)' : 'Key Projects (Banan City Mega Project)'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'ZFP Project No: J23-05900 | Developer: TMG & NHC | Consultant: ZFP' : 'ZFP Project No: J23-05900 | Developer: TMG & NHC | Consultant: ZFP'}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -340,22 +340,22 @@ export default function App() {
             {/* Fanar Bannan */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 01</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'مشتريات المواد' : 'Material Procurement'}</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT NO: J23-05900</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'الفنار (BV.1, BV.2)' : 'Fanar (BV.1, BV.2)'}</span>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع فنار بنان' : 'Fanar Bannan'}</h3>
-                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'مشتريات المواد ومراقبة المخزون' : 'Material Procurement & Stock Monitoring'}</h4>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'مشتريات المواد ومراقبة المخزون (فنار BV.1 و BV.2)' : 'Material Procurement & Stock Monitoring (Fanar BV.1 & BV.2)'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
                   <li>• {isAr ? 'متابعة مواد الصرف الصحي وحلقات المطاط' : 'Sewer materials and rubber rings tracking'}</li>
-                  <li>• {isAr ? 'مراقبة مخزون معدات السلامة' : 'Safety equipment inventory control'}</li>
+                  <li>• {isAr ? 'مراقبة مخزون معدات السلامة بنطاق فنار' : 'Safety equipment inventory control in Fanar zones'}</li>
                   <li>• {isAr ? 'متابعة رصيد المخزون ومستويات إعادة الطلب' : 'Stock balance and reorder level monitoring'}</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex flex-col gap-3">
                 <div className="flex gap-2 flex-wrap">
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'مراقبة المخزون' : 'Stock Monitoring'}</span>
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'لوحة إكسل' : 'Excel Dashboard'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">TMG & NHC</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">ZFP Consultant</span>
                 </div>
                 <a href={fanarBananLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
                   {isAr ? 'مشروع فنار بنان ↗' : 'project fanar banan ↗'}
@@ -366,22 +366,22 @@ export default function App() {
             {/* Homes Bannan */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 02</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'التحكم بطلبات وأوامر الشراء' : 'PR & PO Control'}</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT NO: J23-05900</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'هومز بنان (الجزء 1 و 2)' : 'Homes Banan (Part 1 & 2)'}</span>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع هومز بنان' : 'Homes Bannan'}</h3>
-                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'إدارة طلبات الشراء، وأوامر الشراء، وطلبات الدفع' : 'PR, PO & Payment Request Management'}</h4>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'إدارة طلبات وأوامر الشراء (هومز بنان الجزء 1 و 2)' : 'PR, PO & Payment Management (Homes Banan Part 1 & 2)'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
-                  <li>• {isAr ? 'سجل تتبع طلبات الشراء (PR)' : 'Purchase Requisition (PR) tracking log'}</li>
-                  <li>• {isAr ? 'نظام مراقبة أوامر الشراء (PO)' : 'Purchase Order (PO) monitoring system'}</li>
+                  <li>• {isAr ? 'سجل تتبع طلبات الشراء (PR) لهومز بنان' : 'Purchase Requisition (PR) tracking log for Homes Banan'}</li>
+                  <li>• {isAr ? 'نظام مراقبة أوامر الشراء (PO) عبر أودو' : 'Purchase Order (PO) monitoring system via Odoo'}</li>
                   <li>• {isAr ? 'متابعة حالة دفعات الموردين والتسليم' : 'Supplier payment status & delivery follow-up'}</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex flex-col gap-3">
                 <div className="flex gap-2 flex-wrap">
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">Odoo ERP</span>
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'تتبع المدفوعات' : 'Payment Tracking'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">TMG & NHC</span>
                 </div>
                 <a href={homesBananLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
                   {isAr ? 'مشروع هومز بنان ↗' : 'homes banan ↗'}
@@ -392,22 +392,22 @@ export default function App() {
             {/* Project B.V.4 */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 03</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'مراقبة التوصيل' : 'Delivery Control'}</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT NO: J23-05900</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'منطقة BV.4' : 'Zone BV.4'}</span>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع B.V.4' : 'B.V.4'}</h3>
-                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'مشتريات وتوصيل مواد المشروع' : 'Project Material Procurement & Delivery'}</h4>
+                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'مشتريات وتوصيل مواد منطقة BV.4' : 'Project Material Procurement & Delivery (BV.4)'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
-                  <li>• {isAr ? 'ميزان كميات مواكب UPVC والوصلات' : 'UPVC pipes and fittings quantity balance'}</li>
+                  <li>• {isAr ? 'ميزان كميات مواكب UPVC والوصلات لمنطقة BV.4' : 'UPVC pipes and fittings quantity balance for BV.4'}</li>
                   <li>• {isAr ? 'مطابقة الكميات المطلوبة مقابل المزودة والمستلمة' : 'Required vs. ordered vs. received quantity reconciliation'}</li>
-                  <li>• {isAr ? 'متابعة سجلات تسليم المواقع' : 'Site delivery monitoring & logs'}</li>
+                  <li>• {isAr ? 'متابعة سجلات تسليم المواقع بنطاق ZFP' : 'Site delivery monitoring & ZFP logs'}</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex flex-col gap-3">
                 <div className="flex gap-2 flex-wrap">
                   <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'رصيد المواد' : 'Material Balance'}</span>
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'اللوجستيات' : 'Logistics'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">ZFP Supervision</span>
                 </div>
                 <a href={bv4SampleLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
                   {isAr ? 'نموذج مشروع B.V.4 ↗' : 'project bv.4 sample ↗'}
@@ -603,15 +603,16 @@ export default function App() {
                 <div>
                   <h3 className="text-xl font-bold">{isAr ? 'مسؤول مشتريات وتوريد' : 'Procurement & Purchasing Officer'}</h3>
                   <p className="text-[#C4B5FD] text-sm font-semibold mt-1">Scientific Systems Construction Company (SSCC) – Riyadh, Saudi Arabia</p>
+                  <p className="text-xs text-[#A79CB8] mt-1">Project: Banan City Mega Project (TMG & NHC) | ZFP Project No: J23-05900</p>
                 </div>
                 <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold mt-2 md:mt-0 w-fit">
-                  {isAr ? 'سبتمبر 2026 – حتى الآن' : 'September 2026 – Present'}
+                  {isAr ? '19 سبتمبر 2026 – حتى الآن' : 'September 19, 2026 – Present'}
                 </span>
               </div>
               <ul className="space-y-2 text-[#C2B8D4] text-sm leading-relaxed">
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة طلبات عروض الأسعار، أوامر الشراء، وعمليات المشتريات عبر نظام Odoo ERP.' : 'Managing RFQs, purchase orders, and procurement workflows using Odoo ERP.'}</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة طلبات عروض الأسعار، أوامر الشراء، وعمليات المشتريات عبر نظام Odoo ERP لمشروع مدينة بنان.' : 'Managing RFQs, purchase orders, and procurement workflows via Odoo ERP for Banan City Mega Project.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'التنسيق مع الموردين بخصوص الأسعار، عروض الأسعار، ومواعيد التسليم.' : 'Coordinating with suppliers regarding quotations, pricing, and delivery schedules.'}</li>
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'مراقبة متطلبات مواد المشاريع، أرصدة المخزون، وحالة المشتريات.' : 'Monitoring project material requirements, stock balances, and procurement status.'}</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'مراقبة متطلبات مواد المشاريع (هومز بنان، فنار، BV.4)، أرصدة المخزون، وحالة المشتريات.' : 'Monitoring project material requirements (Homes Banan, Fanar, BV.4), stock balances, and procurement status.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إعداد متتبعات المشتريات وجداول مقارنة الموردين باستخدام برنامج Excel.' : 'Preparing Excel-based procurement trackers and vendor comparison sheets.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'الحفاظ على سجلات الشراء وتنسيق متابعة المدفوعات والتسليم.' : 'Maintaining purchase records and coordinating payment and delivery follow-ups.'}</li>
               </ul>
@@ -633,7 +634,7 @@ export default function App() {
                 </div>
               </div>
               <ul className="space-y-2 text-[#C2B8D4] text-sm leading-relaxed">
-                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'الحفاظ على أنظمة حفظ الملفات الورقية والإلكترونية.' : 'Maintained physical and electronic document filing systems.'}</li>
+                <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة أعمال ومستندات المكتب والملفات الورقية والإلكترونية بكفاءة عالية.' : 'Managed office document operations, physical and electronic filing systems efficiently.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'إدارة ترقيم المستندات، مراقبة التعديلات، وسجلات المستندات.' : 'Managed document numbering, revision control, and document registers.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'تنظيم السجلات الفنية والإدارية لسهولة الاسترجاع.' : 'Organized technical and administrative records for easy retrieval.'}</li>
                 <li className="flex items-start gap-2.5"><span className="text-[#8B5CF6]">▹</span>{isAr ? 'دعم توزيع المستندات، الأرشفة، وصيانة السجلات.' : 'Supported document distribution, archiving, and record maintenance.'}</li>
