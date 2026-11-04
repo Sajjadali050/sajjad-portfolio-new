@@ -195,8 +195,8 @@ export default function App() {
               <div>
                 <h3 className="text-xl font-bold mb-3">{isAr ? 'الملخص المهني' : 'Professional Summary'}</h3>
                 <p className="text-[#C2B8D4] leading-relaxed text-sm md:text-base space-y-3">
-                  <span>{isAr ? 'أقيم في الرياض بالمملكة العربية السعودية، وأعمل كمسؤول مشتريات وتوريد في مشروع مدينة بنان الضخم (تطوير سكني وبنيوي تابع لـ TMG و NHC بإشراف ZFP برقم J23-05900). أمتلك خبرة عملية في عمليات الشراء وإدارة طلبات عروض الأسعار، أوامر الشراء، تنسيق الموردين، وتتبع المواد باستخدام نظام Odoo ERP وMicrosoft Excel.' : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer working on the Banan City Mega Project (Residential & Infrastructure Development by TMG & NHC, supervised by ZFP, Project No: J23-05900). Experienced in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.'}</span>
-                  <span className="block mt-3">{isAr ? 'خبرتي السابقة كمراقب مستندات في Administrative Business Pattern Co. (من سبتمبر 2024 إلى أبريل 2026) عززت مهارات إدارة المستندات، التحكم في التعديلات، تنظيم السجلات والأرشفة الرقمية لدعم كفاءة العمليات التشغيلية.' : 'My previous experience as a Document Controller at Administrative Business Pattern Co. (Sep 2024 – Apr 2026) strengthened my skills in document management, revision control, record organization, and digital archiving supporting efficient project operations.'}</span>
+                  <span>{isAr ? 'أقيم في الرياض بالمملكة العربية السعودية، وأعمل كمسؤول مشتريات وتوريد في مشروع مدينة بنان الضخم (تطوير سكني وبنيوي تابع لـ TMG و NHC بإشراف ZFP برقم J23-05900) منذ 19 سبتمبر 2026. أمتلك خبرة عملية في عمليات الشراء وإدارة طلبات عروض الأسعار، أوامر الشراء، تنسيق الموردين، وتتبع المواد باستخدام نظام Odoo ERP وMicrosoft Excel.' : 'Based in Riyadh, Saudi Arabia, I am a Procurement & Purchasing Officer working on the Banan City Mega Project (Residential & Infrastructure Development by TMG & NHC, supervised by ZFP, Project No: J23-05900) since Sep 19, 2026. Experienced in procurement operations, RFQ management, purchase orders, supplier coordination, and material tracking using Odoo ERP and Microsoft Excel.'}</span>
+                  <span className="block mt-3">{isAr ? 'خبرتي السابقة كمراقب مستندات في Administrative Business Pattern Co. (من سبتمبر 2024 إلى يوليو 2026) عززت مهارات إدارة المستندات، التحكم في التعديلات، تنظيم السجلات والأرشفة الرقمية لدعم كفاءة العمليات التشغيلية المكتبية.' : 'My previous experience as a Document Controller at Administrative Business Pattern Co. (Sep 2024 – Jul 2026) strengthened my skills in office document management, revision control, record organization, and digital archiving supporting efficient operations.'}</span>
                 </p>
               </div>
             </article>
@@ -331,8 +331,8 @@ export default function App() {
         <section id="projects" className="py-20 max-w-[1160px] mx-auto px-5">
           <div className="max-w-[720px] mb-8">
             <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '03 / المشاريع' : '03 / Projects'}</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز المشاريع (مشروع مدينة بنان الضخم)' : 'Key Projects (Banan City Mega Project)'}</h2>
-            <p className="text-[#A79CB8]">{isAr ? 'ZFP Project No: J23-05900 | Developer: TMG & NHC | Consultant: ZFP' : 'ZFP Project No: J23-05900 | Developer: TMG & NHC | Consultant: ZFP'}</p>
+            <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-3">{isAr ? 'أبرز المشاريع (شركة SSCC والخبرة السابقة)' : 'Key Projects (SSCC & Previous Experience)'}</h2>
+            <p className="text-[#A79CB8]">{isAr ? 'مشاريع شركة SSCC (منذ 19 سبتمبر 2026) والخبرة المكتبية السابقة (سبتمبر 2024 - يوليو 2026)' : 'SSCC Projects (Sep 19, 2026 – Present) & Previous Office Experience (Sep 2024 – Jul 2026)'}</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -341,9 +341,10 @@ export default function App() {
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT NO: J23-05900</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'الفنار (BV.1, BV.2)' : 'Fanar (BV.1, BV.2)'}</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? '19 سبتمبر 2026 – حتى الآن' : 'Sep 19, 2026 – Present'}</span>
               </div>
               <div className="p-6">
+                <div className="text-[10px] bg-[#8B5CF6]/20 text-[#C4B5FD] px-2 py-1 rounded w-fit font-bold mb-2">SSCC | Banan City Mega Project</div>
                 <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع فنار بنان' : 'Fanar Bannan'}</h3>
                 <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'مشتريات المواد ومراقبة المخزون (فنار BV.1 و BV.2)' : 'Material Procurement & Stock Monitoring (Fanar BV.1 & BV.2)'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
@@ -367,9 +368,10 @@ export default function App() {
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT NO: J23-05900</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'هومز بنان (الجزء 1 و 2)' : 'Homes Banan (Part 1 & 2)'}</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? '19 سبتمبر 2026 – حتى الآن' : 'Sep 19, 2026 – Present'}</span>
               </div>
               <div className="p-6">
+                <div className="text-[10px] bg-[#8B5CF6]/20 text-[#C4B5FD] px-2 py-1 rounded w-fit font-bold mb-2">SSCC | Banan City Mega Project</div>
                 <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع هومز بنان' : 'Homes Bannan'}</h3>
                 <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'إدارة طلبات وأوامر الشراء (هومز بنان الجزء 1 و 2)' : 'PR, PO & Payment Management (Homes Banan Part 1 & 2)'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
@@ -393,9 +395,10 @@ export default function App() {
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
                 <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT NO: J23-05900</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'منطقة BV.4' : 'Zone BV.4'}</span>
+                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? '19 سبتمبر 2026 – حتى الآن' : 'Sep 19, 2026 – Present'}</span>
               </div>
               <div className="p-6">
+                <div className="text-[10px] bg-[#8B5CF6]/20 text-[#C4B5FD] px-2 py-1 rounded w-fit font-bold mb-2">SSCC | Banan City Mega Project</div>
                 <h3 className="font-bold text-xl mb-2">{isAr ? 'مشروع B.V.4' : 'B.V.4'}</h3>
                 <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'مشتريات وتوصيل مواد منطقة BV.4' : 'Project Material Procurement & Delivery (BV.4)'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
@@ -415,28 +418,29 @@ export default function App() {
               </div>
             </div>
 
-            {/* Document Control */}
+            {/* Document Control (Previous Company Office Work) */}
             <div className="border border-[#30263F] rounded-[20px] overflow-hidden bg-[#171321] flex flex-col justify-between">
               <div className="p-5 border-b border-[#30263F] bg-[#100E18] flex justify-between items-center">
-                <span className="text-xs text-[#C4B5FD] font-extrabold">PROJECT / 04</span>
-                <span className="text-[11px] bg-[#7C3AED]/20 text-[#C4B5FD] px-2 py-0.5 rounded font-bold">{isAr ? 'ضبط المستندات' : 'Document Control'}</span>
+                <span className="text-xs text-[#C4B5FD] font-extrabold">PREVIOUS COMPANY EXPERIENCE</span>
+                <span className="text-[11px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-bold">{isAr ? 'سبتمبر 2024 – يوليو 2026' : 'Sep 2024 – Jul 2026'}</span>
               </div>
               <div className="p-6">
-                <h3 className="font-bold text-xl mb-2">{isAr ? 'سجل المستندات' : 'Document Control'}</h3>
-                <h4 className="text-xs font-bold text-[#8B5CF6] mb-3 uppercase tracking-wider">{isAr ? 'سجل المستندات وإدارة التعديلات' : 'Document Register & Revision Management'}</h4>
+                <div className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-1 rounded w-fit font-bold mb-2">Administrative Business Pattern Co.</div>
+                <h3 className="font-bold text-xl mb-2">{isAr ? 'إدارة المستندات المكتبية' : 'Office Document Control'}</h3>
+                <h4 className="text-xs font-bold text-amber-400 mb-3 uppercase tracking-wider">{isAr ? 'أعمال المكتب وإدارة السجلات الرقمية' : 'Office Works & Digital Records Management'}</h4>
                 <ul className="text-[#C2B8D4] text-sm mb-6 space-y-1.5 leading-relaxed">
-                  <li>• {isAr ? 'سجل ترقيم المستندات القياسي' : 'Standardized document numbering register'}</li>
-                  <li>• {isAr ? 'تتبع تاريخ التعديلات وحالة الاعتماد' : 'Revision history & approval status tracking'}</li>
-                  <li>• {isAr ? 'أرشفة المراجع الرقمية لسهولة الاسترجاع' : 'Digital file referencing & retrieval archive'}</li>
+                  <li>• {isAr ? 'إدارة أعمال ومستندات المكتب والملفات الورقية والإلكترونية' : 'Managed office document operations, physical and electronic files'}</li>
+                  <li>• {isAr ? 'سجل ترقيم المستندات القياسي ومراقبة التعديلات' : 'Standardized document numbering register & revision control'}</li>
+                  <li>• {isAr ? 'تنظيم الأرشيف والمراسلات المكتبية لسهولة الاسترجاع' : 'Organized archive & office correspondence for easy retrieval'}</li>
                 </ul>
               </div>
               <div className="p-6 pt-0 flex flex-col gap-3">
                 <div className="flex gap-2 flex-wrap">
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'سجل المستندات' : 'Doc Register'}</span>
-                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'إدارة التعديلات' : 'Revision Control'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'أعمال المكتب' : 'Office Work'}</span>
+                  <span className="border border-[#3B2B50] rounded-md px-2 py-1 text-xs bg-[#100D17]">{isAr ? 'الأرشفة الرقمية' : 'Digital Archive'}</span>
                 </div>
                 <a href={projectDocLink} target="_blank" rel="noopener noreferrer" className="text-xs font-bold bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3.5 py-2 rounded-xl text-center hover:bg-[#7C3AED] hover:text-white transition-colors">
-                  {isAr ? 'مستندات المشروع ↗' : 'project document ↗'}
+                  {isAr ? 'مستندات المكتب ↗' : 'office documents ↗'}
                 </a>
               </div>
             </div>
@@ -626,7 +630,7 @@ export default function App() {
                 </div>
                 <div className="flex flex-col md:items-end gap-2 mt-2 md:mt-0">
                   <span className="text-xs bg-[#7C3AED]/20 text-[#C4B5FD] border border-[#8B5CF6]/40 px-3 py-1 rounded-full font-bold w-fit">
-                    {isAr ? 'سبتمبر 2024 – أبريل 2026' : 'September 2024 – April 2026'}
+                    {isAr ? 'سبتمبر 2024 – يوليو 2026' : 'September 2024 – July 2026'}
                   </span>
                   <a href="https://drive.google.com/file/d/1_9JsMfHwicUWWI51nR274xEhJ47ILINt/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-xs bg-[#7C3AED]/30 text-[#C4B5FD] border border-[#8B5CF6]/50 px-3 py-1.5 rounded-xl font-bold w-fit hover:bg-[#7C3AED] hover:text-white transition-colors">
                     {isAr ? 'عرض خطاب الخبرة ↗' : 'View Experience Letter ↗'}
