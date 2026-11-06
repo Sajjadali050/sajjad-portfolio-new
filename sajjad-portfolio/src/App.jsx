@@ -18,6 +18,7 @@ export default function App() {
   const whatsappLink = "https://wa.me/966542475245";
   const cvLink = "https://drive.google.com/file/d/1e9Lp08tXyBt0VAPHP-sBGdXWsKdwn_lN/view?usp=sharing";
   const linkedinLink = "https://www.linkedin.com/in/sajjad-ali-880a03338";
+  const twitterLink = "https://x.com/Sajjad_Procure";
 
   // Sample Work Links
   const sample1DriveLink = "https://drive.google.com/file/d/17yTt58V-Lk_mScmBZYFCxJWJPaGlB_7d/view?usp=sharing"; // PO Tracker
@@ -746,7 +747,7 @@ export default function App() {
                 <span className="text-[#C4B5FD] text-xs font-extrabold tracking-widest uppercase">{isAr ? '08 / التواصل' : '08 / Contact'}</span>
                 <h2 className="text-3xl md:text-4xl font-extrabold mt-2 mb-4">{isAr ? 'دعنا نتواصل' : 'Get in touch'}</h2>
                 <p className="text-[#C2B8D4] mb-8 leading-relaxed">
-                  {isAr ? 'هل تبحث عن مسؤول مشتريات متخصص في الرياض؟ تواصل معي مباشرة عبر البريد الإلكتروني أو الواتساب أو لينكد إن.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email, WhatsApp or LinkedIn.'}
+                  {isAr ? 'هل تبحث عن مسؤول مشتريات متخصص في الرياض؟ تواصل معي مباشرة عبر البريد الإلكتروني أو الواتساب أو لينكد إن أو تويتر.' : 'Looking for a dedicated Procurement Specialist in Riyadh? Feel free to reach out directly via email, WhatsApp, LinkedIn or Twitter.'}
                 </p>
                 <div className="space-y-4 text-sm font-medium">
                   <p className="flex items-center gap-3">
@@ -761,45 +762,63 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Right Side: Two Cards Side by Side (WhatsApp QR & LinkedIn Box) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {/* Right Side: Three Cards (WhatsApp QR, LinkedIn & Twitter) */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 
                 {/* WhatsApp QR Card */}
-                <div className="bg-[#100E18] border border-[#30263F] p-5 rounded-2xl flex flex-col items-center text-center shadow-xl">
-                  <div className="w-28 h-28 bg-white p-2 rounded-xl shadow-inner mb-3 flex items-center justify-center">
+                <div className="bg-[#100E18] border border-[#30263F] p-4 rounded-2xl flex flex-col items-center text-center shadow-xl justify-between">
+                  <div className="w-20 h-20 bg-white p-1.5 rounded-xl shadow-inner mb-2 flex items-center justify-center">
                     <img 
                       src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://wa.me/966542475245" 
                       alt="WhatsApp QR Code" 
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <h3 className="font-bold text-sm text-[#EDE7F7] mb-1">{isAr ? 'امسح للدردشة' : 'Scan to Chat'}</h3>
-                  <p className="text-[11px] text-[#A79CB8] mb-3">{isAr ? 'تواصل معنا فورا عبر الواتساب.' : 'Chat on WhatsApp.'}</p>
+                  <h3 className="font-bold text-xs text-[#EDE7F7] mb-0.5">{isAr ? 'امسح للدردشة' : 'Scan QR'}</h3>
+                  <p className="text-[10px] text-[#A79CB8] mb-2">{isAr ? 'واتساب' : 'WhatsApp'}</p>
                   <a 
                     href={whatsappLink} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="w-full py-2 px-3 rounded-xl bg-[#25D366] text-white font-bold text-xs hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-1.5"
+                    className="w-full py-1.5 px-2 rounded-lg bg-[#25D366] text-white font-bold text-[11px] hover:bg-[#20ba59] transition-colors shadow-md flex items-center justify-center gap-1"
                   >
-                    <span>💬 WhatsApp</span> ↗
+                    <span>💬 Chat</span> ↗
                   </a>
                 </div>
 
                 {/* LinkedIn Professional Box */}
-                <div className="bg-[#100E18] border border-[#30263F] p-5 rounded-2xl flex flex-col items-center text-center shadow-xl justify-between">
-                  <div className="w-28 h-28 bg-[#0A66C2] p-2 rounded-xl shadow-inner mb-3 flex flex-col items-center justify-center text-white">
-                    <span className="text-3xl font-black tracking-tighter">in</span>
-                    <span className="text-[10px] font-semibold mt-1">Sajjad Ali</span>
+                <div className="bg-[#100E18] border border-[#30263F] p-4 rounded-2xl flex flex-col items-center text-center shadow-xl justify-between">
+                  <div className="w-20 h-20 bg-[#0A66C2] p-1.5 rounded-xl shadow-inner mb-2 flex flex-col items-center justify-center text-white">
+                    <span className="text-2xl font-black tracking-tighter">in</span>
+                    <span className="text-[9px] font-semibold mt-0.5">Sajjad Ali</span>
                   </div>
-                  <h3 className="font-bold text-sm text-[#EDE7F7] mb-1">{isAr ? 'الملف المهني' : 'LinkedIn Profile'}</h3>
-                  <p className="text-[11px] text-[#A79CB8] mb-3">{isAr ? 'تواصل معي عبر لينكد إن.' : 'Connect on LinkedIn.'}</p>
+                  <h3 className="font-bold text-xs text-[#EDE7F7] mb-0.5">{isAr ? 'الملف المهني' : 'LinkedIn'}</h3>
+                  <p className="text-[10px] text-[#A79CB8] mb-2">{isAr ? 'تواصل معي' : 'Connect'}</p>
                   <a 
                     href={linkedinLink} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="w-full py-2 px-3 rounded-xl bg-[#0A66C2] text-white font-bold text-xs hover:bg-[#084e96] transition-colors shadow-md flex items-center justify-center gap-1.5"
+                    className="w-full py-1.5 px-2 rounded-lg bg-[#0A66C2] text-white font-bold text-[11px] hover:bg-[#084e96] transition-colors shadow-md flex items-center justify-center gap-1"
                   >
-                    <span>💼 LinkedIn</span> ↗
+                    <span>💼 Profile</span> ↗
+                  </a>
+                </div>
+
+                {/* Twitter (X) Card */}
+                <div className="bg-[#100E18] border border-[#30263F] p-4 rounded-2xl flex flex-col items-center text-center shadow-xl justify-between">
+                  <div className="w-20 h-20 bg-black p-1.5 rounded-xl shadow-inner mb-2 flex flex-col items-center justify-center text-white border border-stone-800">
+                    <span className="text-2xl font-black tracking-tighter">𝕏</span>
+                    <span className="text-[9px] font-semibold mt-0.5">@Sajjad_Procure</span>
+                  </div>
+                  <h3 className="font-bold text-xs text-[#EDE7F7] mb-0.5">{isAr ? 'تويتر / إكس' : 'Twitter (X)'}</h3>
+                  <p className="text-[10px] text-[#A79CB8] mb-2">{isAr ? 'تابعني' : 'Follow'}</p>
+                  <a 
+                    href={twitterLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full py-1.5 px-2 rounded-lg bg-stone-900 border border-stone-700 text-white font-bold text-[11px] hover:bg-black transition-colors shadow-md flex items-center justify-center gap-1"
+                  >
+                    <span>𝕏 Follow</span> ↗
                   </a>
                 </div>
 
